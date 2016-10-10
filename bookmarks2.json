@@ -4,12 +4,13 @@
             "items":[
                     {"url":"http://www.weizhsihu.com/","title":"官网"},
                     {"url":"http://release.weizhishu.com/","title":"测试"},
-                    {"url":"http://"}
+                    {"url":"https://www.baidu.com/","title":"百度"}
             ]},
             {"name":"我的",
             "items":[
                     {"url":"https://www.aliyun.com/","title":"阿里"},
-                    {"url":"http://120.27.7.144/","title":"网站"}
+                    {"url":"http://120.27.7.144/","title":"网站"},
+                    {"url":"https://mp.weixin.qq.com/wiki","title":"微信开发文档"}
             ]},
             {"name":"书签",
             "items":[
