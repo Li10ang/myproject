@@ -16,6 +16,7 @@
             "items":[
                     {"url":"http://www.imooc.com/video/4285","title":"慕课Angular"},
                     {"url":"https://mp.weixin.qq.com/","title":"微信公众号"},
+                    {"url":"http://www.iconfont.cn/","title":"Iconfont"},
                     {"url":"http://www.runoob.com/","title":"菜鸟站"},
                     {"url":"https://facebook.github.io/react/docs/getting-started.html","title":"React"},
                     {"url":"https://www.cnblogs.com/cate/108703/#p2","title":"博客园"},
