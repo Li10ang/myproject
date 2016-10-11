@@ -20,7 +20,22 @@
                     {"url":"https://facebook.github.io/react/docs/getting-started.html","title":"React"},
                     {"url":"https://www.cnblogs.com/cate/108703/#p2","title":"博客园"},
                     {"url":"https://segmentfault.com/a/1190000004690338","title":"webpack入坑之旅"}
-            ]}
+            ]},
+            {"name":"文档",
+              "items":[
+                {"url":"http://vuefe.cn/router/installation.html","title":"Vue文档"},
+                {"url":"https://atomjaylee.github.io/","title":"李杰的笔记"},
+                {"url":"http://www.jianshu.com/p/465830080ea9","title":"HEXO搭建博客系统"}
+              ]
+            },
+            {"name":"微信小程序",
+              "items":[
+                {"url":"https://weui.io/","title":"微信UI组件"},
+                {"url":"https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/?t=1475052056828","title":"框架"},
+                {"url":"https://mp.weixin.qq.com/debug/wxadoc/dev/component/icon.html?t=1475052053662","title":"组件"},
+                {"url":"https://mp.weixin.qq.com/debug/wxadoc/dev/api/network-request.html?t=1475052047879","title":"API"}
+              ]
+            }
         ]
 
         
