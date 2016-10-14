@@ -21,11 +21,12 @@
     <h1>首页导航</h1>
 </div>
 <div class="contetn">
-    <p>插件等等</p>
-    <a href="/tool/"><span class="btn">我的组件库</span></a>
-    <a href="/cssdemo/"><span class="btn">CSS揭秘</span></a>
-    <p>云笔记</p>
-    <a href="/cloudnotes/"><span>我的云笔记</span></a>
+<!--    <p>插件等等</p>-->
+<!--    <a href="/tool/"><span class="btn">我的组件库</span></a>-->
+<!--    <a href="/cssdemo/"><span class="btn">CSS揭秘</span></a>-->
+<!--    <p>云笔记</p>-->
+<!--    <a href="/cloudnotes/"><span>我的云笔记</span></a>-->
+    个人网站!啦啦啦
 </div>
 <div class="footer">
 
