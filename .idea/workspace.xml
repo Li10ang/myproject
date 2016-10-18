@@ -37,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/bookmarks2.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="13" column="88" selection-start-line="13" selection-start-column="88" selection-end-line="13" selection-end-column="88" />
+              <caret line="13" column="79" selection-start-line="13" selection-start-column="79" selection-end-line="13" selection-end-column="79" />
               <folding />
             </state>
           </provider>
@@ -262,12 +262,12 @@
       <workItem from="1476162560422" duration="519000" />
       <workItem from="1476182781300" duration="1549000" />
       <workItem from="1476429651719" duration="5823000" />
-      <workItem from="1476777905515" duration="1270000" />
+      <workItem from="1476777905515" duration="1475000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10093000" />
+    <option name="totallyTimeSpent" value="10298000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1448" y="23" width="1443" height="936" extended-state="0" />
@@ -643,7 +643,7 @@
     <entry file="file://$PROJECT_DIR$/bookmarks2.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="13" column="88" selection-start-line="13" selection-start-column="88" selection-end-line="13" selection-end-column="88" />
+          <caret line="13" column="79" selection-start-line="13" selection-start-column="79" selection-end-line="13" selection-end-column="79" />
           <folding />
         </state>
       </provider>
