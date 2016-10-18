@@ -27,7 +27,8 @@
                 {"url":"http://vuefe.cn/router/installation.html","title":"Vue文档"},
                 {"url":"https://atomjaylee.github.io/","title":"李杰的笔记"},
                 {"url":"http://www.jianshu.com/p/465830080ea9","title":"HEXO搭建博客系统"},
-                {"url":"http://www.tuicool.com/articles/ueI7naV","title":"HEXO详细教程"}
+                {"url":"http://www.tuicool.com/articles/ueI7naV","title":"HEXO详细教程"},
+                {"url":"https://dwqs.gitbooks.io/frontenddevhandbook/content/","title":"前端手册"}
               ]
             },
             {"name":"微信小程序",
