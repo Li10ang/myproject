@@ -11,7 +11,8 @@
                     {"url":"https://www.aliyun.com/","title":"阿里"},
                     {"url":"http://120.27.7.144/","title":"网站"},
                     {"url":"https://mp.weixin.qq.com/wiki","title":"微信开发文档"},
-                    {"URL":"https://li10ang.github.io/liang.github.com/","title":"github"}
+                    {"url":"https://li10ang.github.io/liang.github.com/","title":"github"},
+                    {"url":"http://naotu.baidu.com/home","title":"百度脑图"}
             ]},
             {"name":"书签",
             "items":[
