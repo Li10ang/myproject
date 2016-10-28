@@ -14,6 +14,11 @@
                     {"url":"https://li10ang.github.io/liang.github.com/","title":"github"},
                     {"url":"http://naotu.baidu.com/home","title":"百度脑图"}
             ]},
+            {"name":"写demo",
+              "items":[
+                    {"url":"http://runjs.cn/","title":"在线写代码"}
+              ]
+            },
             {"name":"书签",
             "items":[
                     {"url":"http://www.imooc.com/video/4285","title":"慕课Angular"},
@@ -23,7 +28,8 @@
                     {"url":"https://facebook.github.io/react/docs/getting-started.html","title":"React"},
                     {"url":"https://www.cnblogs.com/cate/108703/#p2","title":"博客园"},
                     {"url":"https://segmentfault.com/a/1190000004690338","title":"webpack入坑之旅"},
-                    {"url":"https://airen.github.io/DemoHouse/index.html?from=groupmessage&isappinstalled=0","title":"大神demo"}
+                    {"url":"https://airen.github.io/DemoHouse/index.html?from=groupmessage&isappinstalled=0","title":"大神demo"},
+                    {"url":"http://tieba.baidu.com/f?kw=%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F&ie=utf-8","title":"微信小程序贴吧"}
             ]},
             {"name":"文档",
               "items":[
@@ -31,7 +37,8 @@
                 {"url":"https://atomjaylee.github.io/","title":"李杰的笔记"},
                 {"url":"http://www.jianshu.com/p/465830080ea9","title":"HEXO搭建博客系统"},
                 {"url":"http://www.tuicool.com/articles/ueI7naV","title":"HEXO详细教程"},
-                {"url":"https://dwqs.gitbooks.io/frontenddevhandbook/content/","title":"前端手册"}
+                {"url":"https://dwqs.gitbooks.io/frontenddevhandbook/content/","title":"前端手册"},
+                {"url":"http://henkuai.com/forum.php","title":"微信小程序开发社区"}
               ]
             },
             {"name":"微信小程序",
