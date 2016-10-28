@@ -1,0 +1,19 @@
+FATAL Port 80 has been used. Try other port instead.
+FATAL Something's wrong. Maybe you can find the solution here: http://hexo.io/docs/troubleshooting.html
+Error: listen EADDRINUSE
+    at errnoException (net.js:905:11)
+    at Server._listen2 (net.js:1043:14)
+    at listen (net.js:1065:10)
+    at net.js:1147:9
+    at dns.js:72:18
+    at process._tickCallback (node.js:448:13)
+FATAL listen EADDRINUSE
+Error: listen EADDRINUSE
+    at errnoException (net.js:905:11)
+    at Server._listen2 (net.js:1043:14)
+    at listen (net.js:1065:10)
+    at net.js:1147:9
+    at dns.js:72:18
+    at process._tickCallback (node.js:448:13)
+INFO  Start processing
+INFO  Hexo is running at http://localhost:40000/. Press Ctrl+C to stop.
