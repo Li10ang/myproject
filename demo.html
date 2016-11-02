@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>H5的demo</title>
+    <style type="text/css">
+        body{
+            overflow: hidden;
+            background: #ccc;
+            position: relative;
+        }
+        .box{
+            width: 20rem;
+            height: 20rem;
+            border: 1px solid #1381C0;
+            border-radius: 50%;
+            margin: 0 auto;
+            /*position: relative;*/
+            /*top: 100px;*/
+            overflow: hidden;
+        }
+        .drop{
+            width: 10rem;
+            height: 10rem;
+            background: #228B22;
+            display: inline-block;
+            position: relative;
+        }
+        .footer{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            overflow: hidden;
+            border: 5px solid #1381C0;
+            background: #FFC0CB;
+        }
+    </style>
+</head>
+<body>
+<div class="footer">
+    <div class="drop" id="move"></div>
+</div>
+
+</body>
+
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        var $width = $(window).height()
+        $('body').css('height', $width )
+        $('#move').on('touchstart',function(e){
+            e.preventDefault();
+            var clx = e.originalEvent.changedTouches[0].clientX;
+            var cly = e.originalEvent.changedTouches[0].clientY;
+            var lx = parseInt($(this).css('left'));
+            var ly = parseInt($(this).css('top'));
+            nx = clx - lx;
+            ny = cly - ly;
+            $("#move").on('touchmove',touchMove);
+            $("#move").on('touchend',touchEnd);
+        })
+        function touchMove(e){
+            var clx = e.originalEvent.changedTouches[0].clientX;
+            var cly = e.originalEvent.changedTouches[0].clientY;
+            var left = clx - nx;
+            console.log(left);
+            $(this).css({
+                'left': clx - nx
+            })
+            if(clx - nx<0){
+                $('#move').css({
+                    'left': 0
+                })
+            }
+            var nrange = $(".footer").width()-$('.drop').width();
+            if(left> nrange){
+                $('#move').css({
+                    'left': nrange
+                })
+            }
+        }
+        function touchEnd(){
+
+        }
+    })
+</script>
+
+</html>
