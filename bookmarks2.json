@@ -12,7 +12,8 @@
                     {"url":"https://yaoliang2016.cn","title":"网站"},
                     {"url":"https://mp.weixin.qq.com/wiki","title":"微信开发文档"},
                     {"url":"https://li10ang.github.io/liang.github.com/","title":"github"},
-                    {"url":"http://naotu.baidu.com/home","title":"百度脑图"}
+                    {"url":"http://naotu.baidu.com/home","title":"百度脑图"},
+                    {"url":"http://www.swiper.com.cn/","title":"移动端滑动"}
             ]},
             {"name":"写demo",
               "items":[
@@ -39,7 +40,8 @@
                 {"url":"http://www.jianshu.com/p/465830080ea9","title":"HEXO搭建博客系统"},
                 {"url":"http://www.tuicool.com/articles/ueI7naV","title":"HEXO详细教程"},
                 {"url":"https://dwqs.gitbooks.io/frontenddevhandbook/content/","title":"前端手册"},
-                {"url":"http://henkuai.com/forum.php","title":"微信小程序开发社区"}
+                {"url":"http://henkuai.com/forum.php","title":"微信小程序开发社区"},
+                {"url":"https://www.sslforfree.com/","title":"SSL(https)"}
               ]
             },
             {"name":"微信小程序",
@@ -48,6 +50,30 @@
                 {"url":"https://mp.weixin.qq.com/debug/wxadoc/dev/framework/view/wxml/?t=1475052056828","title":"框架"},
                 {"url":"https://mp.weixin.qq.com/debug/wxadoc/dev/component/icon.html?t=1475052053662","title":"组件"},
                 {"url":"https://mp.weixin.qq.com/debug/wxadoc/dev/api/network-request.html?t=1475052047879","title":"API"}
+              ]
+            },
+            {"name":"UI",
+              "items":[
+                {"url":"http://amazeui.org/","title":"妹子ui"},
+                {"url":"http://getuikit.net/index.html","title":"uikit"},
+                {"url":"http://www.bootcss.com/","title":"bootstrap"},
+                {"url":"http://www.bootcss.com/p/flat-ui/","title":"FlatUI"}
+              ]
+            },
+            {"name":"CSS",
+              "items":[
+                {"url":"http://www.dowebok.com/demo/2014/98/","title":"Animate.css"}
+              ]
+            },
+            {"name":"框架",
+              "items":[
+                {"url":"https://facebook.github.io/react/index.html","title":"React"},
+                {"url":"http://www.ruanyifeng.com/blog/2015/03/react.html","title":"阮一峰React"},
+                {"url":"http://www.tudou.com/listplay/ah20h1-t4V4/9y2RBn8q6qU.html","title":"视频React"},
+                {"url":"https://github.com/reactnativecn/react-native-guide","title":"react-native"},
+                {"url":"http://tguide.qq.com/motion.html","title":"motion腾讯移动端H5框架"},
+                {"url":"http://tguide.qq.com/main/index.htm","title":"腾讯前端老窝"},
+                {"url":"http://www.runoob.com/angularjs/angularjs-tutorial.html","title":"Angular"}
               ]
             }
         ]
