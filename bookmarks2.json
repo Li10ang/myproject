@@ -61,42 +61,6 @@
                 {"url":"http://www.layui.com/","title":"Layui"},
 
               ]
-            },
-            {"name":"CSS",
-              "items":[
-                {"url":"https://daneden.github.io/animate.css/","title":"Animate.css"}
-              ]
-            },
-            {"name":"框架",
-              "items":[
-                {"url":"https://facebook.github.io/react/index.html","title":"React"},
-                {"url":"http://www.ruanyifeng.com/blog/2015/03/react.html","title":"阮一峰React"},
-                {"url":"http://www.tudou.com/listplay/ah20h1-t4V4/9y2RBn8q6qU.html","title":"视频React"},
-                {"url":"https://github.com/reactnativecn/react-native-guide","title":"react-native"},
-                {"url":"http://tguide.qq.com/motion.html","title":"motion腾讯移动端H5框架"},
-                {"url":"http://tguide.qq.com/main/index.htm","title":"腾讯前端老窝"},
-                {"url":"http://www.runoob.com/angularjs/angularjs-tutorial.html","title":"Angular"}
-              ]
-            },
-            {"name":"懒癌",
-              "items":[
-                {"url":"http://www.jq22.com/","title":"jq22"},
-                {"url":"http://www.htmleaf.com/","title":"jq之家"}
-              ]
-            },
-            {"name":"素材",
-              "items":[
-                {"url":"http://588ku.com/","title":"千库"},
-                {"url":"https://unsplash.com/","title":"高清照片"},
-                {"url":"http://www.youziku.com/onlinefont/index","title":"字库－可js调用"},
-                {"url":"http://www.psjia.com/pssc/fontxz/list_18_3.html","title":"ps的字体库"},
-                {"url":"http://colorhunt.co/hot","title":"网站颜色搭配"}
-              ]
-            },
-            {"name":"学习",
-              "items":[
-                {"url":"http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/","title":"廖雪峰的js教程"}
-              ]
             }
         ]
 
