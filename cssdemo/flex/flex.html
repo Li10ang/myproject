@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex布局</title>
+    <style>
+        html,body{padding: 0; margin: 0 auto; width: 1200px;}
+        ul,li{line-height: 20px;}
+        p.title{background: #ededed;padding: 10px 0;}
+        code{padding: 3px; background: pink;margin: 0 5px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;}
+        .items{border: 3px solid #ccc;padding: 5px 3px;overflow: hidden;background: #f5f2f0;margin: 10px 0;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            border-radius: 8px;}
+    </style>
+</head>
+<body>
+    <h2>页面的flex布局</h2>
+    <h5>注意，设为Flex布局以后，子元素的 <code>float</code>、<code>clear</code>和<code>vertical-align</code>属性将失效。</h5>
+    <p class="title">一、［flex］</p>
+    <div>
+        <div>
+            <img src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071004.png" alt="" style="">
+        </div>
+        <p>
+            容器默认存在两根轴：水平的主轴（main axis）和垂直的交叉轴（cross axis）。主轴的开始位置（与边框的交叉点）叫做main start，结束位置叫做main end；交叉轴的开始位置叫做cross start，结束位置叫做cross end。
+        </p>
+        <p>
+            项目默认沿主轴排列。单个项目占据的主轴空间叫做main size，占据的交叉轴空间叫做cross size。
+        </p>
+    </div>
+    <p class="title">二、容器属性</p>
+    <div>
+        <div class="items">
+            <ul>
+                <li>flex-direction</li>
+                <li>flex-wrap</li>
+                <li>flex-flow</li>
+                <li>justify-content</li>
+                <li>align-items</li>
+                <li>align-content</li>
+            </ul>
+        </div>
+        <p>2.1 flex-direct</p>
+        <p>
+            <code>flex-direction</code>属性决定主轴的方向（即项目的排列方向）。
+        </p>
+        <div class="items">
+            .box{ <br>
+            &nbsp;&nbsp;flex-direction: row | row-reverse | column | column-reverse;<br>
+            }
+        </div>
+        <img src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071005.png" alt="阮一峰的图借用一下">
+        <div class="items">
+            <ul>
+                <li>row(默认值)：主轴为水平方向，起点在左端。</li>
+                <li>row-reverse: 主轴为水平方向，起点在右端</li>
+                <li>column: 主轴为垂直方向，起点在上沿</li>
+                <li>column-reverse: 主轴为垂直方向，起点在下沿</li>
+            </ul>
+        </div>
+        <p>2.2 flex-wrap属性</p>
+        <p>
+            默认情况下，项目都排在一条线（又称"轴线"）上。flex-wrap属性定义，如果一条轴线排不下，如何换行。
+        </p>
+        <div class="items">
+            .box{<br>
+            &nbsp;&nbsp;flex-wrap: nowrap | wrap | wrap-reverse;<br>
+            }
+        </div>
+        <div class="items">
+            <ul>
+                <li>nowrap(默认值): 不换行</li>
+                <li>wrap: 换行，第一行在上边</li>
+                <li>wrap-reverse: 换行，第一行在下方</li>
+            </ul>
+        </div>
+        <p>2.3 flew-flow</p>
+        <p>
+            <code>flex-flow</code>属性是<code>flex-direction</code>属性和<code>flex-wrap</code>属性的简写形式，默认值为<code>row nowrap</code>。
+        </p>
+        <div class="items">
+            .box{<br>
+            &nbsp;&nbsp;flew-flow: &ltflew-direction&gt || &ltflew-wrap&gt <br>
+            }
+        </div>
+        <p>2.4 justify-content属性</p>
+        <p>
+            <code>justify-content</code>属性定义了项目在主轴上的对齐方式。
+        </p>
+        <div class="items">
+            .box{<br>
+            &nbsp;&nbsp;justify-content: flex-start | flex-end | center | space-between | space-around <br>
+            }
+        </div>
+        <img src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071010.png" alt="阮一峰的图借用一下">
+        <div class="items">
+           <p>它可能取5个值，具体对齐方式与轴的方向有关。下面假设主轴为从左到右。</p>
+            <ul>
+                <li>flew-start(默认值): 左对齐</li>
+                <li>flew-end: 右对齐</li>
+                <li>center: 居中</li>
+                <li>space-between: 两端对齐，项目之间的间隔都相等。</li>
+                <li>space-around: 每个项目两侧的间隔相等。所以，项目之间的间隔比项目与边框的间隔大一倍。</li>
+            </ul>
+        </div>
+        <p>2.5 align-items</p>
+        <p>
+            <code>align-items</code>属性定义项目在交叉轴上如何对齐。
+        </p>
+        <div class="items">
+            .box{<br>
+            &nbsp;&nbsp;align-items: flex-start | flex-end | center | baseline | stretch <br>
+            }
+        </div>
+        <img src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071011.png" alt="阮一峰的图借用一下">
+        <div class="items">
+            <p>它可能取5个值。具体的对齐方式与交叉轴的方向有关，下面假设交叉轴从上到下。</p>
+            <ul>
+                <li>flex-start: 交叉轴的起点对齐。</li>
+                <li>flex-end: 交叉轴的终点对齐。</li>
+                <li>center: 交叉轴的中点对齐。</li>
+                <li>baseline: 项目的第一行文字的基线对齐。</li>
+                <li>stretch(默认值): 如果项目未设置高度或设为auto，将占满整个容器的高度。</li>
+            </ul>
+        </div>
+        <p>2.6 align-content属性</p>
+        <p>
+            <code>align-content</code>属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用。
+        </p>
+        <div class="items">
+            .box{<br>
+            &nbsp;&nbsp;align-content: flex-start | flex-end | center | space-between | space-around | stretch <br>
+            }
+        </div>
+        <img src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071012.png" alt="阮一峰的图借用一下">
+        <div class="items">
+            <ul>
+                <li>flex-start: 与交叉轴的起点对齐。</li>
+                <li>flew-end: 与交叉轴的终点对齐。</li>
+                <li>center: 与交叉轴的中点对齐。</li>
+                <li>space-between: 与交叉轴两端对齐，轴线之间的间隔平均分布。</li>
+                <li>space-around: 每根轴线两侧的间隔都相等。所以，轴线之间的间隔比轴线与边框的间隔大一倍。</li>
+                <li>stretch(默认值): 轴线占满整个交叉轴。</li>
+            </ul>
+        </div>
+    </div>
+
+    <p class="title">三、项目属性</p>
+    <div>
+        <p>
+            以下6个属性设置在项目上。
+        </p>
+        <div class="items">
+            <ul>
+                <li>order</li>
+                <li>flex-grow</li>
+                <li>flex-shrink</li>
+                <li>flex-basis</li>
+                <li>flex</li>
+                <li>align-self</li>
+            </ul>
+        </div>
+        <p>3.1 order属性</p>
+        <p>
+            <code>order</code>属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。
+        </p>
+        <div class="items">
+            .item{<br>
+            &nbsp;&nbsp;order: &lt;integer&gt;
+        </div>
+        <img src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071013.png" alt="阮一峰的图借用一下">
+        <p>3.2 flex-grow属性</p>
+        <p>
+            <code>flex-grow</code>属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。
+        </p>
+        <div class="items">
+            .item{<br>
+            &nbsp;&nbsp;flex-grow: &lt;number&gt;<br>
+            }
+        </div>
+        <img src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071014.png" alt="阮一峰的图借用一下">
+        <p>
+            如果所有项目的<code>flex-grow</code>属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍。
+        </p>
+        <p>3.3 flex-shrink属性</p>
+        <p>
+            <code>flex-shrink</code>属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。
+        </p>
+        <div class="items">
+            .item{<br>
+            &nbsp;&nbsp;flex-shrink: &lt;number&gt;;<br>
+            }
+        </div>
+        <p>
+            如果所有项目的<code>flex-shrink</code>属性都为1，当空间不足时，都将等比例缩小。如果一个项目的<code>flex-shrink</code>属性为0，其他项目都为1，则空间不足时，前者不缩小。<br>
+            负值对该属性无效。
+        </p>
+        <p>3.4 flex-basis属性</p>
+        <p>
+            <code>flex-basis</code>属性定义了在分配多余空间之前，项目占据的主轴空间（main size）。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为<code>auto</code>，即项目的本来大小。
+        </p>
+        <div class="items">
+            .item{<br>
+            &nbsp;&nbsp;flex-basis: &lt;length&gt;;<br>
+            }
+        </div>
+        <p>
+            它可以设为跟<code>width</code>或<code>height</code>属性一样的值（比如350px），则项目将占据固定空间。
+        </p>
+        <p>3.5 flex属性</p>
+        <p>
+            <code>flex</code>属性是<code>flex-grow</code>, <code>flex-shrink</code> 和 <code>flex-basis</code>的简写，默认值为<code>0 1 auto</code>。后两个属性可选。
+        </p>
+        <div class="items">
+            .item{<br>
+            &nbsp;&nbsp;flex: none | [ &lt;'flex-grow'&gt; &nbsp; &lt;'flex-shrink'&gt; ? || &lt;'flex-basis'&gt; ]<br>
+            }
+        </div>
+        <p>
+            该属性有两个快捷值：<code>auto</code> (<code>1 1 auto</code>) 和 none (<code>0 0 auto</code>)。
+            建议优先使用这个属性，而不是单独写三个分离的属性，因为浏览器会推算相关值。
+        </p>
+        <p>3.6 align-self属性</p>
+        <p>
+            <code>align-self</code>属性允许单个项目有与其他项目不一样的对齐方式，可覆盖<code>align-items</code>属性。默认值为<code>auto</code>，表示继承父元素的<code>align-items</code>属性，如果没有父元素，则等同于<code>stretch</code>。
+        </p>
+        <div class="items">
+            .item{<br>
+            &nbsp;&nbsp;align-self: auto | flex-start | flex-end | center | baseline | stretch;<br>
+            }
+        </div>
+        <img src="http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071016.png" alt="阮一峰的图借用一下">
+        <p>
+            该属性可能取6个值，除了auto，其他都与align-items属性完全一致。
+        </p>
+    </div>
+    <!--代码-->
+    <div class="box">
+        
+    </div>
+    <div class="footer">
+        详细教程可参照：<a href="http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool">阮一峰的Flex布局教程</a>
+    </div>
+</body>
+</html>
