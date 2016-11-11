@@ -41,7 +41,8 @@
                 {"url":"http://www.tuicool.com/articles/ueI7naV","title":"HEXO详细教程"},
                 {"url":"https://dwqs.gitbooks.io/frontenddevhandbook/content/","title":"前端手册"},
                 {"url":"http://henkuai.com/forum.php","title":"微信小程序开发社区"},
-                {"url":"https://www.sslforfree.com/","title":"SSL(https)"}
+                {"url":"https://www.sslforfree.com/","title":"SSL(https)"},
+                {"url":"http://uprogrammer.cn/react-tutorial-cn/introduction.html","title":"React简明教程"}
               ]
             },
             {"name":"微信小程序",
@@ -94,7 +95,8 @@
             },
             {"name":"学习",
               "items":[
-                {"url":"http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/","title":"廖雪峰的js教程"}
+                {"url":"http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/","title":"廖雪峰的js教程"},
+                {"url":"https://zhuanlan.zhihu.com/p/23412169","title":"是真的吗"}
               ]
             }
         ]

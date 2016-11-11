@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flexdemo</title>
+    <style>
+        html,body{width: 85%;min-width: 1200px;margin: 0 auto;padding: 0;}
+        .box{width: 200px;height: 200px;background: #15B7B9;float: left;margin: 20px; position: relative;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;}
+        span{width: 50px;height: 50px;background: #F5F5F5;display: inline-block;margin: 3px;text-align: center;font-size: 16px;line-height: 50px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;}
+        /*.box-1{display: flex; flex-direction: column; justify-content: space-between; align-items: center;}*/
+        /*.box-2{display: flex; flex-direction: column; justify-content: space-between; align-items: flex-end;}*/
+        .box>p{position: absolute; top: -42px; left: 0; background: #10DDC2;padding: 3px 5px;white-space: nowrap;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;;}
+        .line{width: 100%; height: 1px; background: #ccc; float: left; margin: 20px 0; }
+        .box-1{display: flex; flex-direction: row;}
+        .box-2{display: flex; flex-direction: row-reverse;}
+        .box-3{display: flex; flex-direction: column;}
+        .box-4{display: flex; flex-direction: column-reverse;}
+        .box-5{display: flex; flex-wrap: nowrap;}
+        .box-6{display: flex; flex-wrap: wrap;}
+        .box-7{display: flex; flex-wrap: wrap-reverse;}
+
+        .box-8{display: flex; flex-flow: row nowrap;}
+        .box-9{display: flex; flex-flow: row-reverse nowrap;}
+        .box-10{display: flex; flex-flow: column nowrap;}
+        .box-11{display: flex; flex-flow: column-reverse nowrap;}
+
+        .box-12{display: flex; flex-flow: row wrap;}
+        .box-13{display: flex; flex-flow: row-reverse wrap;}
+        .box-14{display: flex; flex-flow: column wrap;}
+        .box-15{display: flex; flex-flow: column-reverse wrap;}
+
+        .box-16{display: flex; flex-flow: row wrap-reverse;}
+        .box-17{display: flex; flex-flow: row-reverse wrap-reverse;}
+        .box-18{display: flex; flex-flow: column wrap-reverse;}
+        .box-19{display: flex; flex-flow: column-reverse wrap-reverse;}
+
+        .box-20{display: flex; flex-flow: column wrap; align-items: center; justify-content: center; align-content: space-around;}
+
+        .box-21>p{left: 216px; top: -37px;}
+        .box-21{display: flex; flex-direction: row; }
+        .box-21>span{flex-grow: 1; width: initial;}
+        .box-21>span:nth-of-type(2){flex-grow: 2;}
+
+        .box-22{display: flex;}
+    </style>
+</head>
+<body>
+    <!--flex的demo-->
+    <h2>Flex弹性盒模型</h2>
+    <div>
+        <!--NO.1-->
+        <div class="box box-1">
+            <p>flex-direction: row</p>
+            <span>1</span><span>2</span><span>3</span>
+        </div>
+        <!--NO.2-->
+        <div class="box box-2">
+            <p>flex-direction: row-reverse</p>
+            <span>1</span><span>2</span><span>3</span>
+        </div>
+        <!--NO.3-->
+        <div class="box box-3">
+            <p>flex-direction: column</p>
+            <span>1</span><span>2</span><span>3</span>
+        </div>
+        <!--NO.4-->
+        <div class="box box-4">
+            <p>flex-direction: column-reverse</p>
+            <span>1</span><span>2</span><span>3</span>
+        </div>
+        <div class="line"></div>
+        <!--NO.5-->
+        <div class="box box-5">
+            <p>flex-wrap: nowrap</p>
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+        </div>
+        <!--NO.6-->
+        <div class="box box-6">
+            <p>flex-wrap: wrap</p>
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+        </div>
+        <!--NO.7-->
+        <div class="box box-7">
+            <p>flex-wrap: wrap-reverse</p>
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+        </div>
+        <div class="line"></div>
+        <!--NO.8-->
+        <div class="box box-8">
+            <p>flex-flow: row nowrap</p>
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+        </div>
+        <!--NO.9-->
+        <div class="box box-9">
+            <p>flex-flow: row-reverse nowrap</p>
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+        </div>
+        <!--NO.10-->
+        <div class="box box-10">
+            <p>flex-flow: column nowrap</p>
+            <span>1</span><span>2</span><span>3</span>
+        </div>
+        <!--NO.11-->
+        <div class="box box-11">
+            <p>flex-flow: column-reverse nowrap</p>
+            <span>1</span><span>2</span><span>3</span>
+        </div>
+        <div class="line"></div>
+        <!--NO.12-->
+        <div class="box box-12">
+            <p>flex-flow: row wrap</p>
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+        </div>
+        <!--NO.13-->
+        <div class="box box-13">
+            <p>flex-flow: row-reverse wrap</p>
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+        </div>
+        <!--NO.14-->
+        <div class="box box-14">
+            <p>flex-flow: column wrap</p>
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+        </div>
+        <!--NO.15-->
+        <div class="box box-15">
+            <p>flex-flow: column-reverse wrap</p>
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+        </div>
+        <div class="line"></div>
+        <!--NO.16-->
+        <div class="box box-16">
+            <p>flex-flow: row wrap-reverse</p>
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+        </div>
+        <!--NO.17-->
+        <div class="box box-17">
+            <p>flex-flow: row-reverse wrap-reverse;</p>
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+        </div>
+        <!--NO.18-->
+        <div class="box box-18">
+            <p>flex-flow: column wrap-reverse</p>
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+        </div>
+        <!--NO.19-->
+        <div class="box box-19">
+            <p>flex-flow: column-reverse wrap-reverse</p>
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+        </div>
+        <div class="line"></div>
+        <!--NO.20-->
+        <div class="box box-20">
+            <p>flex-flow: column wrap; align-items: center; justify-content: center; align-content: space-around;</p>
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+        </div>
+        <div class="line"></div>
+        <!--NO.21-->
+        <div class="box box-21">
+            <p> .box-21{display: flex; flex-direction: row; }<br>
+                .box-21>span{flex-grow: 1; width: initial;}<br>
+                .box-21>span:nth-of-type(2){flex-grow: 2;}<br>
+            </p>
+            <span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span>
+        </div>
+        <div class="line"></div>
+        <!--NO.22-->
+        <div class="box box-22">
+            <div class="box-2-1">
+                <span>1</span><span>2</span>
+            </div>
+                <span class="box-2-3">3</span>
+            <div class="box-2-2">
+                <span>4</span><span>5</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

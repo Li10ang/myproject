@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transform旋转动画</title>
+    <style>
+        img{width: 40px; height: 40px; border: 1px solid #ccc;
+            -webkit-border-radius:50%;
+            -moz-border-radius:50%;
+            border-radius:50%;}
+        .box{width: 200px; height: 200px; box-shadow: 0px 3px 5px #ccc; margin: 20px; border-radius: 50%; }
+        .avatar-box{
+            -webkit-animation:spin 10s infinite linear;
+            -o-animation:spin 10s infinite linear;
+            animation:spin 10s infinite linear;
+            transform-origin: 100px 100px;
+        }
+        .avatar{
+            -webkit-animation:spin-reverse 10s infinite linear;
+            -o-animation:spin-reverse 10s infinite linear;
+            animation:spin-reverse 10s infinite linear;
+        }
+        .avatar-new{
+            -webkit-animation:spin-new 10s infinite linear;
+            -o-animation:spin-new 10s infinite linear;
+            animation:spin-new 10s infinite linear;
+        }
+
+
+        @keyframes spin {
+            to {
+                -webkit-transform: rotate(1turn);
+                -moz-transform: rotate(1turn);
+                -ms-transform: rotate(1turn);
+                -o-transform: rotate(1turn);
+                transform: rotate(1turn);
+            }
+        }
+        @keyframes spin-reverse {
+            from{
+                -webkit-transform: rotate(1turn);
+                -moz-transform: rotate(1turn);
+                -ms-transform: rotate(1turn);
+                -o-transform: rotate(1turn);
+                transform: rotate(1turn);
+            }
+        }
+        @keyframes spin-new {
+            from { transform:
+                    translate(100px, 100px) rotate(0turn) translate(-100px, -100px)
+                    translate(50%, 50%) rotate(1turn) translate(-50%, -50%); }
+            to { transform:
+                    translate(100px, 100px) rotate(1turn) translate(-100px, -100px)
+                    translate(50%, 50%) rotate(0turn) translate(-50%, -50%); }
+        }
+    </style>
+</head>
+<body>
+    <!--使用transform旋转平移-->
+    <!--举个栗子-->
+    <div class="box">
+        <div class="avatar-box">
+            <img src="http://acgtofe.com/assets/used-images/author_about/edwardup_avatar.jpg" alt="移动的图像" class="avatar">
+        </div>
+    </div>
+    <div class="box">
+        <img src="http://acgtofe.com/assets/used-images/author_about/edwardup_avatar.jpg" alt="" class="avatar-new">
+    </div>
+</body>
+</html>
