@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<style>
+			.box {
+				width: 100%;
+				height: 200px;
+				border: 1px solid #ccc;
+			}
+		</style>
+		<title>Document</title>
+	</head>
+
+	<body>
+		<div id="inp"></div>
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		function load() {
+
+			document.addEventListener('touchstart', touch, false);
+			document.addEventListener('touchmove', touch, false);
+			document.addEventListener('touchend', touch, false);
+
+			function touch(event) {
+				var event = event || window.event;
+
+				var oInp = document.getElementById("inp");
+
+				switch(event.type) {
+					case "touchstart":
+						oInp.innerHTML = "Touch started (" + event.touches[0].clientX + "," + event.touches[0].clientY + ")";
+						break;
+					case "touchend":
+						oInp.innerHTML = "<br>Touch end (" + event.changedTouches[0].clientX + "," + event.changedTouches[0].clientY + ")";
+						break;
+					case "touchmove":
+						event.preventDefault();
+						oInp.innerHTML = "<br>Touch moved (" + event.touches[0].clientX + "," + event.touches[0].clientY + ")";
+						break;
+				}
+
+			}
+		}
+		window.addEventListener('load', load, false);
+</script>
+</html>

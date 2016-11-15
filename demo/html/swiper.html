@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>移动端的滑动聚焦展示效果</title>
+</head>
+<body>
+    <style>
+    		html,body{padding: 0; margin: 0; background: #172e3e; }
+    		body{font-size: 62.5%; }
+    		.top-container{width: 100%; height: 10rem; position: absolute; background: #122835;}
+    		.swiper-content{width: 100%; height: 10rem; position: absolute; perspective: 1000px; position: relative; overflow: hidden;}
+    		.swiper-item{width: 7rem; height: 8.5rem; border: 1px solid #ccc; box-sizing: border-box; position: absolute; border-radius: 10px; }
+    		.swiper-previos{
+    			top: .8rem;left: 5%;height: 8rem;
+    			-webkit-transform: rotateY(-38deg);
+    			-moz-transform: rotateY(-38deg);
+    			-ms-transform: rotateY(-38deg);
+    			-o-transform: rotateY(-38deg);
+    			transform: rotateY(-38deg);
+    			background: #09939d;
+    		}
+    		.swiper-next{
+    			top: .8rem; right: 5%; height: 8rem;
+    			-webkit-transform: rotateY(38deg);
+    			-moz-transform: rotateY(38deg);
+    			-ms-transform: rotateY(38deg);
+    			-o-transform: rotateY(38deg);
+    			transform: rotateY(38deg);
+    			background: #969856;
+    		}
+    		.swiper-active{
+    			top: .5rem;left: 50%;
+    			-webkit-transform: translateX(-3.5rem);
+    			-moz-transform: translateX(-3.5rem);
+    			-ms-transform: translateX(-3.5rem);
+    			-o-transform: translateX(-3.5rem);
+    			transform: translateX(-3.5rem);
+    			background: #01e7c3;
+    		}
+    		.swiper-item:first-child{
+    			top: 1.2rem; left: -15%; height: 7.2rem;
+    			-webkit-transform: rotateY(-55deg);
+    			-moz-transform: rotateY(-55deg);
+    			-ms-transform: rotateY(-55deg);
+    			-o-transform: rotateY(-55deg);
+    			transform: rotateY(-55deg);
+    			background: #124560;
+    		}
+    		.swiper-item:last-child{
+    			top: 1.2rem; right: -15%; height: 7.2rem;
+    			-webkit-transform: rotateY(55deg);
+    			-moz-transform: rotateY(55deg);
+    			-ms-transform: rotateY(55deg);
+    			-o-transform: rotateY(55deg);
+    			transform: rotateY(55deg);
+    			background: #464c32;
+    		}
+    </style>
+    <div class="top-container">
+    		<div class="swiper-content">
+	    		<div class="swiper-item"></div>
+	    		<div class="swiper-item swiper-previos"></div>
+	    		<div class="swiper-item swiper-active"></div>
+	    		<div class="swiper-item swiper-next"></div>
+	    		<div class="swiper-item"></div>
+	    </div>
+    </div>
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="../js/swiper-3.4.0.jquery.min.js"></script>
+</html>
