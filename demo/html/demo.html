@@ -1,81 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
-    <title>Circles</title>
-    <style>
-        #canvas .circle {
-            display: inline-block;
-            margin: 1em;
-        }
-        .circles-decimals {
-            font-size: .4em;
-        }
-    </style>
-</head>
-<body>
-<a href="http://www.htmleaf.com/html5/SVG/201512162908.html">API</a>
-<div id="canvas">
-    <div class="circle" id="circles-1"></div>
-    <div class="circle" id="circles-2"></div>
-    <div class="circle" id="circles-3"></div>
-    <div class="circle" id="circles-4"></div>
-    <div class="circle" id="circles-5"></div>
-    <!--<br />-->
-    <!--<button id="add_button">Value +10</button>-->
-    <!--<button id="substract_button">Value -10</button>-->
-    <!--<button id="add_width_button">Width +10</button>-->
-    <!--<button id="substract_width_button">Width -10</button>-->
-    <!--<button id="colors_button">Swap colors</button>-->
-</div>
-
-<script src="../js/circle.js"></script>
-<script>
-    //@ http://jsfromhell.com/array/shuffle [v1.0]
-//    function shuffle(o){ //v1.0
-//        for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
-//        return o;
-//    }
-    var colors = [
-        ['#D3B6C6', '#4B253A'], ['#FCE6A4', '#EFB917'], ['#BEE3F7', '#45AEEA'], ['#F8F9B6', '#D2D558'], ['#F4BCBF', '#D43A43']
-    ], circles = [];
-    for (var i = 1; i <= 5; i++) {
-        var child = document.getElementById('circles-' + i),
-//                percentage = 31.42 + (i * 9.84);
-                percentage = 100;
-        circles.push(Circles.create({
-            id:         child.id,
-            value:		percentage,
-            radius:     60,
-            width:      10,
-            colors:     colors[i - 1]
-        }));
-    }
-//    document.getElementById('add_button').onclick = function()
-//    {
-//        for(var i = 0, l = circles.length; i < l; i++)
-//            circles[i].update(circles[i]._value + 10, 250);
-//    };
-//    document.getElementById('substract_button').onclick = function()
-//    {
-//        for(var i = 0, l = circles.length; i < l; i++)
-//            circles[i].update(circles[i]._value - 10, 250);
-//    };
-//    document.getElementById('add_width_button').onclick = function()
-//    {
-//        for(var i = 0, l = circles.length; i < l; i++)
-//            circles[i].updateWidth(circles[i]._strokeWidth + 10);
-//    };
-//    document.getElementById('substract_width_button').onclick = function()
-//    {
-//        for(var i = 0, l = circles.length; i < l; i++)
-//            circles[i].updateWidth(circles[i]._strokeWidth - 10);
-//    };
-//    document.getElementById('colors_button').onclick = function()
-//    {
-//        colors = shuffle(colors);
-//        for(var i = 0, l = circles.length; i < l; i++)
-//            circles[i].updateColors(colors[i]);
-//    };
-</script>
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<style>
+			html{font-size: 62.5%;}
+		</style>
+		<style>
+			html,body{padding: 0; margin: 0;}
+			*{box-sizing: border-box;}
+			.box{width: 10rem; height: 10rem; border: 1px solid #ccc; margin: 0 auto;}
+			
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<div class="box"></div>
+	</body>
+	<!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>-->
+	<script type="text/javascript">
+		var box = document.getElementsByClassName('box')[0];
+		var width = document.defaultView.getComputedStyle(box, false).width;
+		document.write(width)
+	</script>
 </html>
