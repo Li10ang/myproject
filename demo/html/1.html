@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>css环绕</title>
+		<style>
+		html,body{
+			font-size: 20px;
+		}
+			.bb, .bb::before, .bb::after,.aa {
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+        }
+         
+        .bb {
+          width: 10rem;
+          height: 10rem;
+          margin: auto;
+          /*background: url("img/Button-White-Large.png") no-repeat 50%/70% rgba(0, 0, 0, 0.1);*/
+          color: #69ca62;
+          box-shadow: inset 0 0 0 1px rgba(105, 202, 98, 0.5);
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+        .aa{
+        		z-index: -1;
+        		margin: -0.25rem;
+	        box-shadow: inset 0 0 0 2px;
+	        -webkit-animation: clipMe 8s linear infinite;
+	        animation: clipMe 8s linear infinite;
+	        /*background-color: rgba(255, 0, 0, 0.3);*/
+        }
+        /*.bb::before, .bb::after {
+          content: '';
+          z-index: -1;
+          margin: -5%;
+          box-shadow: inset 0 0 0 2px;
+          -webkit-animation: clipMe 8s linear infinite;
+          animation: clipMe 8s linear infinite;
+        }
+        .bb::before {
+          animation-delay: -4s;
+        }
+        .bb:hover::after, .bb:hover::before {
+          background-color: rgba(255, 0, 0, 0.3);
+        }*/
+         
+         
+        /*@-moz-keyframes clipMe{
+	        0%, 100% {
+	            clip: rect(0px, 220.0px, 2px, 0px);
+	          }
+	          25% {
+	            clip: rect(0px, 2px, 220.0px, 0px);
+	          }
+	          50% {
+	            clip: rect(218.0px, 220.0px, 220.0px, 0px);
+	          }
+	          75% {
+	            clip: rect(0px, 220.0px, 220.0px, 218.0px);
+	          }
+        } 
+        @-ms-keyframes name{
+	        	0%, 100% {
+	            clip: rect(0px, 220.0px, 2px, 0px);
+	          }
+	          25% {
+	            clip: rect(0px, 2px, 220.0px, 0px);
+	          }
+	          50% {
+	            clip: rect(218.0px, 220.0px, 220.0px, 0px);
+	          }
+	          75% {
+	            clip: rect(0px, 220.0px, 220.0px, 218.0px);
+	          }
+        }
+        @-webkit-keyframes name{
+	        0%, 100% {
+	            clip: rect(0px, 220.0px, 2px, 0px);
+	          }
+	          25% {
+	            clip: rect(0px, 2px, 220.0px, 0px);
+	          }
+	          50% {
+	            clip: rect(218.0px, 220.0px, 220.0px, 0px);
+	          }
+	          75% {
+	            clip: rect(0px, 220.0px, 220.0px, 218.0px);
+	          }
+        }*/
+       @-moz-keyframes name{
+       	0%, 100% {
+	            clip: rect(0px, 10.5rem, 0.25rem, 0px);
+	          }
+	          25% {
+	            clip: rect(0px, 0.25rem, 10.5rem, 0px);
+	          }
+	          50% {
+	            clip: rect(10rem, 10.5rem, 10.5rem, 0px);
+	          }
+	          75% {
+	            clip: rect(0px, 10.5rem, 10.5rem, 10rem);
+	          }
+       }
+       @-ms-keyframes name{
+       	0%, 100% {
+	            clip: rect(0px, 10.5rem, 0.25rem, 0px);
+	          }
+	          25% {
+	            clip: rect(0px, 0.25rem, 10.5rem, 0px);
+	          }
+	          50% {
+	            clip: rect(10rem, 10.5rem, 10.5rem, 0px);
+	          }
+	          75% {
+	            clip: rect(0px, 10.5rem, 10.5rem, 10rem);
+	          }
+       }
+       @-webkit-keyframes name{
+       	0%, 100% {
+	            clip: rect(0px, 10.5rem, 0.25rem, 0px);
+	          }
+	          25% {
+	            clip: rect(0px, 0.25rem, 10.5rem, 0px);
+	          }
+	          50% {
+	            clip: rect(10rem, 10.5rem, 10.5rem, 0px);
+	          }
+	          75% {
+	            clip: rect(0px, 10.5rem, 10.5rem, 10rem);
+	          }
+       }
+        @keyframes clipMe {
+	          0%, 100% {
+	            clip: rect(0px, 10.5rem, 0.25rem, 0px);
+	          }
+	          25% {
+	            clip: rect(0px, 0.25rem, 10.5rem, 0px);
+	          }
+	          50% {
+	            clip: rect(10rem, 10.5rem, 10.5rem, 0px);
+	          }
+	          75% {
+	            clip: rect(0px, 10.5rem, 10.5rem, 10rem);
+	          }
+        } 
+       
+		</style>
+	</head>
+	<body>
+		<div class="bb"><div class="aa"></div></div>
+	</body>
+</html>

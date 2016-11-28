@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+</head>
+<body>
+	输入：<input type="text" name="" id="" value="" />
+	<div class="btn">按钮</div>
+	
+	
+	<style>
+		.box{
+			width: 100px;
+			height: 100px;
+			border: 1px solid #ccc;
+			margin-top: 20px;
+			position: relative;
+		}
+		.box::before{
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+		.box::before,.box::after{
+			content: '';
+			z-index: -1;
+			margin: -5%;
+			box-shadow: inset 0 0 0 2px;
+		}
+		.box::before{
+			animation: rect 1s ease;
+		}
+		@-moz-keyframes rect{
+			from{
+				clip: rect(-5px 20px 20px 0px);
+			}
+			50%{
+				clip: rect(80px 20px 120px 0px);
+			}
+			to{}
+		}
+		@-webkit-keyframes rect{
+			from{
+				clip: rect(-5px 20px 20px 0px);
+			}
+			to{}
+		}
+		@keyframes rect{
+			from{
+				clip: rect(-5px 20px 20px 0px);
+			}
+			to{}
+		}
+	</style>
+	<div class="box"></div>
+</body>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var flag;
+//		$('.btn').click(function(){
+//			if(flag){
+//				$('input[type="text"]').attr('readonly','readonly');
+//				flag = false;
+//			}else{
+//				$('input[type="text"]').removeAttr('readonly');
+//				flag = true;				
+//			}
+//		})
+		$('.btn').click(function(){
+			$('input').slideToggle('slow');
+		})
+	})
+</script>
+</html>
