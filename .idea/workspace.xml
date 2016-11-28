@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2953b423-febf-4028-893d-a2ba04bd241c" name="Default" comment="" />
+    <list default="true" id="2953b423-febf-4028-893d-a2ba04bd241c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/source/_posts/hello-world.md" afterPath="$PROJECT_DIR$/hexo/source/_posts/hello-world.md" />
+    </list>
     <ignored path="myproject.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -89,8 +91,8 @@
             <entry file="file://$PROJECT_DIR$/hexo/source/_posts/hello-world.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="450">
-                    <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+                  <first_editor relative-caret-position="660">
+                    <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
                     <folding />
                   </first_editor>
                   <second_editor />
@@ -195,6 +197,7 @@
         <option value="$PROJECT_DIR$/demo/html/swiper.html" />
         <option value="$PROJECT_DIR$/cssdemo/flex/flex.html" />
         <option value="$PROJECT_DIR$/demo/html/2.html" />
+        <option value="$PROJECT_DIR$/hexo/source/_posts/hello-world.md" />
       </list>
     </option>
   </component>
@@ -429,12 +432,12 @@
       <workItem from="1479087675959" duration="9703000" />
       <workItem from="1479189057686" duration="907000" />
       <workItem from="1479872153569" duration="1911000" />
-      <workItem from="1480300281272" duration="2973000" />
+      <workItem from="1480300281272" duration="3739000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62730000" />
+    <option name="totallyTimeSpent" value="63496000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1601" y="42" width="1519" height="1057" extended-state="0" />
@@ -685,8 +688,8 @@
     <entry file="file://$PROJECT_DIR$/hexo/source/_posts/hello-world.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="450">
-            <caret line="21" column="53" selection-start-line="21" selection-start-column="53" selection-end-line="21" selection-end-column="53" />
+          <first_editor relative-caret-position="660">
+            <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
             <folding />
           </first_editor>
           <second_editor />
