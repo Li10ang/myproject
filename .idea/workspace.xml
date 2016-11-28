@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2953b423-febf-4028-893d-a2ba04bd241c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/source/_posts/hello-world.md" afterPath="$PROJECT_DIR$/hexo/source/_posts/hello-world.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/source/_posts/The-first-Blog.md" afterPath="$PROJECT_DIR$/hexo/source/_posts/The-first-Blog.md" />
     </list>
     <ignored path="myproject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,13 +87,33 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="hello-world.md" pinned="false" current-in-tab="true">
+          <file leaf-file-name="hello-world.md" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/hexo/source/_posts/hello-world.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="SPLIT">
                   <first_editor relative-caret-position="660">
                     <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
                     <folding />
+                  </first_editor>
+                  <second_editor />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="The-first-Blog.md" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/hexo/source/_posts/The-first-Blog.md">
+              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+                <state split_layout="SPLIT">
+                  <first_editor relative-caret-position="885">
+                    <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+                    <folding>
+                      <marker date="1480318470000" expanded="true" signature="254:368" ph="..." />
+                      <marker date="1480318470000" expanded="true" signature="291:361" ph="..." />
+                      <marker date="1480318470000" expanded="true" signature="582:603" ph="{...}" />
+                      <marker date="1480318470000" expanded="true" signature="619:664" ph="{...}" />
+                      <marker date="1480318470000" expanded="true" signature="673:704" ph="{...}" />
+                      <marker date="1480318470000" expanded="true" signature="740:869" ph="{...}" />
+                    </folding>
                   </first_editor>
                   <second_editor />
                 </state>
@@ -115,16 +135,6 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="450">
                   <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="test.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/demo/json/test.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="115" selection-start-line="0" selection-start-column="115" selection-end-line="0" selection-end-column="115" />
                   <folding />
                 </state>
               </provider>
@@ -198,6 +208,7 @@
         <option value="$PROJECT_DIR$/cssdemo/flex/flex.html" />
         <option value="$PROJECT_DIR$/demo/html/2.html" />
         <option value="$PROJECT_DIR$/hexo/source/_posts/hello-world.md" />
+        <option value="$PROJECT_DIR$/hexo/source/_posts/The-first-Blog.md" />
       </list>
     </option>
   </component>
@@ -432,12 +443,12 @@
       <workItem from="1479087675959" duration="9703000" />
       <workItem from="1479189057686" duration="907000" />
       <workItem from="1479872153569" duration="1911000" />
-      <workItem from="1480300281272" duration="3739000" />
+      <workItem from="1480300281272" duration="3902000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63496000" />
+    <option name="totallyTimeSpent" value="63659000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1601" y="42" width="1519" height="1057" extended-state="0" />
@@ -478,11 +489,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/UPLOAD/static/css/default/img/login_logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -691,6 +697,24 @@
           <first_editor relative-caret-position="660">
             <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
             <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo/source/_posts/The-first-Blog.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="885">
+            <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+            <folding>
+              <marker date="1480318470000" expanded="true" signature="254:368" ph="..." />
+              <marker date="1480318470000" expanded="true" signature="291:361" ph="..." />
+              <marker date="1480318470000" expanded="true" signature="582:603" ph="{...}" />
+              <marker date="1480318470000" expanded="true" signature="619:664" ph="{...}" />
+              <marker date="1480318470000" expanded="true" signature="673:704" ph="{...}" />
+              <marker date="1480318470000" expanded="true" signature="740:869" ph="{...}" />
+            </folding>
           </first_editor>
           <second_editor />
         </state>
