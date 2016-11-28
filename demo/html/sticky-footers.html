@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>页脚固定</title>
+    <style>
+        body,html{text-align: center; margin: 0; padding: 0;}
+        footer{background: #000000; color: #fff; padding: 20px 0; }
+        .box{border: 1px solid #ccc; max-width: 400px; margin: 0 auto; height: 300px; overflow-y: scroll;}
+        .box2{display: flex; flex-flow: column;}
+        .box2 .main{flex: 1;}
+    </style>
+</head>
+<body>
+    <h1>页脚固定的问题</h1>
+    <h2>1.固定高度的解决方案</h2>
+    <div class="box1 box">
+        <div class="main">
+            <p>内容</p>
+            <p>There are moments in life when you miss someone so much that you just want to pick them from your dreams and hug them for real! Dream what you want to dream;go where you want to go;be what you want to be,because you have only one life and one chance to do all the things you want to do.
+                May you have enough happiness to make you sweet,enough trials to make you strong,enough sorrow to keep you human,enough hope to make you happy? Always put yourself in others’shoes.If you feel that it hurts you,it probably hurts the other person, too.
+                The happiest of people don’t necessarily have the best of everything;they just make the most of everything that comes along their way.Happiness lies for those who cry,those who hurt, those who have searched,and those who have tried,for only they can appreciate the importance of people</p>
+        </div>
+        <footer>
+            <p>© 2015 No rights reserved.</p>
+            <p>Made with ♥ by an anonymous pastafarian.</p>
+        </footer>
+    </div>
+<!--====================================-->
+    <h2>2.Flexbox解决方案</h2>
+    <div class="box2 box">
+        <div class="main">
+            <p>内容</p>
+            <p>There are moments in life when you miss someone so much that you just want to pick them from your dreams and hug them for real! Dream what you want to dream;go where you want to go;be what you want to be,because you have only one life and one chance to do all the things you want to do.
+                </p>
+        </div>
+        <footer>
+            <p>© 2015 No rights reserved.</p>
+            <p>Made with ♥ by an anonymous pastafarian.</p>
+        </footer>
+    </div>
+<!--=======================================-->
+</body>
+</html>
