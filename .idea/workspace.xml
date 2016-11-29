@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2953b423-febf-4028-893d-a2ba04bd241c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hexo/source/_posts/npm.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/source/_posts/hello-world.md" afterPath="$PROJECT_DIR$/hexo/source/_posts/hello-world.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/source/_posts/npm.md" afterPath="$PROJECT_DIR$/hexo/source/_posts/npm.md" />
     </list>
     <ignored path="myproject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -60,25 +58,12 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="npm.md" pinned="false" current-in-tab="false">
+          <file leaf-file-name="npm.md" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/hexo/source/_posts/npm.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="150">
-                    <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-                    <folding />
-                  </first_editor>
-                  <second_editor />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="hello-world.md" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/hexo/source/_posts/hello-world.md">
-              <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-                <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="180">
-                    <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+                  <first_editor relative-caret-position="255">
+                    <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
                     <folding />
                   </first_editor>
                   <second_editor />
@@ -221,8 +206,8 @@
         <option value="$PROJECT_DIR$/demo/html/canvas/canvas-one.html" />
         <option value="$PROJECT_DIR$/demo/html/canvas/canvas-two.html" />
         <option value="$PROJECT_DIR$/hexo/source/_posts/vue.md" />
-        <option value="$PROJECT_DIR$/hexo/source/_posts/npm.md" />
         <option value="$PROJECT_DIR$/hexo/source/_posts/hello-world.md" />
+        <option value="$PROJECT_DIR$/hexo/source/_posts/npm.md" />
       </list>
     </option>
   </component>
@@ -486,12 +471,12 @@
       <workItem from="1479189057686" duration="907000" />
       <workItem from="1479872153569" duration="1911000" />
       <workItem from="1480300281272" duration="11571000" />
-      <workItem from="1480386097832" duration="3219000" />
+      <workItem from="1480386097832" duration="4827000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74547000" />
+    <option name="totallyTimeSpent" value="76155000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1519" y="23" width="1519" height="1057" extended-state="0" />
@@ -755,22 +740,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hexo/source/_posts/npm.md">
+    <entry file="file://$PROJECT_DIR$/hexo/source/_posts/hello-world.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="150">
-            <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
+          <first_editor relative-caret-position="405">
+            <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
             <folding />
           </first_editor>
           <second_editor />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hexo/source/_posts/hello-world.md">
+    <entry file="file://$PROJECT_DIR$/hexo/source/_posts/npm.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="180">
-            <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <first_editor relative-caret-position="255">
+            <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
             <folding />
           </first_editor>
           <second_editor />
