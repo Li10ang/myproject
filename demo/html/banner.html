@@ -1,0 +1,688 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        /**
+ * Created by xiezhouzhen on 2016/09/12
+ */
+        /*************************基本样式--begin********************************/
+        html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 100%;
+            vertical-align: baseline;
+            background: transparent;
+        }
+
+        body {line-height: 1;}
+
+        ol, ul {list-style: none;}
+
+        blockquote, q {quotes: none;}
+
+        blockquote:before, blockquote:after,q:before, q:after {
+            content: "";
+            content: none;
+        }
+
+        /* remember to define focus styles! */
+        :focus {outline: 0;}
+
+        /* remember to highlight inserts somehow! */
+        ins {text-decoration: none;}
+
+        del {text-decoration: line-through;}
+
+        /* tables still need 'cellspacing="0"' in the markup */
+        table {border-collapse: collapse;border-spacing: 0;}
+        html, body{
+            min-width: 1200px;
+            font-size: 14px;
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+        }
+        ::selection { background: #50A4DE; color: #FFFFFF;}
+        ::-moz-selection { background: #50A4DE; color: #FFFFFF;}
+        a, img {
+            text-decoration: none;
+            color: #000;
+        }
+        .clearfix:before,.clearfix:after {
+            content: " ";display:table;
+        }
+
+        .clearfix:after {
+            clear:both;
+            overflow:hidden;
+        }
+        .clearfix {
+            zoom: 1;
+        }
+        .clear-both {
+            width: 0;
+            height: 0;
+            clear: both;
+        }
+        .nowrap {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .break-all {
+            white-space: normal;
+            word-break: break-all;
+            overflow: hidden;
+        }
+        .cannot-select{
+            -moz-user-select: none;/*火狐*/
+            -webkit-user-select: none;/*webkit浏览器*/
+            -ms-user-select: none;/*IE10*/
+            user-select: none;
+        }
+        .transparent-class {
+            filter:alpha(opacity=50);
+            -moz-opacity:0.5;
+            -khtml-opacity: 0.5;
+            opacity: 0.5;
+        }
+        /*满屏宽度*/
+        .full-width {
+            width: 100%;
+            overflow: hidden;
+        }
+        /*1200px的宽度，并左右居中*/
+        .normal-width {
+            margin: 0 auto;
+            width: 1200px;
+            overflow: hidden;
+        }
+        .orange-font {
+            color: #f5602a;
+        }
+        .light-grey {
+            color: #ccc;
+        }
+        /*************************基本样式--end********************************/
+        /*************************关于我们--Begin********************************/
+        .index-banner {
+            background: #3c4048;
+            height: 880px;
+        }
+        .banner-mask {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -960px;
+            height: 880px;
+            width: 1920px;
+            z-index: 99;
+        }
+        .banner-img {
+            position: absolute;
+            font-size: 0;
+            width: 100%;
+            height: 880px;
+            overflow: hidden;
+        }
+        .banner-img img {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -960px;
+        }
+        .banner-parts {
+            position: absolute;
+            width: 1200px;
+            top: 470px;
+            left: 50%;
+            margin-left: -600px;
+            z-index: 999;
+        }
+        .banner-parts a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+        }
+        .banner-parts a.banner-left-btn {
+            background-position: -62px -122px;
+            float: left;
+        }
+        .banner-parts a.banner-right-btn {
+            background-position: -116px -122px;
+            float: right;
+        }
+        .banner-parts div {
+            width: 100%;
+            text-align: center;
+            margin-top: 372px;
+        }
+        .banner-parts div span {
+            margin: 0 5px;
+            display: inline-block;
+            height: 5px;
+            width: 26px;
+            background: #787B83;
+        }
+        .banner-parts div span.banner-active {
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="index-banner full-width banner-box">
+        <div class="banner-img" id="banner-img">
+            <img src="http://cinemasmedia.cn/twcms/view/cinema_bb/img/index-banner01.jpg" width="1920" height="880" class="current-img">
+            <img src="http://cinemasmedia.cn/twcms/view/cinema_bb/img/index-banner02.jpg" width="1920" height="880">
+            <img src="http://cinemasmedia.cn/twcms/view/cinema_bb/img/index-banner03.jpg" width="1920" height="880">
+            <img src="http://cinemasmedia.cn/twcms/view/cinema_bb/img/index-banner04.jpg" width="1920" height="880">
+        </div>
+        <div class="banner-parts clearfix">
+            <a class="banner-left-btn" id="left-btn"></a>
+            <a class="banner-right-btn" id="right-btn"></a>
+            <div class="img-icon" id="img-icon">
+                <span class="banner-active"></span><span></span><span></span><span></span>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="http://cinemasmedia.cn/twcms/view/cinema_bb/js/jquery.1.11.3.min.js"></script>
+<script>
+    /**
+     * Created by 41609 on 2016/9/21.
+     */
+    function getCss(ele,attr){
+        if(attr=="scrollTop"){
+            return ele.scrollTop;
+        }
+        if(window.getComputedStyle)	return parseFloat(getComputedStyle(ele,null)[attr]);else return parseFloat(ele.currentStyle[attr]);
+    }
+    function setCss(ele,attr,val){
+        if(attr=="opacity"){
+            ele.style.opacity=val;
+            ele.style.filter="alpha(opacity="+val*100+")";
+        }else if(attr=="scrollTop"){
+            ele.scrollTop=val;
+        }else{ele.style[attr]=val+"px";}
+    }
+
+
+    function animate(ele,obj,duration,type,fnCallback){
+        function linear(times,begin,duration,change){
+            return change*times/duration+begin;
+        }
+        //
+        var customEffect = {
+            //当前时间*变化量/持续时间+初始值
+            zfLinear: function(t,b,c,d){ return c*t/d + b; },
+            Quad: {//二次方的缓动（t^2）；
+                easeIn: function(t,b,c,d){
+                    return c*(t/=d)*t + b;
+                },
+                easeOut: function(t,b,c,d){
+                    return -c *(t/=d)*(t-2) + b;
+                },
+                easeInOut: function(t,b,c,d){
+                    if ((t/=d/2) < 1) return c/2*t*t + b;
+                    return -c/2 * ((--t)*(t-2) - 1) + b;
+                }
+            },
+            Cubic: {//三次方的缓动（t^3）
+                easeIn: function(t,b,c,d){
+                    return c*(t/=d)*t*t + b;
+                },
+                easeOut: function(t,b,c,d){
+                    return c*((t=t/d-1)*t*t + 1) + b;
+                },
+                easeInOut: function(t,b,c,d){
+                    if ((t/=d/2) < 1) return c/2*t*t*t + b;
+                    return c/2*((t-=2)*t*t + 2) + b;
+                }
+            },
+            Quart: {//四次方的缓动（t^4）；
+                easeIn: function(t,b,c,d){
+                    return c*(t/=d)*t*t*t + b;
+                },
+                easeOut: function(t,b,c,d){
+                    return -c * ((t=t/d-1)*t*t*t - 1) + b;
+                },
+                easeInOut: function(t,b,c,d){
+                    if ((t/=d/2) < 1) return c/2*t*t*t*t + b;
+                    return -c/2 * ((t-=2)*t*t*t - 2) + b;
+                }
+            },
+            Quint: {//5次方的缓动（t^5）；
+                easeIn: function(t,b,c,d){
+                    return c*(t/=d)*t*t*t*t + b;
+                },
+                easeOut: function(t,b,c,d){
+                    return c*((t=t/d-1)*t*t*t*t + 1) + b;
+                },
+                easeInOut: function(t,b,c,d){
+                    if ((t/=d/2) < 1) return c/2*t*t*t*t*t + b;
+                    return c/2*((t-=2)*t*t*t*t + 2) + b;
+                }
+            },
+            Sine: {//正弦曲线的缓动（sin(t)）
+                easeIn: function(t,b,c,d){
+                    return -c * Math.cos(t/d * (Math.PI/2)) + c + b;
+                },
+                easeOut: function(t,b,c,d){
+                    return c * Math.sin(t/d * (Math.PI/2)) + b;
+                },
+                easeInOut: function(t,b,c,d){
+                    return -c/2 * (Math.cos(Math.PI*t/d) - 1) + b;
+                }
+            },
+            Expo: {//指数曲线的缓动（2^t）；
+                easeIn: function(t,b,c,d){
+                    return (t==0) ? b : c * Math.pow(2, 10 * (t/d - 1)) + b;
+                },
+                easeOut: function(t,b,c,d){
+                    return (t==d) ? b+c : c * (-Math.pow(2, -10 * t/d) + 1) + b;
+                },
+                easeInOut: function(t,b,c,d){
+                    if (t==0) return b;
+                    if (t==d) return b+c;
+                    if ((t/=d/2) < 1) return c/2 * Math.pow(2, 10 * (t - 1)) + b;
+                    return c/2 * (-Math.pow(2, -10 * --t) + 2) + b;
+                }
+            },
+            Circ: {//圆形曲线的缓动（sqrt(1-t^2)）；
+                easeIn: function(t,b,c,d){
+                    return -c * (Math.sqrt(1 - (t/=d)*t) - 1) + b;
+                },
+                easeOut: function(t,b,c,d){
+                    return c * Math.sqrt(1 - (t=t/d-1)*t) + b;
+                },
+                easeInOut: function(t,b,c,d){
+                    if ((t/=d/2) < 1) return -c/2 * (Math.sqrt(1 - t*t) - 1) + b;
+                    return c/2 * (Math.sqrt(1 - (t-=2)*t) + 1) + b;
+                }
+            },
+            Elastic: {//指数衰减的正弦曲线缓动；
+                easeIn: function(t,b,c,d,a,p){
+                    if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
+                    if (!a || a < Math.abs(c)) { a=c; var s=p/4; }
+                    else var s = p/(2*Math.PI) * Math.asin (c/a);
+                    return -(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
+                },
+                easeOut: function(t,b,c,d,a,p){
+                    if (t==0) return b;  if ((t/=d)==1) return b+c;  if (!p) p=d*.3;
+                    if (!a || a < Math.abs(c)) { a=c; var s=p/4; }
+                    else var s = p/(2*Math.PI) * Math.asin (c/a);
+                    return (a*Math.pow(2,-10*t) * Math.sin( (t*d-s)*(2*Math.PI)/p ) + c + b);
+                },
+                easeInOut: function(t,b,c,d,a,p){
+                    if (t==0) return b;  if ((t/=d/2)==2) return b+c;  if (!p) p=d*(.3*1.5);
+                    if (!a || a < Math.abs(c)) { a=c; var s=p/4; }
+                    else var s = p/(2*Math.PI) * Math.asin (c/a);
+                    if (t < 1) return -.5*(a*Math.pow(2,10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )) + b;
+                    return a*Math.pow(2,-10*(t-=1)) * Math.sin( (t*d-s)*(2*Math.PI)/p )*.5 + c + b;
+                }
+            },
+            Back: {//超过范围的三次方缓动（(s+1)*t^3 - s*t^2）；
+                easeIn: function(t,b,c,d,s){
+                    if (s == undefined) s = 1.70158;
+                    return c*(t/=d)*t*((s+1)*t - s) + b;
+                },
+                easeOut: function(t,b,c,d,s){
+                    if (s == undefined) s = 1.70158;
+                    return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
+                },
+                easeInOut: function(t,b,c,d,s){
+                    if (s == undefined) s = 1.70158;
+                    if ((t/=d/2) < 1) return c/2*(t*t*(((s*=(1.525))+1)*t - s)) + b;
+                    return c/2*((t-=2)*t*(((s*=(1.525))+1)*t + s) + 2) + b;
+                }
+            },
+            zfBounce: {//指数衰减的反弹缓动。
+                easeIn: function(t,b,c,d){
+                    return c - customEffect.zfBounce.easeOut(d-t, 0, c, d) + b;
+                },
+                easeOut: function(t,b,c,d){
+                    if ((t/=d) < (1/2.75)) {
+                        return c*(7.5625*t*t) + b;
+                    } else if (t < (2/2.75)) {
+                        return c*(7.5625*(t-=(1.5/2.75))*t + .75) + b;
+                    } else if (t < (2.5/2.75)) {
+                        return c*(7.5625*(t-=(2.25/2.75))*t + .9375) + b;
+                    } else {
+                        return c*(7.5625*(t-=(2.625/2.75))*t + .984375) + b;
+                    }
+                },
+                easeInOut: function(t,b,c,d){
+                    if (t < d/2) return customEffect.zfBounce.easeIn(t*2, 0, c, d) * .5 + b;
+                    else return customEffect.zfBounce.easeOut(t*2-d, 0, c, d) * .5 + c*.5 + b;
+                }
+            }
+        };
+        var fnEffect=customEffect.Expo.easeOut;//buffer
+        //0，buffer,1:linear,2:back,3,elastic,4:bounce
+        if(typeof type =="number"){
+            switch(type){
+                case 0:
+                    break;
+                case 1:
+                    fnEffect=customEffect.zfLinear;
+                    break;
+                case 2:
+                    fnEffect=customEffect.Back.easeOut;
+                    break;
+                case 3:
+                    fnEffect=customEffect.Elastic.easeOut;
+                    break;
+                case 4:
+                    fnEffect=customEffect.zfBounce.easeOut;
+                    break;
+
+            }
+
+        }else if(typeof type=="function"){
+            fnCallback=type;
+        }
+
+        var oBegin={};
+        var oChange={};
+        var flag=0;
+        for(var attr in obj){
+            var begin=getCss(ele,attr);
+            var change=obj[attr]-begin;
+            if(change){
+                oBegin[attr]=begin;//就是存下了width的begin，起始值
+                oChange[attr]=change;//这样就存了各个方向的运动的距离
+                flag++;
+            }
+        }
+        if(flag===0)return;
+        var times=0;
+        if(document.all)var interval=15;else 	 var interval=13;
+        window.clearTimeout(ele.timer);
+
+        _move();
+        function _move(){
+            times+=interval;
+            if(times>=duration){//到达目地的，做一个过界判断
+                for(var attr in oChange){
+                    var target=obj[attr];
+                    setCss(ele,attr,target);//时间到了，则让各方向停在目标值
+                }
+                ele.timer=null;
+                if(typeof fnCallback=="function"){
+                    fnCallback.call(ele);
+                }
+            }else{	//正常的运动
+                for(var attr in oChange){
+                    var change=oChange[attr];
+                    var begin=oBegin[attr];
+
+                    var val=fnEffect(times,begin,change,duration);
+                    setCss(ele,attr,val);
+                }
+                ele.timer=window.setTimeout(_move,interval);
+            }
+        }
+    }
+
+    var oMask=document.createElement('div');
+    oMask.id="banner-mask";
+    oMask.className = 'banner-mask';
+    var banner=document.getElementById('banner-img');
+    var oImgs = banner.getElementsByTagName('img');
+    banner.appendChild(oMask);
+    var leftBtn = document.getElementById('left-btn');
+    var rightBtn = document.getElementById('right-btn');
+    var eles=[];
+    for(var i=0;i<30;i++){
+        var oDiv=document.createElement('div');
+        oDiv.style.width=192+"px";
+        oDiv.style.height=293+"px";
+        oDiv.style.backgroundImage="url(http://cinemasmedia.cn/twcms/view/cinema_bb/img/index-banner02.jpg)";
+        oDiv.style.position="absolute";
+        oDiv.style.left=-300+"px";
+        if(Math.floor(i/10)==0){
+            oDiv.style.top=-200+'px';
+        }else if(Math.floor(i/10)==1){
+            oDiv.style.top=Math.floor(i/10)*293+'px';
+        }else if(Math.floor(i/10)==2){
+            oDiv.style.top=3*293+'px';
+        }
+        oDiv.l=i%10*192;
+        oDiv.t=Math.floor(i/10)*293;
+        oDiv.style.backgroundPosition="-"+i%10*192+"px  -"+Math.floor(i/10)*293+'px';
+        oMask.appendChild(oDiv);
+        eles.push(oDiv);
+    }
+
+    function fnEffect1(nImage){
+        nEffect=4;
+        for(var k=0,l=eles.length;k<l;k++){
+            var oDiv=eles[k];
+            oDiv.style.backgroundImage="url(http://cinemasmedia.cn/twcms/view/cinema_bb/img/index-banner0"+(nImage+1)+".jpg)";
+            with(oDiv.style){
+                left=oDiv.l+'px';
+                top=oDiv.t+"px";
+                width=0;
+                height=0;
+                opacity=0;
+            }
+        }
+    }
+
+
+    function fnEffect4(nImage){
+        nEffect=1;
+        for(var k=0,l=eles.length;k<l;k++){
+            var oDiv=eles[k];
+            oDiv.style.backgroundImage="url(http://cinemasmedia.cn/twcms/view/cinema_bb/img/index-banner0"+(nImage+1)+".jpg)";
+            with(oDiv.style){
+                left=oDiv.l+'px';
+                top=oDiv.t+"px";
+                width=192+'px';
+                height=0;
+                opacity=1;
+            }
+        }
+    }
+
+    function fnEffect5(nImage){
+        nEffect=4;
+        for(var k=0,l=eles.length;k<l;k++){
+            var oDiv=eles[k];
+            oDiv.style.backgroundImage="url(http://cinemasmedia.cn/twcms/view/cinema_bb/img/index-banner0"+(nImage+1)+".jpg)";
+            if(k%2){
+                with(oDiv.style){
+                    left=oDiv.l+'px';
+                    top=-880+"px";
+                    width=192+'px';
+                    height="106px";
+                    opacity=0;
+                }
+            }else{
+                with(oDiv.style){
+                    left=oDiv.l+'px';
+                    top=880+"px";
+                    width=192+'px';
+                    height="106px";
+                    opacity=0;
+                }
+
+            }
+        }
+    }
+    function fnEffect2(nImage){
+        nEffect=2;
+        for(var i=0;i<30;i++){//从左向右
+            var oDiv=eles[i];
+            oDiv.style.left=-600+"px";
+            oDiv.style.width="192px";
+            oDiv.style.height="293px";
+            if(Math.floor(i/10)==0){
+                oDiv.style.top=-200+'px';
+            }else if(Math.floor(i/10)==1){
+                oDiv.style.top=Math.floor(i/10)*293+'px';
+            }else if(Math.floor(i/10)==2){
+                oDiv.style.top=3*293+'px';
+            }
+            oDiv.style.opacity=0;
+            //注意还要给小DIV们换背景
+            oDiv.style.backgroundImage="url(http://cinemasmedia.cn/twcms/view/cinema_bb/img/index-banner0"+(nImage+1)+".jpg)";
+        }
+
+    }
+
+    function fnEffect3(nImage){
+        nEffect=2;
+        for(var k=0;k<30;k++){
+            var oDiv=eles[k];
+            oDiv.style.backgroundImage="http://cinemasmedia.cn/twcms/view/cinema_bb/img/index-banner0"+(nImage+1)+".jpg)";
+            oDiv.style.opacity=0;
+            if(Math.floor(k/10)==0){
+                oDiv.style.top=-200+'px';
+                oDiv.style.left=1920+198+'px';
+            }else if(Math.floor(k/10)==1){
+                oDiv.style.top=oDiv.t+'px';
+                oDiv.style.left=1920+198+'px';
+            }else if(Math.floor(k/10)==2){
+                oDiv.style.top=3*293+'px';
+                oDiv.style.left=1920+198+'px';
+            }
+        }
+
+    }
+
+
+
+    var objEffect={fn1:fnEffect1,fn2:fnEffect2,fn3:fnEffect3,fn4:fnEffect4,fn5:fnEffect5}
+    var nEffect=2;
+    var current=0;//当前显示的img，
+    var zIndex=1;//保证图片在最上边的，用来改变图片的zIndex值的变量。初始的
+    function init(nImage){//在执行新的动画之前，做的初始化。就是把30个小div藏起来。
+        zIndex+=1;
+        if (zIndex >= 99) {
+            zIndex = 1;
+        }
+        oImgs.item(current).style.zIndex=zIndex;
+        if(nImage>current) objEffect.fn2(nImage);else	objEffect.fn3(nImage);
+        current=nImage;
+    }
+    oImgs.item(current).style.zIndex=++zIndex;
+
+    var group=document.getElementById('img-icon').getElementsByTagName('span');
+    var flying=true;
+
+    for(var i=0;i<group.length;i++){
+        group.item(i).nIndex=i;
+        group.item(i).onclick=function(){
+            if(this.nIndex==current) return;
+            if(!flying)return;
+            var _nIndex = this.nIndex;
+            group.item(current).className="";
+            this.className="banner-active";
+            clearInterval(autoTimer);
+            clearTimeout(clickTimer);
+            init(this.nIndex);
+            flying=false;
+            setGroup();
+            clickTimer=window.setTimeout(function(){
+                autoMove(_nIndex);
+            },3000);
+        }
+    }
+
+    var nIndex=0;
+    var autoTimer=null;
+    var clickTimer = null;
+    var imgLen = oImgs.length;
+    group.item(current).className="banner-active";
+    function moveImg(_index){
+        //autoTimer=window.setTimeout(arguments.callee,5000);
+        var nImage=_index;
+        zIndex+=1;
+        if (zIndex >= 996) {
+            zIndex = 1;
+        }
+        oImgs.item(current).style.zIndex=zIndex;
+        group.item(current).className="";
+        group.item(_index).className="banner-active";
+        objEffect["fn"+Math.ceil(Math.random()*5)](nImage);
+        current=nImage;
+        flying=false;
+        setGroup();
+    };
+
+    function setGroup(){
+        for(var i=0;i<30;i++){
+            (function(i){//这个闭包必须有，没有ele变量会被覆盖
+                var ele=eles[i];
+                function fn() {animate(ele,{left:ele.l,top:ele.t,opacity:1,width:192,height:293},600,nEffect,function(){if(this==oDiv&&(!this.timer))flying=true;});}
+                if(nEffect==4){window.setTimeout(fn);
+
+                }else{
+                    window.setTimeout(fn,i%10*100+100);
+                }
+            })(i);
+
+        }
+    }
+
+    function autoMove(num){
+        autoTimer = window.setInterval(function(){
+            num++;
+            if(num>=oImgs.length){
+                num=0;
+            }
+            moveImg(num);
+        },3000);
+    }
+    autoMove(nIndex);
+
+    leftBtn.onclick = function(){
+        var _direction = "left";
+        btnClick(_direction);
+    };
+    rightBtn.onclick = function(){
+        var _direction = "right";
+        btnClick(_direction);
+    };
+
+    function btnClick(direction) {
+        //if(!flying) return;
+        clearTimeout(clickTimer);
+        clearInterval(autoTimer);
+        var _index = null;
+        for(var i=0;i<group.length;i++){
+
+            var _class = group.item(i).className;
+            if(_class == "banner-active") {
+                _index = i;
+                break;
+            }
+        }
+        if(direction == "left"){
+            _index-=1;
+            (_index<0) && (_index = (imgLen-1));
+        }else if(direction == "right"){
+            _index+=1;
+            (_index>=imgLen) && (_index=0);
+        }
+        group.item(current).className="";
+        group.item(_index).className="banner-active";
+        init(_index);
+        //flying=false;
+        setGroup();
+
+        clickTimer = window.setTimeout(function(){
+            autoMove(_index);
+        },3000);
+    }
+</script>
+</html>
