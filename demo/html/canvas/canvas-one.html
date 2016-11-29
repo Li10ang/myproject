@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas动画系列－one</title>
+</head>
+<body>
+    <canvas id='mycanvas' width="800" height="800">
+        您的浏览器不支持canvas
+    </canvas>
+    <script>
+        var cc=document.getElementById("mycanvas");
+        if(cc.getContext){
+//            绘制矩形
+            var cxt=cc.getContext("2d");
+            cxt.strokeRect(0,0,100,100);
+            cxt.fillRect(40,40,50,50);
+            cxt.clearRect(50,50,30,30);
+//            绘制路径
+//            开始路径 beginPath();
+//            闭合路径 closePath();
+//            闭合当前与开始点 stroke();
+//            填充路径 fill();
+//            移动笔触 moveTo(x,y);
+//            绘制一条从当前到制定位置的直线 lineTo(x,y);
+            cxt.beginPath();
+            cxt.moveTo(150,150);
+            cxt.lineTo(150,250);
+            cxt.lineTo(300,250);
+            cxt.stroke();
+            cxt.closePath();
+
+            cxt.beginPath();
+            cxt.moveTo(400,400);
+            cxt.lineTo(400,500);
+            cxt.lineTo(500,500);
+            cxt.fill();
+            cxt.closePath();
+
+//            绘制圆弧或圆
+//            arc(x, y, radius, startAngle, endAngle, anticlockwise);
+//            画一个以（x,y）为圆心的以radius为半径的圆弧（圆），从startAngle开始到endAngle结束，参数anticlockwise 为一个布尔值。为true时，是逆时针方向，否则顺时针方向。
+            cxt.beginPath();
+            cxt.arc(70, 70, 50, 0, Math.PI/2, true);
+            cxt.stroke();
+
+            cxt.beginPath();
+            cxt.arc(180, 70, 50, 0, Math.PI/2, false);
+            cxt.stroke();
+
+            cxt.beginPath();
+            cxt.arc(300, 70, 50, 0, Math.PI/2, true);
+            cxt.fill();
+
+            cxt.beginPath();
+            cxt.arc(400, 70, 50, 0, Math.PI/2, false);
+            cxt.fill();
+
+//            贝塞尔曲线
+//            绘制二次贝塞尔曲线quadraticCurveTo(cp1x, cp1y, x, y);
+//            x,y为结束点，cp1x, cp1y为控制点
+//
+//            绘制三次贝塞尔曲线bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
+//            x,y为结束点，cp1x,cp1y为控制点一,cp2x,cp2y为控制点二；
+//
+//            rect(x, y, width, height)
+//            绘制一个左上角坐标（x, y）,宽高为width以及height的矩形
+
+//            Path2D在较新的浏览器中使用，用来缓存或者纪录绘画命令
+            var path = new Path2D();
+            path.rect(120, 120, 50, 50);
+            cxt.stroke(path);
+
+            var p = new Path2D('M10 10 h 80 v 80 h -80 Z');
+            p.rect(150, 150, 50, 50);
+            cxt.stroke(p);
+
+        }
+    </script>
+</body>
+</html>
