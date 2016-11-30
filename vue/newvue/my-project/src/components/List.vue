@@ -36,12 +36,14 @@
 		line-height: 0.5rem;
 		font-size: 16px;
 		color: #333;
+		text-align: center;
 	}
 	.lp_li_price {
 		height: 0.5rem;
 		line-height: 0.5rem;
 		font-size: 16px;
 		color: #fb3b3b;
+		text-align: center;
 	}
 </style>
 

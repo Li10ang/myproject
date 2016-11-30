@@ -10,6 +10,7 @@ Vue.use(VueRouter)
 // 导入 pages 下的 Home.vue 
 import Home from './pages/Home'
 import Detail from './pages/Detail'
+import Account from './pages/Account'
 
 // 定义路由配置
 const routes = [
@@ -20,6 +21,10 @@ const routes = [
 	{
 		path: '/detail',
 		component: Detail
+	}
+	,{
+		path: '/detail/account',
+		component: Account
 	}
 ]
 

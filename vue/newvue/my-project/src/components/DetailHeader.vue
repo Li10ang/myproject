@@ -39,12 +39,13 @@
 		background-color: #fff;
 	}
 	.header_btn {
-		width: 0.5rem;
+		width: 1rem;
 		height: 100%;
 		background-repeat: no-repeat;
 	}
 	.header_btn_back {
 		line-height: 0.86rem;
+		font-size: 15px;
 	}
 	.header_cont {
 		text-align: center;
