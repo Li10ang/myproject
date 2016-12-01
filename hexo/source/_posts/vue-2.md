@@ -1,5 +1,5 @@
 ---
-title: vue-2
+title: vue-第二天
 date: 2016-12-01T11:11:11.000Z
 tags:
   - vue
