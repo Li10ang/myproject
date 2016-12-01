@@ -15,7 +15,7 @@ Vue.js的目标是通过尽可能简单的API实现响应的数据绑定和组�
 
 <!--more-->
 
-###声明式渲染
+### 声明式渲染
 ```html
 <div id="app">
     {{ message }}
@@ -48,7 +48,7 @@ var app2 = new Vue({
 ```
 这里的v-bind属性被称为指令。指令带有前缀 v- ，以表示它们是Vue.js提供的特殊属性。这个指令的简单含义是：将这个元素节点的title属性和Vue实例的message属性绑定到一起。
 
-###条件与循环
+### 条件与循环
 ```html
 <div id="app-3">
     <p v-if="seen">Now you see me</p>
@@ -63,7 +63,7 @@ var app3 = new Vue({
 })
 ```
 如果在控制台设置app3.seen = false,你会发现'Now you see me'消失了～
-####使用v-for指令循环列表
+#### 使用v-for指令循环列表
 ```html
 <div id="app-4">
     <ol>
@@ -87,7 +87,7 @@ var app4 = new Vue({
 })
 ```
 在控制台里输入：app4.todos.push({ text: 'New item' })。列表中就多了一栏新内容。
-###处理用户输入
+### 处理用户输入
 使用v-on绑定监听事件用于调用Vue实例中定义的方法：
 ```html
 <div id="app-5">
@@ -124,7 +124,7 @@ var app6 = new Vue({
 })
 ```
 
-###用组件构建（应用）？？？ .－.
+### 用组件构建（应用）？？？ .－.
 用独立可复用的小组件来构建大型应用。
 在Vue里，一个组件实质上是一个拥有预定义选项的一个Vue实例：
 ```js
