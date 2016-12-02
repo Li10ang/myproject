@@ -1,5 +1,5 @@
 ---
-title: vue-计算属性
+title: 怎么看这14道题～
 date: 2016-12-01T17:52:11.000Z
 tags:
   - javascript
