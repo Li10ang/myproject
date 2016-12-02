@@ -13,9 +13,7 @@ tags:
   return typeof arguments;
 })();
 ```
-
 <!--more-->
-
 <ul class="answers" style="list-style: none;">
     <li>
        <input type="radio" name="question-1" id="answer-1-1"><label for="answer-1-1" style="margin-left: 10px">object</label>
@@ -36,7 +34,6 @@ tags:
 var f = function g(){ return 23; };
 typeof g();
 ```
-
 <ul class="answers" style="list-style: none;">
         <li>
           <input type="radio" name="question-2" id="answer-2-1"><label for="answer-2-1" style="margin-left: 10px">number</label>
@@ -59,7 +56,6 @@ typeof g();
   return x;
 })(1);
 ```
-
 <ul class="answers" style="list-style: none;">
         <li>
           <input type="radio" name="question-3" id="answer-3-1"><label for="answer-3-1" style="margin-left: 10px">1</label>
