@@ -9,9 +9,9 @@ tags:
 1.
 
 ```js
-    (function(){
-      return typeof arguments;
-    })();
+(function(){
+  return typeof arguments;
+})();
 ```
 
 <ul class="answers">
@@ -35,8 +35,8 @@ tags:
 2.
 
 ```js
-    var f = function g(){ return 23; };
-    typeof g();
+var f = function g(){ return 23; };
+typeof g();
 ```
 
 <ul class="answers">
@@ -60,10 +60,10 @@ tags:
 3.
 
 ```js
-    (function(x){
-        delete x;
-        return x;
-      })(1);
+(function(x){
+  delete x;
+  return x;
+})(1);
 ```
 
 <ul class="answers">
@@ -87,8 +87,8 @@ tags:
       
 4.
 ```js
-    var y = 1, x = y = typeof x;
-    x;
+var y = 1, x = y = typeof x;
+x;
 ```
 <ul class="answers">
         <li>
@@ -111,9 +111,9 @@ tags:
       
 5.
 ```js
-    (function f(f){
-       return typeof f();
-    })(function(){ return 1; });
+(function f(f){
+  return typeof f();
+})(function(){ return 1; });
 ```
 <ul class="answers">
         <li>
@@ -136,13 +136,13 @@ tags:
       
 6.
 ```js
-    var foo = {
-       bar: function() { return this.baz; },
-       baz: 1
-    };
-    (function(){
-       return typeof arguments[0]();
-    })(foo.bar);
+var foo = {
+  bar: function() { return this.baz; },
+  baz: 1
+};
+(function(){
+  return typeof arguments[0]();
+})(foo.bar);
 ```
 <ul class="answers">
         <li>
@@ -165,11 +165,11 @@ tags:
 
 7.
 ```js
-    var foo = {
-        bar: function(){ return this.baz; },
-        baz: 1
-      }
-      typeof (f = foo.bar)();
+var foo = {
+  bar: function(){ return this.baz; },
+  baz: 1
+}
+typeof (f = foo.bar)();
 ```
 <ul class="answers">
         <li>
@@ -192,8 +192,8 @@ tags:
 8.
 
 ```js
-    var f = (function f(){ return "1"; }, function g(){ return 2; })();
-      typeof f;
+var f = (function f(){ return "1"; }, function g(){ return 2; })();
+typeof f;
 ```
 <ul class="answers">
         <li>
@@ -216,10 +216,10 @@ tags:
 9.
 
 ```js
-  var x = 1;
-  if (function f(){}) {
-    x += typeof f;
-  }
+var x = 1;
+if (function f(){}) {
+  x += typeof f;
+}
   x;
 ```
 <ul class="answers">
@@ -243,8 +243,8 @@ tags:
 10.
 
 ```js
-    var x = [typeof x, typeof y][1];
-    typeof typeof x;
+var x = [typeof x, typeof y][1];
+typeof typeof x;
 ```
 <ul class="answers">
         <li>
@@ -268,9 +268,9 @@ tags:
 11.
 
 ```js
-    (function(foo){
-        return typeof foo.bar;
-    })({ foo: { bar: 1 } });
+(function(foo){
+  return typeof foo.bar;
+})({ foo: { bar: 1 } });
 ```
 <ul class="answers">
         <li>
@@ -294,11 +294,11 @@ tags:
 12.
 
 ```js
-    (function f(){
-        function f(){ return 1; }
-        return f();
-        function f(){ return 2; }
-     })();
+(function f(){
+  function f(){ return 1; }
+  return f();
+  function f(){ return 2; }
+})();
 ```
 <ul class="answers">
         <li>
@@ -321,8 +321,8 @@ tags:
       
 13.
 ```js
-    function f(){ return f; }
-    new f() instanceof f;
+function f(){ return f; }
+new f() instanceof f;
 ```
 <ul class="answers">
         <li>
@@ -337,7 +337,7 @@ tags:
       
 14.
 ```js
-    with (function(x, undefined){}) length;
+with (function(x, undefined){}) length;
 ```
 <ul class="answers">
         <li>
