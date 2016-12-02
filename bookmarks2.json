@@ -99,7 +99,22 @@
             {"name":"学习",
               "items":[
                 {"url":"http://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/","title":"廖雪峰的js教程"},
-                {"url":"https://zhuanlan.zhihu.com/p/23412169","title":"是真的吗"}
+                {"url":"https://zhuanlan.zhihu.com/p/23412169","title":"是真的吗"},
+                {"url":"https://cn.udacity.com/?utm_source=ruanyf&utm_medium=referral&utm_campaign=ruanyf1st","title":"优达学院"}
+              ]
+            },
+            {"name":"大牛的窝",
+              "items":[
+                {"url":"http://www.liaoxuefeng.com/","title":"廖雪峰"},
+                {"url":"http://www.ruanyifeng.com/blog/archives.html","title":"阮一峰"}
+              ]
+            },
+            {"name":"前端外文站",
+              "items":[
+                {"url":"https://www.sitepoint.com/javascript/","title":"sitepoint"},
+                {"url":"http://maxdesign.com.au/","title":"maxdesign"},
+                {"url":"https://www.smashingmagazine.com/","title":"smashing"},
+                {"url":"https://css-tricks.com/","title":"CSS-TRICKS"}
               ]
             }
         ]

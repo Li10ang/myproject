@@ -6,6 +6,7 @@
 				<h1>I am a title.</h1>
 				<a>这是：{{ author }}</a>
 			</div>
+			<p>Reversed message: {{ reverseMessage }}</p>
 		</div>
 	</template>
 	<style scoped>
@@ -28,6 +29,13 @@
 				return {
 					author: "haha"
 				}
+			},
+			computed: {
+			    // a computed getter
+			    reversedMessage: function () {
+			      // `this` points to the vm instance
+			      return this.author.split('').reverse().join('')
+			    }
 			}
 		}
 	</script>  
