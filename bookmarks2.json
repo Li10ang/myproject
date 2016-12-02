@@ -106,7 +106,8 @@
             {"name":"大牛的窝",
               "items":[
                 {"url":"http://www.liaoxuefeng.com/","title":"廖雪峰"},
-                {"url":"http://www.ruanyifeng.com/blog/archives.html","title":"阮一峰"}
+                {"url":"http://www.ruanyifeng.com/blog/archives.html","title":"阮一峰"},
+                {"url":"http://www.zhangxinxu.com/wordpress/category/js/","title":"张鑫旭"}
               ]
             },
             {"name":"前端外文站",
