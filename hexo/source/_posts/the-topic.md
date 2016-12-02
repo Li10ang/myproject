@@ -14,6 +14,8 @@ tags:
 })();
 ```
 
+<!--more-->
+
 <ul class="answers">
     <li>
        <input type="radio" name="question-1" id="answer-1-1">
