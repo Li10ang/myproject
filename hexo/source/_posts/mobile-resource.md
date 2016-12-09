@@ -17,6 +17,7 @@ tags:
 ```html
 <meta name="format-detection" content="telephone=no" />
 ```
+<!--more-->
 ### 忽略安卓平台中对邮箱地址的识别
 ```html
 <meta name="format-detection" content="email=no" />
