@@ -10,6 +10,8 @@ tags:
 
  在各移动端浏览器中经常会出现这种页面高度100%的渲染错误，页面低端和系统自带的导航条重合了，高度的不正确我们需要重置修正它，通过javascript代码重置掉：
  
+ <!--more-->
+ 
  ```js
  document.documentElement.style.height = window.innerHeight + 'px';
  ```
