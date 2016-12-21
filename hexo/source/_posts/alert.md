@@ -6,6 +6,7 @@ tags:
 ---
 
 在移动端使用原生的alert/confirm总是会显示网址(url)，界面看起来很丑，搜索半天也找不到解决办法，在绝望的时候看到一篇文章写的很好，在此感谢http://ifindever.com/archives/260.html，本文只是在此基础上做些改进，还希望能帮助到大家。
+<!--more-->
 ```js
 /*remove url of alert/confirm*/  
 var wAlert = window.alert;  
