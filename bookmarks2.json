@@ -35,7 +35,8 @@
                     {"url":"http://ghmagical.com/","title":"大神的前端总结"},
                     {"url":"https://alinode.aliyun.com/","title":"基于node应用服务解决方案"},
                     {"url":"https://segmentfault.com/a/1190000006831597#articleHeader6","title":"Hexo Yilia主题"},
-                    {"url":"http://www.qdfuns.com/tools.php","title":"前端工具库"}
+                    {"url":"http://www.qdfuns.com/tools.php","title":"前端工具库"},
+                    {"url":"http://ce.baidu.com/index/yunguance?addsite&url=https%3A%2F%2Fyaoliang2016.cn#/my-sites","title":"网站监测"}
             ]},
             {"name":"文档",
               "items":[
@@ -118,6 +119,12 @@
                 {"url":"http://maxdesign.com.au/","title":"maxdesign"},
                 {"url":"https://www.smashingmagazine.com/","title":"smashing"},
                 {"url":"https://css-tricks.com/","title":"CSS-TRICKS"}
+              ]
+            },
+            {"name":"设计",
+              "items":[
+                {"url":"http://www.myfonts.com/WhatTheFont/","title":"查找字体"},
+                {"url":"http://www.qiuziti.com/","title":"求字体"}
               ]
             }
         ]
