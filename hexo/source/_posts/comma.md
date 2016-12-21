@@ -15,6 +15,7 @@ function addComma(num){
 		return r>0?num.slice(0,r)+","+num.slice(r, len).match(/\d{3}/g).join(","):num.slice(r, len).match(/\d{3}/g).join(",");
 	}
 ```
+<!--more-->
 上面的写法解决了部分的需求，但是在包含小数的时候就不可以那样用了。
 下面是添加了小数的写法：
 ```js

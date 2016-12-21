@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2953b423-febf-4028-893d-a2ba04bd241c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hexo/source/_posts/alert.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hexo/source/_posts/comma.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookmarks2.json" afterPath="$PROJECT_DIR$/bookmarks2.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hexo/source/_posts/comma.md" afterPath="$PROJECT_DIR$/hexo/source/_posts/comma.md" />
     </list>
     <ignored path="myproject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -261,19 +258,19 @@
             <entry file="file://$PROJECT_DIR$/hexo/source/_posts/comma.md">
               <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
                 <state split_layout="SPLIT">
-                  <first_editor relative-caret-position="585">
-                    <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+                  <first_editor relative-caret-position="270">
+                    <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
                     <folding>
-                      <marker date="1482303747000" expanded="true" signature="137:390" ph="{...}" />
-                      <marker date="1482303747000" expanded="true" signature="471:1062" ph="{...}" />
-                      <marker date="1482303747000" expanded="true" signature="531:767" ph="{...}" />
-                      <marker date="1482303747000" expanded="true" signature="568:708" ph="{...}" />
-                      <marker date="1482303747000" expanded="true" signature="603:649" ph="{...}" />
-                      <marker date="1482303747000" expanded="true" signature="653:693" ph="{...}" />
-                      <marker date="1482303747000" expanded="true" signature="773:1060" ph="{...}" />
-                      <marker date="1482303747000" expanded="true" signature="818:969" ph="{...}" />
-                      <marker date="1482303747000" expanded="true" signature="853:899" ph="{...}" />
-                      <marker date="1482303747000" expanded="true" signature="903:954" ph="{...}" />
+                      <marker date="1482315671000" expanded="true" signature="137:390" ph="{...}" />
+                      <marker date="1482315671000" expanded="true" signature="483:1074" ph="{...}" />
+                      <marker date="1482315671000" expanded="true" signature="543:779" ph="{...}" />
+                      <marker date="1482315671000" expanded="true" signature="580:720" ph="{...}" />
+                      <marker date="1482315671000" expanded="true" signature="615:661" ph="{...}" />
+                      <marker date="1482315671000" expanded="true" signature="665:705" ph="{...}" />
+                      <marker date="1482315671000" expanded="true" signature="785:1072" ph="{...}" />
+                      <marker date="1482315671000" expanded="true" signature="830:981" ph="{...}" />
+                      <marker date="1482315671000" expanded="true" signature="865:911" ph="{...}" />
+                      <marker date="1482315671000" expanded="true" signature="915:966" ph="{...}" />
                     </folding>
                   </first_editor>
                   <second_editor />
@@ -688,12 +685,12 @@
       <workItem from="1482113766003" duration="6275000" />
       <workItem from="1482199933906" duration="613000" />
       <workItem from="1482205564009" duration="2000" />
-      <workItem from="1482303276948" duration="3383000" />
+      <workItem from="1482303276948" duration="3394000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146216000" />
+    <option name="totallyTimeSpent" value="146227000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1643" y="23" width="1641" height="1057" extended-state="0" />
@@ -1199,19 +1196,19 @@
     <entry file="file://$PROJECT_DIR$/hexo/source/_posts/comma.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="585">
-            <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
+          <first_editor relative-caret-position="270">
+            <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
             <folding>
-              <marker date="1482303747000" expanded="true" signature="137:390" ph="{...}" />
-              <marker date="1482303747000" expanded="true" signature="471:1062" ph="{...}" />
-              <marker date="1482303747000" expanded="true" signature="531:767" ph="{...}" />
-              <marker date="1482303747000" expanded="true" signature="568:708" ph="{...}" />
-              <marker date="1482303747000" expanded="true" signature="603:649" ph="{...}" />
-              <marker date="1482303747000" expanded="true" signature="653:693" ph="{...}" />
-              <marker date="1482303747000" expanded="true" signature="773:1060" ph="{...}" />
-              <marker date="1482303747000" expanded="true" signature="818:969" ph="{...}" />
-              <marker date="1482303747000" expanded="true" signature="853:899" ph="{...}" />
-              <marker date="1482303747000" expanded="true" signature="903:954" ph="{...}" />
+              <marker date="1482315671000" expanded="true" signature="137:390" ph="{...}" />
+              <marker date="1482315671000" expanded="true" signature="483:1074" ph="{...}" />
+              <marker date="1482315671000" expanded="true" signature="543:779" ph="{...}" />
+              <marker date="1482315671000" expanded="true" signature="580:720" ph="{...}" />
+              <marker date="1482315671000" expanded="true" signature="615:661" ph="{...}" />
+              <marker date="1482315671000" expanded="true" signature="665:705" ph="{...}" />
+              <marker date="1482315671000" expanded="true" signature="785:1072" ph="{...}" />
+              <marker date="1482315671000" expanded="true" signature="830:981" ph="{...}" />
+              <marker date="1482315671000" expanded="true" signature="865:911" ph="{...}" />
+              <marker date="1482315671000" expanded="true" signature="915:966" ph="{...}" />
             </folding>
           </first_editor>
           <second_editor />
