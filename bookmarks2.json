@@ -2,9 +2,10 @@
         [
             {"name":"公司",
             "items":[
-                    {"url":"http://www.weizhsihu.com/","title":"官网"},
-                    {"url":"http://release.weizhishu.com/","title":"测试"},
-                    {"url":"https://www.baidu.com/","title":"百度"}
+                    {"url":"http://www.weizhsihu.com/","title":"微指数官网"},
+                    {"url":"http://release.weizhishu.com/","title":"微指数测试"},
+                    {"url":"https://www.baidu.com/","title":"百度"},
+                    {"url":"https://www.leangoo.com/kanban/board/go/1320375","title":"leangoo"}
             ]},
             {"name":"我的",
             "items":[
@@ -14,7 +15,8 @@
                     {"url":"https://mp.weixin.qq.com/wiki","title":"微信开发文档"},
                     {"url":"https://li10ang.github.io/liang.github.com/","title":"github"},
                     {"url":"http://naotu.baidu.com/home","title":"百度脑图"},
-                    {"url":"http://www.swiper.com.cn/","title":"移动端滑动"}
+                    {"url":"http://www.swiper.com.cn/","title":"移动端滑动"},
+                    {"url":"http://fff.cmiscm.com/#!/main","title":"H5动态效果的展示"}
             ]},
             {"name":"写demo",
               "items":[
@@ -36,7 +38,8 @@
                     {"url":"https://alinode.aliyun.com/","title":"基于node应用服务解决方案"},
                     {"url":"https://segmentfault.com/a/1190000006831597#articleHeader6","title":"Hexo Yilia主题"},
                     {"url":"http://www.qdfuns.com/tools.php","title":"前端工具库"},
-                    {"url":"http://ce.baidu.com/index/yunguance?addsite&url=https%3A%2F%2Fyaoliang2016.cn#/my-sites","title":"网站监测"}
+                    {"url":"http://ce.baidu.com/index/yunguance?addsite&url=https%3A%2F%2Fyaoliang2016.cn#/my-sites","title":"网站监测"},
+                    {"url":"http://www.focusky.com.cn/","title":"PPT制作神器"}
             ]},
             {"name":"文档",
               "items":[
@@ -125,6 +128,11 @@
               "items":[
                 {"url":"http://www.myfonts.com/WhatTheFont/","title":"查找字体"},
                 {"url":"http://www.qiuziti.com/","title":"求字体"}
+              ]
+            },
+            {"name":"AR",
+              "items":[
+                {"url":"https://github.com/GeekLiB","title":"AR开发Github"}
               ]
             }
         ]
