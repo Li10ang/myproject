@@ -18,7 +18,8 @@
             { "url": "http://naotu.baidu.com/home", "title": "百度脑图" },
             { "url": "http://www.swiper.com.cn/", "title": "移动端滑动" },
             { "url": "http://fff.cmiscm.com/#!/main", "title": "H5动态效果的展示" },
-            { "url": "http://www.jianshu.com/p/6cb49271cd2a", "title": "前端资源大汇总" }
+            { "url": "http://www.jianshu.com/p/6cb49271cd2a", "title": "前端资源大汇总" },
+            { "url": "https://laracasts.com/series/learn-vue-2-step-by-step", "title": "Vue学习视频"}
         ]
     },
     {
