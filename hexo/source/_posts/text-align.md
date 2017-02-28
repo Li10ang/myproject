@@ -1,6 +1,6 @@
 ---
 title: 文字两端对齐
-date: 2016-02-15T11:29:11.000Z
+date: 2017-02-15T11:29:11.000Z
 tags:
   - text－align
   - justify-content:space-between
