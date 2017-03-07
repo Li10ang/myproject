@@ -1,0 +1,322 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue Demo</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+</head>
+<body>
+    <!--1.渲染-->
+    <!--<div id="app">-->
+        <!--{{message}}-->
+    <!--</div>-->
+    <script>
+//        1.渲染
+//        var app = new Vue({
+//            el: '#app',
+//            data: {
+//                message: 'Hello Vue!'
+//            }
+//        })
+    </script>
+
+
+    <!--<div id="app-2">-->
+        <!--<span v-bind:title="message">-->
+            <!--Hover your mouse over me for a few seconds to see my dynamically bound title!-->
+        <!--</span>-->
+    <!--</div>-->
+    <!--<script>-->
+        <!--var app2 = new Vue({-->
+            <!--el: '#app-2',-->
+            <!--data: {-->
+                <!--message: 'You loaded this page on '+ new Date()-->
+            <!--}-->
+        <!--})-->
+    <!--</script>-->
+
+    <!--2.循环-->
+    <!--<div id="app-3">-->
+        <!--<p v-if="seen">now you see me</p>-->
+    <!--</div>-->
+    <!--<script>-->
+        <!--var app3 = new Vue({-->
+            <!--el: '#app-3',-->
+            <!--data: {-->
+                <!--seen: true-->
+            <!--}-->
+        <!--})-->
+    <!--</script>-->
+
+    <!--过渡效果-->
+    <!--<div id="demo">-->
+        <!--<button v-on:click="show = !show">Toggle</button>-->
+        <!--<transition name="fade">-->
+            <!--<p v-if="show">hello</p>-->
+        <!--</transition>-->
+    <!--</div>-->
+    <!--<style>-->
+        <!--.fade-enter-active, .fade-leave-active {-->
+            <!--transition: opacity .5s-->
+        <!--}-->
+        <!--.fade-enter, .fade-leave-active {-->
+            <!--opacity: 0-->
+        <!--}-->
+    <!--</style>-->
+    <!--<script>-->
+        <!--new Vue({-->
+            <!--el:'#demo',-->
+            <!--data:{-->
+                <!--show:true-->
+            <!--}-->
+        <!--})-->
+    <!--</script>-->
+
+
+
+    <!--css过渡-->
+    <!--<div id="example-1">-->
+        <!--<button @click="show = !show">Toggle render</button>-->
+        <!--<transition name="slide-fade">-->
+            <!--<p v-if="show">hello</p>-->
+        <!--</transition>-->
+    <!--</div>-->
+    <!--<style>-->
+        <!--/* 可以设置不同的进入和离开动画 */-->
+        <!--/* 设置持续时间和动画函数 */-->
+        <!--.slide-fade-enter-active {-->
+            <!--transition: all .3s ease;-->
+        <!--}-->
+        <!--.slide-fade-leave-active {-->
+            <!--transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);-->
+            <!--/*贝塞尔曲线*/-->
+        <!--}-->
+        <!--.slide-fade-enter, .slide-fade-leave-active {-->
+            <!--transform: translateX(10px);-->
+            <!--opacity: 0;-->
+        <!--}-->
+    <!--</style>-->
+    <!--<script>-->
+        <!--new Vue({-->
+            <!--el:'#example-1',-->
+            <!--data:{-->
+                <!--show:true-->
+            <!--}-->
+        <!--})-->
+    <!--</script>-->
+
+    <!--<div id="example-2">-->
+        <!--<button @click="show = !show">Toggle show</button>-->
+        <!--<transition name="bounce">-->
+            <!--<p v-if="show">Look at me!</p>-->
+        <!--</transition>-->
+    <!--</div>-->
+    <!--<style>-->
+        <!--.bounce-enter-active {-->
+            <!--animation: bounce-in .5s;-->
+        <!--}-->
+        <!--.bounce-leave-active {-->
+            <!--animation: bounce-out .5s;-->
+        <!--}-->
+        <!--@keyframes bounce-in {-->
+            <!--0% {-->
+                <!--transform: scale(0);-->
+            <!--}-->
+            <!--50% {-->
+                <!--transform: scale(1.5);-->
+            <!--}-->
+            <!--100% {-->
+                <!--transform: scale(1);-->
+            <!--}-->
+        <!--}-->
+        <!--@keyframes bounce-out {-->
+            <!--0% {-->
+                <!--transform: scale(1);-->
+            <!--}-->
+            <!--50% {-->
+                <!--transform: scale(1.5);-->
+            <!--}-->
+            <!--100% {-->
+                <!--transform: scale(0);-->
+            <!--}-->
+        <!--}-->
+    <!--</style>-->
+    <!--<script>-->
+        <!--new Vue({-->
+            <!--el:'#example-2',-->
+            <!--data:{-->
+                <!--show:true-->
+            <!--}-->
+        <!--})-->
+    <!--</script>-->
+
+    <style>
+        /*.fade-enter-active, .fade-leave-active {}*/
+        /*.fade-enter, .fade-leave-active{}*/
+
+        /*.slide-fade-enter-active{}*/
+        /*.slide-fade-leave-active{}*/
+        /*.slide-fade-enter, .slide-fade-leave-active{}*/
+
+        /*.bounce-enter-active{}*/
+        /*.bounce-leave-active{}*/
+    </style>
+
+
+
+    <!--for循环-->
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+                {{todo.text}}
+            </li>
+        </ol>
+    </div>
+    <script>
+//        var app4 = new Vue({
+//            el:'#app-4',
+//            data:[
+//                {text:'Learn Javascript'},
+//                {text:'Learn Vue'},
+//                {text:'Build something awesome'}
+//            ]
+//        })
+        var app4 = new Vue({
+            el: '#app-4',
+            data: {
+                todos: [
+                    { text: 'Learn JavaScript' },
+                    { text: 'Learn Vue' },
+                    { text: 'Build something awesome' }
+                ]
+            }
+        })
+    </script>
+
+    <!--处理用户输入-->
+    <div id="app-5">
+        <p>{{message}}</p>
+        <button v-on:click="reverseMessage">Reverse Message</button>
+    </div>
+    <script>
+        var app5 = new Vue({
+            el:'#app-5',
+            data:{
+                message:'HEllo Vue'
+            },
+            methods:{
+                reverseMessage:function () {
+                    this.message = this.message.split('').reverse().join('')
+                }
+            }
+        })
+    </script>
+
+
+    <!--v-module-->
+    <div id="app-6">
+        <p>{{message}}</p>
+        <input type="text" v-model="message">
+    </div>
+    <script>
+        var app6 = new Vue({
+            el: '#app-6',
+            data:{
+                message: 'Hello World'
+            }
+        })
+    </script>
+
+
+
+    <!--<script>-->
+        <!--// Define a new component called todo-item-->
+        <!--Vue.component('todo-item', {-->
+            <!--template: '<li>This is a todo</li>'-->
+        <!--})-->
+    <!--</script>-->
+    <!--<ol>-->
+        <!--&lt;!&ndash; Create an instance of the todo-item component &ndash;&gt;-->
+        <!--<todo-item></todo-item>-->
+    <!--</ol>-->
+<h1>------------------------------------------------------------------------------------------</h1>
+
+
+    <div id="app-7">
+        <ol>
+            <todo-item v-for="item in groceryList" v-bind:todoo="item"></todo-item>
+        </ol>
+    </div>
+    <div id="app-70">
+        <ul>
+            <todo-item1 v-for="item in groceryList" v-bind:todo1="item"></todo-item1>
+        </ul>
+    </div>
+    <script>
+        Vue.component('todo-item', {
+            props: ['todoo'],
+            template: '<li>{{ todoo.text }}</li>'
+        });
+        Vue.component('todo-item1',{
+            props: ['todo1'],
+            template: '<li>{{ todo1.text }}</li>'
+        });
+        var app70 = new Vue({
+            el: '#app-70',
+            data:{
+                groceryList:[
+                    {text:'asdfghjkl'},
+                    {text:'lkjhgfdsxcvbnm'},
+                    {text:'uygvbnmkjhgv'}
+                ]
+            }
+        });
+        var app7 = new Vue({
+            el: '#app-7',
+            data: {
+                groceryList: [
+                    { text: 'Vegetables' },
+                    { text: 'Cheese' },
+                    { text: 'Whatever else humans are supposed to eat' }
+                ]
+            }
+        })
+    </script>
+
+<h1>------------------------------------------------------------------------------------------</h1>
+    <span id="a1" v-once>Message{{msg}}</span>
+    <script>
+        var a1 = new Vue({
+            el:'#a1',
+            data:{
+                msg:'hgfvbnmjuhg'
+            }
+        })
+    </script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

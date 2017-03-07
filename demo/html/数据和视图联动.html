@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>数据和视图联动</title>
+</head>
+<body>
+    <div>
+        <p>你好，<span id="nickName"></span></p>
+        <div id="introduce"></div>
+    </div>
+
+    <script>
+        //Object.defineProperty(a, "b", {})//接受三个参数
+        //第一个参数：目标对象
+        //第二个参数：需要定义的属性或方法的名字
+        //第三个参数：目标属性所拥有的特性
+            //value: 属性的值
+            //writable: 如果为false，属性的值就不能被重写，只能为只读
+                //如果设置为fasle，就变成只读了。。
+                //var a = {};
+                //Object.defineProperty(o, "b", {
+                //    value : 123,
+                //    writable : false });
+                //console.log(a.b); // 打印 37
+                //a.b = 25; // 没有错误抛出（在严格模式下会抛出，即使之前已经有相同的值）
+                //console.log(o.a); // 打印 37， 赋值不起作用。
+            //configurable: 总开关，一旦为false，就不能再设置他的（value, writable, configurable）
+                //总开关，第一次设置 false 之后，，第二次什么设置也不行了，比如说
+                //var a= {}
+                //Object.defineProperty(a,"b",{
+                //    configurable:false
+                //})
+                //Object.defineProperty(a,"b",{
+                //    configurable:true
+                //})
+                //error: Uncaught TypeError: Cannot redefine property: b
+                //就会报错了。。注意上面讲的默认值。。。如果第一次不设置它会怎样。。会帮你设置为false。。所以。。第二次。再设置他会怎样？。。对喽，，会报错
+            //enumerable: 是否能在for...in循环中遍历出来或在Object.keys中列举出来
+
+
+            //get
+            //set
+                //set和get方法不能同时与writable或value中任意一个同用
+
+
+
+        //视图控制器
+        var userInfo = {};
+        Object.defineProperty(userInfo, "nickName", {
+            get: function(){
+                return document.getElementById('nickName').innerHTML;
+            },
+            set: function(nick){
+                document.getElementById('nickName').innerHTML = nick;
+            }
+        });
+        Object.defineProperty(userInfo, "introduce", {
+            get: function(){
+                return document.getElementById('introduce').innerHTML;
+            },
+            set: function(introduce){
+                document.getElementById('introduce').innerHTML = introduce;
+            }
+        });
+        userInfo.nickName = '张三';
+        userInfo.introduce = '我来自北京';
+
+    </script>
+</body>
+</html>

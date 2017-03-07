@@ -20,8 +20,24 @@
 	</body>
 	<!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>-->
 	<script type="text/javascript">
-		var box = document.getElementsByClassName('box')[0];
-		var width = document.defaultView.getComputedStyle(box, false).width;
-		document.write(width)
+//		var box = document.getElementsByClassName('box')[0];
+//		var width = document.defaultView.getComputedStyle(box, false).width;
+//		document.write(width)
+	</script>
+	<script>
+		<!--随即输出n个从2-23的数字-->
+
+		function  fn(n) {
+			var min = 2,
+				max = 23,
+				arr = [];
+			for (var i=0; i<n;){
+				var a = Math.floor(Math.random()*(max-min)+min);
+				arr.push(a);
+				i++;
+			}
+			console.log(arr);
+		}
+		fn(30);
 	</script>
 </html>
