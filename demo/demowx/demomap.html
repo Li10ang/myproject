@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<script src="http://api.map.baidu.com/api?v=2.0&ak=MYQEYRx0KCRkEtvzKqOFutVk9gp0PNZx&s=1" type="text/javascript"></script>
+<script src="https://api.map.baidu.com/api?v=2.0&ak=MYQEYRx0KCRkEtvzKqOFutVk9gp0PNZx&s=1" type="text/javascript"></script>
 <script type="text/javascript">
     function initialize() {
         var mp = new BMap.Map('map');
@@ -16,7 +16,7 @@
 
     function loadScript() {
         var script = document.createElement("script");
-        script.src = "http://api.map.baidu.com/api?v=2.0&ak=MYQEYRx0KCRkEtvzKqOFutVk9gp0PNZx&callback=initialize&s=1";//此为v2.0版本的引用方式
+        script.src = "https://api.map.baidu.com/api?v=2.0&ak=MYQEYRx0KCRkEtvzKqOFutVk9gp0PNZx&callback=initialize";//此为v2.0版本的引用方式
         // http://api.map.baidu.com/api?v=1.4&ak=您的密钥&callback=initialize"; //此为v1.4版本及以前版本的引用方式
         document.body.appendChild(script);
     }
