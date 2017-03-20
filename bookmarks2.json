@@ -46,7 +46,10 @@
             { "url": "http://www.qdfuns.com/tools.php", "title": "前端工具库" },
             { "url": "http://ce.baidu.com/index/yunguance?addsite&url=https%3A%2F%2Fyaoliang2016.cn#/my-sites", "title": "网站监测" },
             { "url": "http://www.focusky.com.cn/", "title": "PPT制作神器" },
-            { "url": "http://f2er.club/", "title": "前端查询手册" }
+            { "url": "http://f2er.club/", "title": "前端查询手册" },
+            { "url": "http://www.qinshenxue.com/demo/datepicker/index.html", "title": "简单的日期插件"},
+            { "url": "http://git.oschina.net/qinshenxue/jquery.pagination", "title": "极简实用的分页插件"},
+            { "url": "http://git.oschina.net/qinshenxue/jquery.tree", "title": "极简实用的树形插件"}
         ]
     },
     {
@@ -60,6 +63,17 @@
             { "url": "http://henkuai.com/forum.php", "title": "微信小程序开发社区" },
             { "url": "https://www.sslforfree.com/", "title": "SSL(https)" },
             { "url": "http://uprogrammer.cn/react-tutorial-cn/introduction.html", "title": "React简明教程" }
+        ]
+    },
+    {
+        "name": "社区",
+        "items": [
+            { "url": "https://www.awesomes.cn/", "title": "获取最新的免费开源的前端库、框架和插件" },
+            { "url": "https://juejin.im/timeline", "title": "掘金" },
+            { "url": "https://segmentfault.com/blogs", "title": "segmentfault" },
+            { "url": "http://www.w3cplus.com/", "title": "w3cplus" },
+            { "url": "https://www.qianduan.net/", "title": "前端观察" },
+            { "url": "http://www.css88.com/", "title": "前端开发" }
         ]
     },
     {
@@ -78,7 +92,8 @@
             { "url": "http://getuikit.net/index.html", "title": "uikit" },
             { "url": "http://www.bootcss.com/", "title": "bootstrap" },
             { "url": "http://www.bootcss.com/p/flat-ui/", "title": "FlatUI" },
-            { "url": "http://www.layui.com/", "title": "Layui" }
+            { "url": "http://www.layui.com/", "title": "Layui" },
+            { "url": "http://hao.uisdc.com/", "title": "设计师网站导航"}
         ]
     },
     {
@@ -133,7 +148,8 @@
         "items": [
             { "url": "http://www.liaoxuefeng.com/", "title": "廖雪峰" },
             { "url": "http://www.ruanyifeng.com/blog/archives.html", "title": "阮一峰" },
-            { "url": "http://www.zhangxinxu.com/wordpress/category/js/", "title": "张鑫旭" }
+            { "url": "http://www.zhangxinxu.com/wordpress/category/js/", "title": "张鑫旭" },
+            { "url": "http://www.xuanfengge.com/", "title": "博客炒鸡好看的前端大牛" }
         ]
     },
     {

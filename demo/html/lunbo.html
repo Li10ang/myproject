@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .banner {
+            /*overflow: hidden;*/
+        }
+
+        .banner .imgList {
+            overflow: hidden;
+        }
+
+        .banner .imgList li {
+            float: left;
+            margin-left: -100%;
+            width: 100%;
+        }
+
+        .banner .imgList li:first-child {
+            margin-left: 0;
+        }
+
+        .banner .imgList .current {
+            position: relative;
+            z-index: 1;
+        }
+
+        .banner .imgList .show {
+            position: relative;
+            z-index: 2;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+
+        .banner .imgList img {
+            vertical-align: top;
+            width: 100%;
+            /*height: 100px;*/
+        }
+
+        .banner .thumbList {
+            margin-top: -30px;
+            height: 21px;
+            font-size: 0;
+            text-align: center;
+        }
+
+        .banner .thumbList li {
+            position: relative;
+            z-index: 3;
+            cursor: pointer;
+            display: inline-block;
+            vertical-align: bottom;
+            margin: 0 5px;
+            width: 42px;
+            background-color: #e6e6e6;
+        }
+
+        .banner .thumbList span {
+            display: block;
+            width: 0;
+            height: 3px;
+            background-color: #a1a1a1;
+        }
+    </style>
+</head>
+<body>
+<div class="banner">
+    <ul class="imgList" id="jBannerList">
+        <li class="current">
+            <a><img src="https://swsdl.vivo.com.cn/vivoshop/commodity/20170303/20170303085806406769_original.jpg"></a>
+        </li>
+        <li>
+            <a><img src="https://swsdl.vivo.com.cn/vivoshop/commodity/20170306/20170306093916891464_original.jpg"></a>
+        </li>
+        <li>
+            <a><img src="https://swsdl.vivo.com.cn/vivoshop/commodity/20170303/20170303085806406769_original.jpg"></a>
+        </li>
+        <li>
+            <a><img src="https://swsdl.vivo.com.cn/vivoshop/commodity/20170306/20170306093916891464_original.jpg"></a>
+        </li>
+    </ul>
+    <ul class="thumbList" id="jBannerThumbList">
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+        <li><span></span></li>
+    </ul>
+</div>
+<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    // requestAnimationFrame的兼容处理
+    !window.requestAnimationFrame && (window.requestAnimationFrame = function (fn) {
+        setTimeout(fn, 17);
+    });
+
+    $(function () {
+        //banner轮播
+        function Slider(option) {
+            this.option = $.extend({
+                position: 0,
+                interval: 6000
+            }, option);
+            this.init();
+        }
+
+        $.extend(Slider.prototype, {
+            init: function () {
+                var that = this;
+
+                this.time = 0;
+                this.option.$thumbs.on('click', function () {
+                    var index;
+
+                    if (!that.locked) {
+                        index = $(this).index();
+                        that.clicked = true;
+                        that.option.$thumbs.children().css('width', 0).eq(index).css('width', '100%');
+                        that.goto(index);
+                    }
+                }).parent().parent().on('mouseenter', function () {
+                    !that.clicked && that.stop();
+                }).on('mouseleave', function () {
+                    !that.clicked && that.start();
+                });
+            },
+            Sine: {
+                /*
+                 * t: current time（当前时间）；
+                 * b: beginning value（初始值）；
+                 * c: change in value（变化量）；
+                 * d: duration（持续时间）。
+                 */
+                easeInOut: function (t, b, c, d) {
+                    return -c / 2 * (Math.cos(Math.PI * t / d) - 1) + b;
+                }
+            },
+            goto: function (position) {
+                var that = this,
+                        t = 0,
+                        b = 0,
+                        c = 1,
+                        d = 20,
+                        $next,
+                        $current,
+                        step;
+
+                if (!this.locked) {
+                    this.locked = true;     //动画还在过渡时锁定切换
+                    $next = this.option.$items.eq(position);
+                    $current = this.option.$items.eq(this.option.position);
+                    this.option.position = position;
+                    step = function () {
+                        var opacity = that.Sine.easeInOut(t, b, c, d);
+
+                        $next.css({
+                            opacity: opacity,
+                            filter: 'alpha(opacity=' + opacity * 100 + ')'
+                        });
+                        t++;
+                        if (t <= d) {
+                            requestAnimationFrame(step);
+                        } else {
+                            $current.removeClass('current');
+                            $next.removeClass('show').addClass('current');
+                            that.locked = false;
+                        }
+                    };
+                    $next.addClass('show');
+                    step();
+                }
+            },
+            start: function () {
+                var that = this;
+
+                this.intervalId = setInterval(function () {
+                    that.time += 50;
+                    that.time > that.option.interval && (that.time = that.option.interval);
+                    that.option.$thumbs.eq(that.option.position).children().css('width', that.time * 100 / that.option.interval + '%');
+                    if (that.time === that.option.interval) {
+                        that.time = 0;
+                        that.option.position + 1 === that.option.$thumbs.length && that.option.$thumbs.children().css('width', 0);
+                        that.goto((that.option.position + 1) % that.option.$thumbs.length);
+                    }
+                }, 50);
+            },
+            stop: function () {
+                clearInterval(this.intervalId);
+            }
+        });
+
+        new Slider({
+            $items: $('#jBannerList').children(),
+            $thumbs: $('#jBannerThumbList').children()
+        }).start();
+    });
+</script>
+</body>
+</html>

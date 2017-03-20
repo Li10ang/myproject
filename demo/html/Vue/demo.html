@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        *{
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;}
+        .box{
+            width: 300px;
+            height:200px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        ul{
+            width: 900px;
+            height:100%;
+            position: absolute;
+            top:0;
+            left:0;
+            margin: 0;
+            padding:0;
+        }
+        li{
+            width: 300px;
+            height:200px;
+            border: 1px solid #ccc;
+            float: left;
+            list-style: none;
+            text-align: center;
+            line-height: 200px;
+            font-size: 30px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li>111</li>
+            <li>222</li>
+            <li>333</li>
+        </ul>
+    </div>
+</body>
+<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+<script>
+    $(function () {
+        var lunbo = {
+            num : 3,
+            nindex : 1,
+            time : 2000,
+            move : function () {
+                var i = lunbo.nindex;
+                var timer = setTimeout(function() {
+                    var left = -300 * i;
+                    $('ul').css({
+                        'left' : left+'px'
+                    });
+//                    console.log(i++);
+                    i++;
+                    if(i>=3){
+                        i = 0;
+                    }
+                    timer = setTimeout(arguments.callee, lunbo.time);
+                }, lunbo.time);
+            }
+        }
+        lunbo.move();
+    })
+</script>
+</html>

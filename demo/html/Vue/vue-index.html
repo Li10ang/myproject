@@ -255,7 +255,27 @@
             <todo-item1 v-for="item in groceryList" v-bind:todo1="item"></todo-item1>
         </ul>
     </div>
+    <div id="app-666">
+        <ul>
+            <todo-item666 v-for="item in gList" v-bind:todo666="item"></todo-item666>
+        </ul>
+    </div>
     <script>
+        Vue.component('todo-item666',{
+            props:['todo666'],
+            template:'<li>{{ todo666.text }}</li>'
+        })
+        var app666 = new Vue({
+            el:'#app-666',
+            data:{
+                gList:[
+                    {text:'dsdjskd'},
+                    {text:'dadasdasd'},
+                    {text:'wewefwefwfwe'},
+                    {text:'qwqwqswqd'}
+                ]
+            }
+        })
         Vue.component('todo-item', {
             props: ['todoo'],
             template: '<li>{{ todoo.text }}</li>'
@@ -297,16 +317,149 @@
         })
     </script>
 
+<h1>------------------------------------------------------------------------------------------</h1>
+
+<!--文本-->
+    <span class="app01">Message {{ msg }}</span>
+    <script>
+        var app01 = new Vue({
+            el:'.app01',
+            data:{
+                msg:'11111'
+            }
+        })
+    </script>
+    <!--双大括号就将数据解释为纯文本。而非HTML。为了输出真正的HTML。你需要使用v－html指令。-->
+    <div v-html="rawHtml"></div>
+
+    <!--对于所有的数据绑定，Vue.js都提供了完全的javascript表达式支持。-->
+    <div v-bind:id="'list-' + id"></div>
+
+    <button v-bind:disabled="someDynamicCondition">Button</button>
+
+    <form v-on:submit.prevent="onSubmit"></form>
+
+    <div v-bind:id="rawId | formatId"></div>
 
 
-</body>
-</html>
+    <div id="example">
+        <p>Original message: "{{ message }}"</p>
+        <p>Computed reversed message: "{{ reversedMessage }}"</p>
+    </div>
+    <script>
+        var vm = new Vue({
+            el: '#example',
+            data: {
+                message: 'Hello'
+            },
+            computed: {
+                // a computed getter
+                reversedMessage: function () {
+                    // `this` points to the vm instance
+                    return this.message.split('').reverse().join('')
+                }
+            }
+        })
+    </script>
+
+    <div id="demo">{{ fullName }}</div>
+    <script>
+//        var vm = new Vue({
+//            el:'#demo',
+//            data:{
+//                firstName:'Foo',
+//                lastName:'Bar',
+//                fullName:'Foo Bar'
+//            },
+//            watch:{
+//                firstNmae: function (val) {
+//                    this.fullName = val + ' ' + this.lastName
+//                },
+//                lastName: function (val) {
+//                    this.fullName = this.firstNmae + ' ' + val
+//                }
+//            }
+//        })
+        var vm = new Vue({
+            el:'#demo',
+            data:{
+                firstName: 'Fooo',
+                lastName: 'Bar'
+            },
+            computed: {
+//                fullName: function () {
+//                    return this.firstName + ' ' + this.lastName
+//                }
+
+                fullName: {
+                    // getter
+                    get: function () {
+                        return this.firstName + ' ' + this.lastName
+                    },
+                    // setter
+                    set: function (newValue) {
+                        var names = newValue.split(' ')
+                        this.firstName = names[0]
+                        this.lastName = names[names.length - 1]
+                    }
+                }
+
+
+            }
+        })
+    </script>
+
+    <div v-bind:class="classObject">00112233</div>
+    <script>
+        var vmm = new Vue({
+            el:'.classObject',
+            data: {
+                isActive: true,
+                error: null
+            },
+            computed: {
+                classObject: function () {
+                    return {
+                        active: this.isActive && !this.error,
+                        'text-danger': this.error && this.error.type === 'fatal',
+                    }
+                }
+            }
+        })
+    </script>
 
 
 
 
+    <div id="my_view">
+        搜索：<input v-model="search" type="text" />
+        <ul>
+            <li v-for="friend in friends | filterBy search in 'name'"> {{ friend.name }} </li>
+            <li v-for="friend in friends">{{friend.name}}</li>
+        </ul>
+    </div>
+    <script>
+        var myModel = {
+            name: 'Ashley',
+            age: 24,
+            friends: [{
+                name: 'Bob',
+                age: 21
+            }, {
+                name: 'Jane',
+                age: 20
+            }, {
+                name: 'Anna',
+                age: 29
+            }],
+            search: ''
+        };
 
-
+        var myViewModel = new Vue({
+            el: '#my_view',
+            data: myModel
+        });
+    </script>
 
 
 
