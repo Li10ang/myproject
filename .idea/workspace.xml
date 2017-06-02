@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2953b423-febf-4028-893d-a2ba04bd241c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/html/Vue/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/demo/html/lunbo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hexo/source/_posts/0307.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/hexo/source/_posts/jquery-ui.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bookmarks2.json" afterPath="$PROJECT_DIR$/bookmarks2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/html/Vue/vue-index.html" afterPath="$PROJECT_DIR$/demo/html/Vue/vue-index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demo/demowx/demomap.html" afterPath="$PROJECT_DIR$/demo/demowx/demomap.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="myproject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,10 +36,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vue-index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="vue-index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/html/Vue/vue-index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
+            <state relative-caret-position="3285">
               <caret line="432" column="0" selection-start-line="432" selection-start-column="0" selection-end-line="432" selection-end-column="0" />
               <folding>
                 <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -80,7 +78,7 @@
       <file leaf-file-name="lunbo.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/demo/html/lunbo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="2610">
               <caret line="174" column="22" selection-start-line="174" selection-start-column="22" selection-end-line="174" selection-end-column="22" />
               <folding />
             </state>
@@ -90,7 +88,7 @@
       <file leaf-file-name="bookmarks2.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bookmarks2.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
+            <state relative-caret-position="2190">
               <caret line="146" column="23" selection-start-line="146" selection-start-column="23" selection-end-line="146" selection-end-column="23" />
               <folding />
             </state>
@@ -101,8 +99,8 @@
         <entry file="file://$PROJECT_DIR$/hexo/source/_posts/0307.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="390">
-                <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="30" selection-end-column="9" />
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="3" />
                 <folding>
                   <marker date="1488867139000" expanded="true" signature="455:476" ph="{...}" />
                   <marker date="1488867139000" expanded="true" signature="790:860" ph="{...}" />
@@ -122,6 +120,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="jquery-ui.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hexo/source/_posts/jquery-ui.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="360">
+                <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="0301.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hexo/source/_posts/0301.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
@@ -131,6 +142,16 @@
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="79" selection-start-line="7" selection-start-column="79" selection-end-line="7" selection-end-column="79" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -150,8 +171,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/demo/html/iscroll.html" />
-        <option value="$PROJECT_DIR$/demo/iscroll-master/demos/snap/index.html" />
         <option value="$PROJECT_DIR$/demo/html/swiper.html" />
         <option value="$PROJECT_DIR$/cssdemo/flex/flex.html" />
         <option value="$PROJECT_DIR$/demo/html/2.html" />
@@ -201,6 +220,8 @@
         <option value="$PROJECT_DIR$/demo/html/lunbo.html" />
         <option value="$PROJECT_DIR$/bookmarks2.json" />
         <option value="$PROJECT_DIR$/demo/html/Vue/vue-index.html" />
+        <option value="$PROJECT_DIR$/hexo/source/_posts/jquery-ui.md" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -218,10 +239,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
+    <option name="x" value="-1920" />
     <option name="y" value="23" />
-    <option name="width" value="1280" />
-    <option name="height" value="731" />
+    <option name="width" value="1920" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -248,8 +269,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -268,8 +287,82 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myproject" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hexo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myproject" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hexo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myproject" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hexo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myproject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="myproject" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hexo" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="source" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_posts" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -422,17 +515,20 @@
       <workItem from="1488853371646" duration="12294000" />
       <workItem from="1488938302744" duration="2540000" />
       <workItem from="1489025183824" duration="3741000" />
+      <workItem from="1490610967676" duration="8000" />
+      <workItem from="1492055119456" duration="308000" />
+      <workItem from="1496381773168" duration="49000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="211497000" />
+    <option name="totallyTimeSpent" value="211862000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="23" width="1280" height="731" extended-state="6" />
-    <editor active="false" />
+    <frame x="-1920" y="23" width="1920" height="1057" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25444266" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26357827" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286385" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -488,27 +584,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/demo/html/sticky-footers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="189" selection-start-line="22" selection-start-column="189" selection-end-line="22" selection-end-column="189" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/newvue/my-project/src/components/DetailHeader.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/newvue/my-project/src/components/List.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hexo/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -712,13 +787,7 @@
     <entry file="file://$USER_HOME$/Downloads/未标题-1.svg" />
     <entry file="file://$USER_HOME$/Downloads/w3cfuns_code.html" />
     <entry file="file://$PROJECT_DIR$/demo/html/解压密码.txt" />
-    <entry file="file://$USER_HOME$/Downloads/未标题-2.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/未标题-2.svg" />
     <entry file="file://$PROJECT_DIR$/demo/html/svg.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -762,13 +831,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Downloads/jquery-powerFloat/201012/jquery-power-float-demo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="265" column="50" selection-start-line="265" selection-start-column="42" selection-end-line="265" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/Downloads/jquery-powerFloat/201012/jquery-power-float-demo.html" />
     <entry file="file://$PROJECT_DIR$/hexo/source/_posts/01-05.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -837,29 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hexo/source/_posts/0307.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="390">
-            <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="30" selection-end-column="9" />
-            <folding>
-              <marker date="1488867139000" expanded="true" signature="455:476" ph="{...}" />
-              <marker date="1488867139000" expanded="true" signature="790:860" ph="{...}" />
-              <marker date="1488867139000" expanded="true" signature="980:1108" ph="{...}" />
-              <marker date="1488867139000" expanded="true" signature="1009:1075" ph="{...}" />
-              <marker date="1488867139000" expanded="true" signature="1128:1151" ph="{...}" />
-              <marker date="1488867139000" expanded="true" signature="1220:1325" ph="{...}" />
-              <marker date="1488867139000" expanded="true" signature="1354:1370" ph="{...}" />
-              <marker date="1488867139000" expanded="true" signature="1392:1408" ph="{...}" />
-              <marker date="1488867139000" expanded="true" signature="1417:1451" ph="//..." />
-              <marker date="1488867139000" expanded="true" signature="1417:1452" ph="//..." />
-              <marker date="1488867139000" expanded="true" signature="1417:1757" ph="//..." />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hexo/source/_posts/0301.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -873,7 +913,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/html/lunbo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
+        <state relative-caret-position="2610">
           <caret line="174" column="22" selection-start-line="174" selection-start-column="22" selection-end-line="174" selection-end-column="22" />
           <folding />
         </state>
@@ -881,7 +921,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bookmarks2.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
+        <state relative-caret-position="2190">
           <caret line="146" column="23" selection-start-line="146" selection-start-column="23" selection-end-line="146" selection-end-column="23" />
           <folding />
         </state>
@@ -889,7 +929,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/demo/html/Vue/vue-index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
+        <state relative-caret-position="3285">
           <caret line="432" column="0" selection-start-line="432" selection-start-column="0" selection-end-line="432" selection-end-column="0" />
           <folding>
             <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
@@ -911,6 +951,56 @@
             <element signature="n#script#8;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="e#11513#11944#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo/source/_posts/0307.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="6" selection-end-column="3" />
+            <folding>
+              <marker date="1488867139000" expanded="true" signature="455:476" ph="{...}" />
+              <marker date="1488867139000" expanded="true" signature="790:860" ph="{...}" />
+              <marker date="1488867139000" expanded="true" signature="980:1108" ph="{...}" />
+              <marker date="1488867139000" expanded="true" signature="1009:1075" ph="{...}" />
+              <marker date="1488867139000" expanded="true" signature="1128:1151" ph="{...}" />
+              <marker date="1488867139000" expanded="true" signature="1220:1325" ph="{...}" />
+              <marker date="1488867139000" expanded="true" signature="1354:1370" ph="{...}" />
+              <marker date="1488867139000" expanded="true" signature="1392:1408" ph="{...}" />
+              <marker date="1488867139000" expanded="true" signature="1417:1451" ph="//..." />
+              <marker date="1488867139000" expanded="true" signature="1417:1452" ph="//..." />
+              <marker date="1488867139000" expanded="true" signature="1417:1757" ph="//..." />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hexo/source/_posts/jquery-ui.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="360">
+            <caret line="24" column="18" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="79" selection-start-line="7" selection-start-column="79" selection-end-line="7" selection-end-column="79" />
+          <folding />
         </state>
       </provider>
     </entry>
