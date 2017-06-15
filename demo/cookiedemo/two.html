@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<ul class="list-group">
+		<li class="list-group-item" data-flag="NPage_One">选项一</li>
+		<li class="list-group-item" data-flag="NPage_Two">选项二</li>
+		<li class="list-group-item" data-flag="NPage_Three">选项三</li>
+	</ul>
+	<button type="button" class="btn">返回</button>
+</body>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<script type="text/javascript">
+	$(function(){
+		if(getCookie('two') != ''){
+			var t = getCookie('two');
+			for(var i=0,len = $('.list-group-item').length; i<len; i++){
+				if($('.list-group-item').eq(i).data('flag') == t){
+					$('.list-group-item').eq(i).addClass('active');
+				}
+			}
+		}
+		$(document).on('click', 'li', function(){
+			var t = $(this).data('flag');
+			$(this).addClass('active').siblings().removeClass('active');
+			setCookie('two', t);
+			location.href = 'three.html'
+		})
+		$('.btn').click(function(){location.href = 'one.html'})	
+	})
+
+	
+
+</script>
+</html>

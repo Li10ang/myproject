@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="Keywords" content="" />
+  <meta name="Description" content="" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta content="telephone=no" name="format-detection" />
+  <meta content="email=no" name="format-detection" />
+  <title>Document</title>
+  <style>
+    div{position:relative;width:40%;height:20vw;border:1px solid #CCC;margin:2em auto;overflow:hidden;-webkit-user-select:none;user-select:none;}
+    ul{position:absolute;list-style-type:none;left:15%;top:0;width:70%;height:100%;margin:0;padding:0;}
+    li{position:absolute;left:0;top:0;width:100%;height:100%;background:none no-repeat 50% 50%;background-size:cover;}
+    .anim{-webkit-transition:all .5s;transition:all .5s;}
+  </style>
+ </head>
+ <body>
+   <div>
+     <ul>
+       <li style="background-image:url('http://img.woyaogexing.com/2016/08/23/b9e46c9deb29ccfd!600x600.jpg')"></li>
+       <li style="background-image:url('http://img.woyaogexing.com/2016/08/23/34b06d56a03b7dc1!600x600.jpg')"></li>
+       <li style="background-image:url('http://img.woyaogexing.com/2016/08/23/e012493e82c863c4!600x600.jpg')"></li>
+       <li style="background-image:url('http://img.woyaogexing.com/2016/08/16/01e01c281ef6386d!600x600.jpg')"></li>
+       <li style="background-image:url('http://img.woyaogexing.com/2016/08/16/9ecb48f95b053004!600x600.jpg')"></li>             
+     </ul>
+   </div>
+   <script>
+   (function(){
+      var ul=document.querySelector("ul");
+
+      var obj={
+        _idx:0,
+        _setPos:function(li,px,isSave){ 
+          var scale=Math.abs(Math.cos(px*0.6));
+          if(isSave)
+          {
+            if(Math.abs(li._pos)+Math.abs(px)===this._len-1)
+            {
+              li.classList.remove("anim");
+            }
+            li._pos=px;
+            
+          }
+          li.style.webkitTransform=li.style.transform="translateX("+px*100+"%) scale("+scale+") translateZ(0)";
+          li.style.opacity=scale;
+        },
+        pos:function(){
+          var lis=this._lis,len=lis.length,i=0,idx=this._idx,key;
+          while(i<len)
+          {
+             key=(idx+i)%len;
+             this._setPos(lis[key],i<len/2?i:i-len,true);
+             i++;
+          }
+
+          return len;
+        },
+        _anim:function(bl){
+          var lis=this._lis,i=this._len;
+          while(i--)
+          {
+            lis[i].classList[bl?"add":"remove"]("anim");
+          }
+        },
+        mousedown:function(e){
+          this._isDown=true;
+          this._ox=e.clientX;
+          this._ow=e.currentTarget.clientWidth;
+          this._anim(false);
+        },
+        mousemove:function(e){
+          if(!this._isDown)return;
+          var offsetX=e.clientX-this._ox,lis=this._lis,i=this._len;
+          while(i--)
+          {
+            this._setPos(lis[i],lis[i]._pos+(offsetX/this._ow),false);
+          }
+        },
+        mouseup:function(e){
+          if(!this._isDown)return;
+          var offsetX=e.clientX-this._ox,idx;
+          this._isDown=false;
+          if(Math.abs(offsetX)>5)
+          {
+             idx=this._idx;
+             idx+=(offsetX-0.5>>31)*-2-1;
+             idx=(idx+this._len)%this._len;
+             this._idx=idx;
+          }
+          else if(e.target.tagName==="LI"&&e.target._idx!==this._idx)
+          {
+             this._idx=e.target._idx;
+          }
+          this._anim(true);
+          this.pos();
+        },
+        handleEvent:function(e){
+          this[e.type](e);
+        },
+        init:function(ul){
+          var lis=ul.children,i;
+          this.mouseleave=this.mouseup;
+          this._lis=[].slice.call(lis);
+          this._len=i=this.pos();
+          
+          while(i--)
+          {
+            lis[i]._idx=i;
+          }
+
+           ul.addEventListener("mousedown",this,false);
+            ul.addEventListener("mousemove",this,false);
+            ul.addEventListener("mouseup",this,false);
+            ul.addEventListener("mouseleave",this,false);
+        }
+      };
+
+      obj.init(ul);
+      
+   })();
+   </script>
+ </body>
+</html>
