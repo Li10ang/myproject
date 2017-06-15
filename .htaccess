@@ -1,0 +1,2 @@
+RewriteCond %{HTTP_HOST} ^blog.example.com [NC]
+RewriteRule ^(.*)$ https://yaoliang2016.com/hexo/public/$1 [L,R=301]
