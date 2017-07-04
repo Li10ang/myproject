@@ -25,7 +25,8 @@
     {
         "name": "写demo",
         "items": [
-            { "url": "http://runjs.cn/", "title": "在线写代码" }
+            { "url": "http://runjs.cn/", "title": "在线写代码" },
+            { "url": "https://codepen.io/", "title": "交互地执行代码"}
         ]
     },
     {
@@ -94,6 +95,19 @@
             { "url": "http://www.bootcss.com/p/flat-ui/", "title": "FlatUI" },
             { "url": "http://www.layui.com/", "title": "Layui" },
             { "url": "http://hao.uisdc.com/", "title": "设计师网站导航"}
+        ]
+    },
+    {
+        "name":"动画库",
+        "items":[
+            { "url": "https://daneden.github.io/animate.css/", "title": "Animate.css"},
+            { "url": "http://animejs.com/", "title": "ANIME" },
+            { "url": "https://minimamente.com/example/magic_animations/", "title": "Magic Animations"},
+            { "url": "http://www.vittoriozaccaria.net/dyn-css/", "title": "DynCSS 视差效果动画库"},
+            { "url": "https://elrumordelaluz.github.io/csshake/", "title": "震荡元素的 CSS 库"},
+            { "url": "http://ianlunn.github.io/Hover/", "title": "Hover.css"},
+            { "url": "https://github.com/julianshapiro/velocity", "title": "Velocity动画库"},
+            { "url": "http://anijs.github.io/", "title": "anijs"}
         ]
     },
     {
