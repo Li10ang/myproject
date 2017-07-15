@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery项目实战课程-课程案例-购物车列表【动脑学院】</title>
+    <link rel="stylesheet" href="assets/plug-in/bootstrap-3.3.0/css/bootstrap.min.css">
+    <style>
+        .bs-example{
+            width: 70%;
+            margin: auto;
+            border: 1px solid #ddd;
+            margin-top: 50px;
+            font-family: Arial,"Microsoft Yahei";
+        }
+        .bs-example .table tr td .iname{
+            width: 240px;
+            text-align: center;
+        }
+        .bs-example .table tr td .remove{
+            color: #c7254e;
+        }
+        .bs-example .table tr td .count{
+            position: relative;
+        }
+        .bs-example .table tr td .count input{
+            width: 39px;
+            height: 30px;
+            line-height: 25px;
+            border: 1px solid #aaa;
+            color: #343434;
+            text-align: center;
+            padding: 4px 0;
+            background-color: #fff;
+            float: left;
+            border-left: none;
+            border-right: none;
+        }
+        .bs-example .table tr td .count a{
+            padding: 4px 6px;
+            border: 1px solid #bbb;
+            text-decoration: none;
+            float: left;
+        }
+        .bs-example .table tr.template,.bs-example .table tr.template2{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="bs-example">
+    <form onsubmit="return false">
+        <div class="button-bar">
+            <br>
+            &nbsp;&nbsp;&nbsp;<button id="add" class="btn btn-primary btn-lg">添加商品</button>
+            <br>
+        </div>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>
+                    <label>
+                        <input name="all" type="checkbox">
+                        全选
+                    </label>
+                </th>
+                <th width="300px">商品信息</th>
+                <th>单价</th>
+                <th width="120px">数量</th>
+                <th>金额</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="template">
+                <td>
+                    <label>
+                        <input name="item" type="checkbox">
+                        <a href="#">
+                            <img src="assets/images/LOGO.png" width="80" height="64">
+                            <input type="file">
+                        </a>
+                    </label>
+                </td>
+                <td>
+                    <a href="#" class="iname" contenteditable="true">
+                        请点击编辑商品的描述
+                    </a>
+                </td>
+                <td>￥<span contenteditable="true" class="amount">1.00</span></td>
+                <td>
+                    <div class="count">
+                        <a href="#" class="sub">-</a>
+                        <input name="count[0]" value="1">
+                        <a href="#" class="add">+</a>
+                    </div>
+                </td>
+                <td>￥<span class="total">1.00</span></td>
+                <td>
+                    <a href="#" class="remove"><span class="glyphicon glyphicon-minus"></span>删除</a>
+                </td>
+            </tr>
+            <tr class="template2">
+                <td>
+                    <label>
+                        <input name="item" type="checkbox">
+                        <img src="#">
+                    </label>
+                </td>
+                <td>
+                    <a href="#" class="iname">
+
+                    </a>
+                </td>
+                <td>￥<span class="amount">1.00</span></td>
+                <td>
+                    <div class="count">
+                        <a href="#" class="sub">-</a>
+                        <input name="count[0]" value="1">
+                        <a href="#" class="add">+</a>
+                    </div>
+                </td>
+                <td>￥<span class="total">0.00</span></td>
+                <td>
+                    <a href="#" class="remove"><span class="glyphicon glyphicon-minus"></span>删除</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="total-bar">
+            <div class="sum-count">
+                已选商品<span>0</span>件
+
+            </div>
+            <div class="sum-amount">
+                合计（不含运费）：
+                <span></span>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="assets/plug-in/jquery/jquery-2.2.4.js"></script>
+<script>
+    $(function () {
+        var $template = $(".bs-example .table tr.template");//商品的模板
+        var $template2 = $(".bs-example .table tr.template2");//商品的模板
+        var $tbody = $(".bs-example .table tbody");
+        $(".bs-example .table tr td .count input").prop("readonly",true);//设置数量只读
+        //添加商品
+        $("#add").on('click',function(){
+            $template.clone(true).show().removeClass("template").appendTo($tbody);
+        });
+        //商品图片
+        $(".bs-example .table tr td label a input[type=file]").on('change', function () {
+            var img = this.value;
+            console.log(img);
+            if(!/\.(gif|jpg|jpeg|png|GIF|JPG|PNG)$/.test(img))
+            {
+                alert("图片类型必须是.gif,jpeg,jpg,png中的一种")
+                return false;
+            }
+            var f = this.files[0];
+            var src = window.URL.createObjectURL(f);
+            $(this).prev().attr("src",src);
+        })
+        //商品数据修改
+        $(".bs-example .table tr td .count a").on('click', function (event,isNotCount) {
+            var $this = $(this);
+            var count = $this.parent().find("input")[0];
+            if(!isNotCount){
+                if($this.hasClass('add')){
+                    count.value++;
+                }else{
+                    count.value == 1?1:count.value--;
+                }
+            }
+            var $row = $this.parents("tr");
+            var total = Number($row.find(".amount").text())*count.value;
+            total = total.toFixed(2);
+            $row.find(".total").text(total);
+            countTotal();
+        })
+        //删除
+        $(".bs-example .table tr td .remove").on('click',function(){
+            $(this).parents("tr").remove();
+            countTotal();
+        });
+        //选择
+        $(".bs-example .table tr td label input[type=checkbox]").on("change",function(){
+            $(".bs-example .table tr td label input[type=checkbox]:checked").length
+            countTotal();
+        });
+        //当编辑商品单价之后，对应的总价改变
+        $(".bs-example .table tr td .amount[contenteditable]").on("blur",function(){
+            var count = Number($(this).text());
+            $(this).text(count.toFixed(2));
+            $(this).parents("tr").find(".sub").trigger("click",true);//trigger传值为true则不执行对应的商品加减操作
+        });
+        //全选
+        $("input[type=checkbox][name=all]").on("change",function(){
+            $(".bs-example .table tr td label input[type=checkbox]").prop("checked",this.checked);
+            $(".bs-example .table tr.template td label input[type=checkbox]").prop("checked",false);
+            $(".bs-example .table tr.template2 td label input[type=checkbox]").prop("checked",false);
+            countTotal();
+        });
+    })
+    //总价和总的商品数目
+    function countTotal() {
+        var total = 0;
+        var count = $(".bs-example .table tr td label input:checked")
+            .each(function(){
+                total+=Number($(this).parents("tr").find(".total").text());
+            })
+            .size();
+        $(".sum-count span").text(count);
+        $(".sum-amount span").text(total.toFixed(2));
+    }
+    //插入数据
+    //模拟jsonp数据插入
+    myJsonp("list.js",getData);
+    function getData(data) {
+        $.each(data,function (i, o) {
+            var $row =  $(".bs-example .table tr.template2").clone(true).show().removeClass("template2");
+            $row.find("img").attr("src",o.img);
+            $row.find(".iname").text(o.name);
+            $row.find(".amount").text(o.amount);
+            $row.find(".total").text(o.total);
+            $row.find(".count input").val(o.count);
+            $row.appendTo($(".bs-example .table tbody"));
+        })
+    }
+    function myJsonp(url){
+        var script = document.createElement("script");
+        script.src = url;
+        document.body.appendChild(script);
+    }
+</script>
+</body>
+</html>
