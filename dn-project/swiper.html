@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>轮播图</title>
+    <style>
+        html,body{
+            padding:0;
+            margin: 0;
+            width: 100%;
+            height:100%;
+        }
+        ul{
+            margin:0;
+            padding:0;
+        }
+        ul li{
+            text-decoration: none;
+            list-style: none;
+            float: left;
+        }
+        *{
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;}
+        .swiper-content{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+        }
+        .swiper-content .item-box{
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .swiper-content .item-box .item{
+            height: 300px;
+            text-align: center;
+            font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+            font-size: 20px;
+            line-height: 300px;
+            color: #0A246A;
+            border: 1px solid #ccc;
+        }
+        .swiper-content .item-box .item:nth-child(1){
+            background: #00a0d2;
+        }
+        .swiper-content .item-box .item:nth-child(2){
+            background: #00BB00;
+        }
+        .swiper-content .item-box .item:nth-child(3){
+            background: #00bebe;
+        }
+    </style>
+</head>
+<body>
+    <div class="swiper-content">
+        <ul class="item-box">
+            <li class="item">the First Page</li>
+            <li class="item">the Second Page</li>
+            <li class="item">the Third Page</li>
+        </ul>
+    </div>
+    <script>
+        window.onload = function () {
+            var mySwiper = {
+                width: document.body.clientWidth,
+                direct: "left",
+                _item: document.querySelectorAll('.item'),
+                _itemBox : document.getElementsByClassName('item-box')[0],
+                _len : document.querySelectorAll('.item').length,
+                _num: 0,
+                init: function () {
+                    for(var i=0;i<this._len;i++){
+                        this._item[i].style.width = Number(this.width)+"px";
+                    }
+                    this._itemBox.style.width = Number(this.width*this._len)+"px";
+                    this.move();
+                },
+                move: function () {
+                    var that = this;
+                    var move = setTimeout(function () {
+                        mySwiper._num++;
+                        if(mySwiper._num>=mySwiper._len){
+                            mySwiper._num = 0;
+                        }
+                        mySwiper._itemBox.style.left = Number(-mySwiper._num*mySwiper.width)+'px';
+                        that.move()
+                    },3000)
+                }
+            }
+            mySwiper.init();
+        }
+    </script>
+</body>
+</html>
