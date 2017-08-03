@@ -1,0 +1,793 @@
+@charset "UTF-8";
+/**********************************************25-我的*********************************************/
+.my-base{
+	position: relative;
+	@include wh(750, 413);
+	background: url(../images/my-bg.png) center center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	overflow: hidden;
+}
+.my-base-dl{
+	margin-top: rem(75);
+	margin-left: rem(65);
+	>dt{
+		@include wh(136, 136);
+		border: rem(3) solid #f7f7f7;
+		-webkit-border-radius: 100%;
+		border-radius: 100%;
+	}
+	.tx-img{
+		@include wh(120, 120);
+		margin: rem(5) auto 0 auto;
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	>dd{
+		margin-left: rem(35);
+	}
+	.wel, .ph-name{
+		margin-top: rem(15);
+		color: #fff9f9;
+	}
+}
+.my-set{
+	position: absolute;
+	top: rem(54);
+	right: rem(62);
+	@include wh(40, 40);
+	background: url(../images/my-set.png) center center no-repeat;
+	@include bgs(40, 40);
+}
+.my-base-ul{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, .4);
+	@include flex;
+	>li{
+		position: relative;
+		@include flex1;
+		&:nth-child(1):after, &:nth-child(2):after{
+			position: absolute;
+			right: 0;
+			top: rem(25);
+			display: inline-block;
+			height: rem(70);
+			content: " ";
+			border-left: 1px solid #ccc;
+		}
+		>a{
+			height: rem(115);
+			text-align: center;
+			overflow: hidden;
+			&.ads{
+				background: url(../images/my-ads.png) center rem(17) no-repeat;
+				@include bgs(32, 41);
+			}
+			&.info{
+				background: url(../images/my-info.png) center rem(18) no-repeat;
+				@include bgs(40, 40);
+			}
+			&.like{
+				background: url(../images/my-like.png) center rem(18) no-repeat;
+				@include bgs(48, 40);
+			}
+		}
+	}
+	.text{
+		margin-top: rem(65);
+		color: #fff9f9;
+	}
+}
+
+.my-order{
+	@extend .com-list;
+	height: rem(100);
+	>h3{
+		line-height: rem(100);
+	}
+	.com-go{
+		height: rem(100);
+	}
+}
+.my-dai{
+	@include flex;
+	>li {
+		@include flex1;
+		>a{
+			position: relative;
+			height: rem(143);
+			text-align: center;
+			overflow: hidden;
+			&.fk{
+				background: url(../images/my-dfk.png) center rem(31) no-repeat;
+				@include bgs(45, 39);
+			}
+			&.fh{
+				background: url(../images/my-dfh.png) center rem(30) no-repeat;
+				@include bgs(45, 37);
+			}
+			&.sh{
+				background: url(../images/my-dsh.png) center rem(28) no-repeat;
+				@include bgs(49, 40);
+			}
+			&.sm{
+				background: url(../images/my-dsm.png) center rem(30) no-repeat;
+				@include bgs(47, 38);
+			}
+		}
+	}
+	.text{
+		margin-top: rem(80);
+	}
+	.num{
+		position: absolute;
+		top: rem(17);
+		left: 50%;
+		margin-left: rem(12);
+		display: block;
+		@include wh(28 ,28);
+		background-color: $color-yel;
+		line-height: rem(28);
+		color: $color-wht;
+		-webkit-border-radius: 100%;
+		border-radius: 100%;
+	}
+}
+.my-disc{
+	dt{
+		height: rem(60);
+		padding-left: rem(25);
+		background-color: $color-bg;
+		line-height: rem(60);
+	}
+	a{
+		@extend .com-list;
+		height: rem(100);
+		padding-left: rem(86);
+		&.disc{
+			background: url(../images/my-juan.png) rem(29) center no-repeat;
+			@include bgs(44, 24)
+		}
+		&.fma{
+			background: url(../images/my-f.png) rem(33) center no-repeat;
+			@include bgs(39, 29)
+		}
+		&.lp{
+			background: url(../images/my-lp.png) rem(33) center no-repeat;
+			@include bgs(33, 37)
+		}
+	}
+	.name{
+		line-height: rem(100);
+	}
+	.com-go{
+		height: rem(100);
+	}
+}
+
+/**********************************************30-设置*********************************************/
+.set-sect{
+	.name{
+	 	line-height: rem(80);
+	 }
+	.com-go{
+		height: rem(80);
+	}
+}
+
+/**********************************************26-收货地址*********************************************/
+.ads-dl{
+	margin-bottom: rem(15);
+	background-color: $color-wht;
+	>dd{
+		padding: 0 rem(25) rem(20) rem(25);
+		border-bottom: 1px solid #e6e5e5;
+	}
+	.name{
+		padding-top: rem(25);
+		padding-bottom: rem(15);
+	}
+	.text{
+		line-height: rem(34);
+	}
+	dt{
+		height: rem(70);
+		padding: 0 rem(25);
+	}
+}
+.ads-default{
+	color: #8e8e8e;
+	line-height: rem(70);
+	.de-icon{
+		display: inline-block;
+		@include wh(29, 29);
+		margin-right: rem(5);
+		margin-top: rem(20);
+		border: 1px solid #c1c0c0;
+		-webkit-border-radius: 100%;
+		border-radius: 100%;
+		vertical-align: top;
+		&.on{
+			background: $color-yel url(../images/com-true.png) center center no-repeat;
+			border-color: $color-yel;
+			@include bgs(19, 14);
+		}
+	}
+}
+.ads-edit{
+	color: #8e8e8e;
+	line-height: rem(70);
+	.ed-icon{
+		display: inline-block;
+		@include wh(27, 27);
+		margin-right: rem(5);
+		margin-top: rem(21);
+		vertical-align: top;
+		background: url(../images/ads-edit.png) center center no-repeat;
+		@include bgs(27, 27);
+	}
+}
+.ads-del{
+	color: #8e8e8e;
+	line-height: rem(70);
+	.del-icon{
+		display: inline-block;
+		@include wh(25, 26);
+		margin-right: rem(5);
+		margin-top: rem(21);
+		vertical-align: top;
+		background: url(../images/ads-del.png) center center no-repeat;
+		@include bgs(25, 26);
+	}
+}
+
+/**********************************************26-编辑地址*********************************************/
+.ed-dl{
+	min-height: rem(85);
+	padding: rem(0) rem(25);
+	background-color: $color-wht;
+	border-bottom: 1px solid #ddd;
+	dt{
+		width: rem(112);
+		line-height: rem(85);
+	}
+	dd{
+		position: relative;
+		width: rem(525);
+		padding-left: rem(25);
+		padding-top: rem(24);
+		padding-bottom: rem(22);
+	}
+	.ipt{
+		width: rem(525);
+		line-height: rem(40);
+		border: 0;
+		color: $color;
+		&::-webkit-input-placeholder{
+			color: #999;
+		}
+	}
+	.com-go{
+		position: absolute;
+		top: 0;
+		right: - rem(68);
+		height: rem(85);
+	}
+	.ed-ta{
+		width: rem(525);
+		min-height: rem(70);
+		border: 0;
+		font-family:sans-serif
+	}
+}
+
+/**********************************************26-新增地址*********************************************/
+.ads-new-go{
+	position: absolute;
+	top: 0;
+	right: - rem(55);
+	line-height: rem(80);
+}
+.ads-new-def{
+	padding: rem(25);
+	background-color: $color-wht;
+	.de-icon{
+		display: inline-block;
+		@include wh(29, 29);
+		border: 1px solid #c1c0c0;
+		-webkit-border-radius: 100%;
+		border-radius: 100%;
+		vertical-align: top;
+		&.on{
+			background: $color-yel url(../images/com-true.png) center center no-repeat;
+			border-color: $color-yel;
+			@include bgs(19, 14);
+		}
+	}
+}
+
+/**********************************************27-入网人信息*********************************************/
+.rw-sect{
+	padding-bottom: rem(5);
+	background-color: $color-wht;
+	.name{
+		line-height: rem(75);
+	}
+}
+.rw-edit{
+	color: #8e8e8e;
+	line-height: rem(70);
+	.ed-icon{
+		display: inline-block;
+		@include wh(27, 27);
+		margin-right: rem(5);
+		margin-top: rem(21);
+		vertical-align: top;
+		background: url(../images/ads-edit.png) center center no-repeat;
+		@include bgs(27, 27);
+	}
+}
+.rw-del{
+	color: #8e8e8e;
+	line-height: rem(70);
+	.del-icon{
+		display: inline-block;
+		@include wh(25, 26);
+		margin-right: rem(5);
+		margin-top: rem(21);
+		vertical-align: top;
+		background: url(../images/ads-del.png) center center no-repeat;
+		@include bgs(25, 26);
+	}
+}
+.rw-sect-dl{
+	padding: rem(10) 0;
+	dt{
+		width: rem(130);
+	}
+	dd{
+		width: rem(570);
+	}
+}
+
+/**********************************************28-我喜欢的*********************************************/
+.my-like{
+	padding: rem(30) rem(25);
+	border-bottom: 1px solid #dad8d8;
+	background-color: $color-wht;
+	.img{
+		@include wh(160, 160);
+		border: 1px solid #dfdede;
+		overflow: hidden;
+		> img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.info{
+		width: rem(500);
+		.pram{
+			color: #8e8e8e;
+			min-height: rem(60);
+		}
+	}
+	.prc{
+		color: $color-yel;
+	}
+}
+
+.my-like-body{
+	padding-bottom: rem(90) !important;
+}
+
+.my-like-sect{
+	position: relative;
+	border-bottom: 1px solid #dad8d8;
+	background-color: $color-wht;
+	.icon{
+		position: absolute;
+		top: 50%;
+		left: rem(20);
+		margin-top: - rem(15);
+		display: inline-block;
+		@include wh(29, 29);
+		border: 1px solid #c1c0c0;
+		-webkit-border-radius: 100%;
+		border-radius: 100%;
+		vertical-align: top;
+		&.on{
+			background: $color-yel url(../images/com-true.png) center center no-repeat;
+			border-color: $color-yel;
+			@include bgs(19, 14);
+		}
+	}
+	.my-like{
+		margin-left: rem(70);
+		padding-left: 0;
+		border-bottom: 0;
+		.info{
+			width: rem(460);
+		}
+	}
+}
+
+/**********************************************29-我的订单*********************************************/
+.my-od-nav{
+	@include flex;
+	border-bottom: 2px solid #f2f3f3;
+	background-color: $color-wht;
+	>li{
+		@include flex1;
+		height: rem(83);
+		text-align: center;
+		line-height: rem(83);
+		font-size: rem(30);
+		>a.on{
+			height: rem(81);
+			border-bottom: 2px solid $color-yel;
+			color: $color-yel;
+		}
+	}
+}
+.my-od-box{
+	margin-bottom: (15);
+	background-color: $color-wht;
+}
+.my-od-one{
+	border-bottom: 1px solid #ededed;
+	line-height: rem(85);
+	.state{
+		color: $color-yel;
+	}
+}
+.my-od-two{
+	padding: rem(30) rem(25);
+	border-bottom: 1px solid #ededed;
+	background-color: $color-wht;
+	.img{
+		@include wh(160, 160);
+		border: 1px solid #dfdede;
+		overflow: hidden;
+		> img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.info{
+		width: rem(500);
+		.pram{
+			color: #8e8e8e;
+			min-height: rem(60);
+		}
+	}
+	.prc{
+		color: $color-yel;
+	}
+}
+
+.my-od-thr{
+	line-height: rem(75);
+	border-bottom: 1px solid #ededed;
+}
+.my-od-del{
+	display: inline-block;
+	@include wh(150, 48);
+	border: 1px solid #d2d2d2;
+	color: #4b4a4a;
+	line-height: rem(48);
+}
+
+/**********************************************31-修改密码*********************************************/
+.up-pwd{
+	.pwd-row{
+		border-bottom: 1px solid #ebebeb;
+	}
+	.pwd-num{
+		width: rem(600);
+		margin: rem(30) 0;
+		line-height: rem(36);
+		border: 0;
+		&::-webkit-input-placeholder{
+			color: #dedede;
+		}
+	}
+	.pwd-ma{
+		width: rem(500);
+		margin: rem(30) 0;
+		line-height: rem(36);
+		border: 0;
+		&::-webkit-input-placeholder{
+			color: #dedede;
+		}
+	}
+	.get-ma{
+		min-width: rem(210);
+		padding: rem(30) rem(45);
+		border-left: 1px solid #ebebeb;
+		color: $color-yel;
+		text-align: center;
+	}
+	.ts{
+		color: #8e8e8e;
+	}
+}
+.up-pwd-new{
+	border-bottom: 1px solid #ebebeb;
+	dt{
+		width: rem(130);
+		line-height: rem(108);
+	}
+	.ipt{
+		margin-top: rem(39);
+		line-height: rem(36);
+		border: 0;
+		&::-webkit-input-placeholder{
+			color: #dedede;
+		}
+	}
+}
+.up-pwd-new-ts{
+	color: #8e8e8e;
+}
+
+/**********************************************32-发票管理*********************************************/
+.fp-mng{
+	margin-bottom: rem(15);
+	background-color: $color-wht;
+	>dd{
+		padding: 0 rem(25) rem(20) rem(25);
+		border-bottom: 1px solid #e6e5e5;
+	}
+	.name{
+		padding-top: rem(25);
+		padding-bottom: rem(15);
+	}
+	.text{
+		line-height: rem(34);
+	}
+	dt{
+		height: rem(70);
+		padding: 0 rem(25);
+	}
+}
+.fp-default{
+	color: #8e8e8e;
+	line-height: rem(70);
+	.de-icon{
+		display: inline-block;
+		@include wh(29, 29);
+		margin-right: rem(5);
+		margin-top: rem(20);
+		border: 1px solid #c1c0c0;
+		-webkit-border-radius: 100%;
+		border-radius: 100%;
+		vertical-align: top;
+		&.on{
+			background: $color-yel url(../images/com-true.png) center center no-repeat;
+			border-color: $color-yel;
+			@include bgs(19, 14);
+		}
+	}
+}
+.fp-edit{
+	color: #8e8e8e;
+	line-height: rem(70);
+	.ed-icon{
+		display: inline-block;
+		@include wh(27, 27);
+		margin-right: rem(5);
+		margin-top: rem(21);
+		vertical-align: top;
+		background: url(../images/ads-edit.png) center center no-repeat;
+		@include bgs(27, 27);
+	}
+}
+.fp-del{
+	color: #8e8e8e;
+	line-height: rem(70);
+	.del-icon{
+		display: inline-block;
+		@include wh(25, 26);
+		margin-right: rem(5);
+		margin-top: rem(21);
+		vertical-align: top;
+		background: url(../images/ads-del.png) center center no-repeat;
+		@include bgs(25, 26);
+	}
+}
+/**********************************************33-意见反馈*********************************************/
+.cmd-sect{
+	background-color: $color-wht;
+	.ta{
+		width: 100%;
+		min-height: rem(340);
+		color: #d6d6d6;
+		border: 0;
+	}
+	.cmd-rlt{
+		margin-top: rem(30);
+		height: rem(67);
+		background: url(../images/cmd-succ1.png) center center no-repeat;
+		@include bgs(67, 67);
+	}
+	.text{
+		color: #8e8e8e;
+	}
+}
+/**********************************************22-我的优惠券*********************************************/
+.yhq-nav{
+	@include flex;
+	border-bottom: 2px solid #f2f3f3;
+	background-color: $color-wht;
+	>li{
+		@include flex1;
+		height: rem(83);
+		text-align: center;
+		line-height: rem(83);
+		font-size: rem(30);
+		&.on{
+			height: rem(81);
+			border-bottom: 2px solid $color-yel;
+			color: $color-yel;
+		}
+	}
+}
+.yhq-list{
+	padding-bottom: rem(30);
+	padding-left: rem(50);
+	border-bottom: dashed 1px #c0c0c0;
+	h3{
+		padding-top: rem(40);
+		padding-bottom: rem(30);
+	}
+	.kind{
+		padding: rem(5) 0;
+		color: $color-yel;
+	}
+	.time{
+		color: #c0c0c0;
+	}
+	&.overed{
+		h3, .kind, .time{
+			color: #dad9d9;
+		}
+	}
+	&.used{
+		h3, .kind, .time{
+			color: #dadada;
+		}
+		.use-time{
+			color: #666;
+		}
+	}
+}
+
+.yhq-dt{
+	padding: 0 rem(50);
+	h3{
+		padding-top: rem(40);
+		padding-bottom: rem(30);
+	}
+	.kind{
+		padding: rem(5) 0;
+		color: $color-yel;
+	}
+	.time{
+		color: #c0c0c0;
+	}
+	.info{
+		line-height: rem(50);
+		dt{
+			color: #666;
+		}
+		dd{
+			color: #b3b3b3;
+		}
+	}
+	.use-des{
+		border-top: 1px dashed #c0c0c0;
+		.des-list{
+			color: #8e8e8e;
+		}
+	}
+}
+
+/**********************************************23-我的F码*********************************************/
+.fma-nav{
+	@include flex;
+	border-bottom: 2px solid #f2f3f3;
+	background-color: $color-wht;
+	>li{
+		@include flex1;
+		height: rem(83);
+		text-align: center;
+		line-height: rem(83);
+		font-size: rem(30);
+		&.on{
+			height: rem(81);
+			border-bottom: 2px solid $color-yel;
+			color: $color-yel;
+		}
+	}
+}
+.fma-list{
+	padding-bottom: rem(30);
+	padding-left: rem(50);
+	border-bottom: dashed 1px #c0c0c0;
+	h3{
+		padding-top: rem(40);
+		padding-bottom: rem(30);
+	}
+	.time{
+		color: #c0c0c0;
+	}
+	.use-time{
+		color: #666;
+	}
+	&.overed{
+		h3, .time{
+			color: #dad9d9;
+		}
+	}
+}
+
+/**********************************************23-我的礼品码*********************************************/
+.lp-nav{
+	@include flex;
+	border-bottom: 2px solid #f2f3f3;
+	background-color: $color-wht;
+	>li{
+		@include flex1;
+		height: rem(83);
+		text-align: center;
+		line-height: rem(83);
+		font-size: rem(30);
+		&.on{
+			height: rem(81);
+			border-bottom: 2px solid $color-yel;
+			color: $color-yel;
+		}
+	}
+}
+.lp-list{
+	padding-bottom: rem(30);
+	padding-left: rem(50);
+	border-bottom: dashed 1px #c0c0c0;
+	h3{
+		padding-top: rem(40);
+		padding-bottom: rem(30);
+	}
+	.time{
+		color: #c0c0c0;
+	}
+	.use-time{
+		color: #666;
+	}
+	&.overed{
+		h3, .time{
+			color: #dad9d9;
+		}
+	}
+}
+
+/**********************************************34-入网协议*********************************************/
+.xy-sect{
+	p{
+		font-size: rem(24);
+		color: #666;
+		line-height: rem(36);
+	}
+	dl{
+		margin-top: rem(30);
+		dt{
+			font-size: rem(24);
+			color: #000;
+			font-weight: bold;
+		}
+	}
+}

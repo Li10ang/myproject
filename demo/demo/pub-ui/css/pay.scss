@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/*******************************08-支付成功-十全十美**************************/
+.pay-rlt-czl-box{
+	padding: rem(40) 0;
+	background-color: $color-wht;
+	img{
+		width: 100%;
+		height: 100%;
+	}
+}
+.pay-rlt-czlc{
+	position: relative;
+	height: rem(56);
+	border-top: 1px solid #e9e9e9;
+	h3{
+		position: absolute;
+		top: - rem(18);
+		left: 50%;
+		display: inline-block;
+		padding: 0 rem(30);
+		margin-left: - rem(114);
+		background-color: $color-wht;
+	}
+}

@@ -1,0 +1,229 @@
+@charset "UTF-8";
+/**********************************************17-登录*********************************************/
+.lg-row{
+	padding: rem(36) rem(25);
+	border-bottom: 1px solid #ebebeb;
+	.ipt{
+		@include wh(610, 38);
+		padding-left: rem(60);
+		line-height: rem(38);
+		border: 0;
+		&::-webkit-input-placeholder{
+			color: #dedede;
+		}
+		&.lg-user{
+			background: url(../images/lg-user.png) left center no-repeat;
+		}
+		&.lg-pwd{
+			background: url(../images/lg-pwd.png) left center no-repeat;
+		}
+	}
+}
+.lg-other{
+	a{
+		color: #666;
+	}
+}
+.lg-qt{
+	position: relative;
+	margin-top: rem(225);
+	border-top: 1px solid #e1e0e0;
+	dt{
+		position: absolute;
+		left: 50%;
+		top: - rem(20);
+		margin-left: - rem(102);
+		padding: 0 rem(30);
+		background-color: #fff;
+		text-align: center;
+	}
+	dd{
+		@include flex;
+		a{
+			@include flex1;
+			padding: rem(60) 0;
+			text-align: center;
+			.icon{
+				display: inline-block;
+				@include wh(82, 82);
+				background-color: #d8d8d8;
+				background-position: center center;
+				background-repeat: no-repeat;
+				-webkit-border-radius: 100%;
+				border-radius: 100%;
+				&.wx{
+					background-image: url(../images/lg-wx.png);
+					@include bgs(54, 42);
+				}
+				&.qq{
+					background-image: url(../images/lg-qq.png);
+					@include bgs(40, 46);
+				}
+				&.wb{
+					background-image: url(../images/lg-wb.png);
+					@include bgs(47, 37);
+				}
+			}
+		}
+	}
+}
+/**********************************************17-登录第二版*********************************************/
+.lg-two-img{
+	img{
+		width: 100%;
+		height: 100%;
+	}
+}
+.lg-two-main{
+	padding: 0 rem(50);
+	.row{
+		padding: rem(25) 0;
+		border-bottom: 1px solid #ebebeb;
+		.ipt{
+			@include wh(610, 38);
+			line-height: rem(38);
+			border: 0;
+			&::-webkit-input-placeholder{
+				color: #dedede;
+			}
+		}
+	}
+}
+.lg-two-qt{
+	@include flex;
+	margin-top: rem(75);
+	margin-bottom: rem(30);
+	a{
+		@include flex1;
+		text-align: center;
+		.icon{
+			display: inline-block;
+			@include wh(39, 39);
+			background-color: #d8d8d8;
+			background-position: center center;
+			background-repeat: no-repeat;
+			-webkit-border-radius: 100%;
+			border-radius: 100%;
+			vertical-align: middle;
+			&.wx{
+				background-image: url(../images/lg-wx.png);
+				@include bgs(25, 20);
+			}
+			&.qq{
+				background-image: url(../images/lg-qq.png);
+				@include bgs(18, 21);
+			}
+			&.wb{
+				background-image: url(../images/lg-wb.png);
+				@include bgs(26, 20);
+			}
+		}
+		.text{
+			display: inline-block;
+			margin-left: rem(10);
+			vertical-align: middle;
+		}
+	}
+}
+/**********************************************18-短信验证码登录*********************************************/
+.lg-dx-row{
+	border-bottom: 1px solid #ebebeb;
+	.ipt{
+		@include wh(610, 38);
+		margin: rem(30) 0;
+		padding-left: rem(60);
+		line-height: rem(38);
+		border: 0;
+		&::-webkit-input-placeholder{
+			color: #dedede;
+		}
+		&.lg-user{
+			background: url(../images/lg-user.png) left center no-repeat;
+		}
+		&.lg-yzm{
+			width: rem(440);
+			background: url(../images/lg-pwd.png) left center no-repeat;
+		}
+	}
+	.get-ma{
+		display: inline-block;
+		min-width: rem(210);
+		padding: rem(30) rem(45);
+		border-left: 1px solid #ebebeb;
+		color: $color-yel;
+		text-align: center;
+	}
+}
+.lg-dx-other{
+	color: #666;
+}
+
+/**********************************************19-注册*********************************************/
+.reg-sect{
+	.reg-row{
+		border-bottom: 1px solid #ebebeb;
+	}
+	.reg-num{
+		width: rem(600);
+		margin: rem(30) 0;
+		line-height: rem(36);
+		border: 0;
+		&::-webkit-input-placeholder{
+			color: #dedede;
+		}
+	}
+	.reg-ma{
+		width: rem(500);
+		margin: rem(30) 0;
+		line-height: rem(36);
+		border: 0;
+		&::-webkit-input-placeholder{
+			color: #dedede;
+		}
+	}
+	.get-ma{
+		min-width: rem(210);
+		padding: rem(30) rem(45);
+		border-left: 1px solid #ebebeb;
+		color: $color-yel;
+		text-align: center;
+	}
+}
+.reg-xy{
+	color: #666;
+	.xy{
+		color: $color-yel;
+	}
+	.icon{
+		display: inline-block;
+		@include wh(29, 29);
+		margin-right: rem(5);
+		border: 1px solid #c1c0c0;
+		-webkit-border-radius: 100%;
+		border-radius: 100%;
+		vertical-align: middle;
+		&.on{
+			background: $color-yel url(../images/com-true.png) center center no-repeat;
+			border-color: $color-yel;
+			@include bgs(19, 14);
+		}
+	}
+}
+
+.reg-pwd-main{
+	.row{
+		padding: rem(25);
+		border-bottom: 1px solid #ebebeb;
+		.ipt{
+			@include wh(610, 38);
+			line-height: rem(38);
+			border: 0;
+			&::-webkit-input-placeholder{
+				color: #dedede;
+			}
+		}
+	}
+	.ts{
+		color: #8e8e8e;
+	}
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html class="html-bg">
+	<head>
+	<meta charset="utf-8">
+	<script>
+	(function(win,lib){var doc=win.document;var docEl=doc.documentElement;var metaEl=doc.querySelector('meta[name="viewport"]');var flexibleEl=doc.querySelector('meta[name="flexible"]');var dpr=0;var scale=0;var tid;var flexible=lib.flexible||(lib.flexible={});if(metaEl){console.warn("将根据已有的meta标签来设置缩放比例");var match=metaEl.getAttribute("content").match(/initial\-scale=([\d\.]+)/);if(match){scale=parseFloat(match[1]);dpr=parseInt(1/scale);}}else{if(flexibleEl){var content=flexibleEl.getAttribute("content");if(content){var initialDpr=content.match(/initial\-dpr=([\d\.]+)/);var maximumDpr=content.match(/maximum\-dpr=([\d\.]+)/);if(initialDpr){dpr=parseFloat(initialDpr[1]);scale=parseFloat((1/dpr).toFixed(2));}if(maximumDpr){dpr=parseFloat(maximumDpr[1]);scale=parseFloat((1/dpr).toFixed(2));}}}}if(!dpr&&!scale){var isAndroid=win.navigator.appVersion.match(/android/gi);var isIPhone=win.navigator.appVersion.match(/iphone/gi);var devicePixelRatio=win.devicePixelRatio;if(isIPhone){if(devicePixelRatio>=3&&(!dpr||dpr>=3)){dpr=3;}else{if(devicePixelRatio>=2&&(!dpr||dpr>=2)){dpr=2;}else{dpr=1;}}}else{dpr=1;}scale=1/dpr;}docEl.setAttribute("data-dpr",dpr);if(!metaEl){metaEl=doc.createElement("meta");metaEl.setAttribute("name","viewport");metaEl.setAttribute("content","initial-scale="+scale+", maximum-scale="+scale+", minimum-scale="+scale+", user-scalable=no");if(docEl.firstElementChild){docEl.firstElementChild.appendChild(metaEl);}else{var wrap=doc.createElement("div");wrap.appendChild(metaEl);doc.write(wrap.innerHTML);}}function refreshRem(){var width=docEl.getBoundingClientRect().width;if(width/dpr>750){width=750*dpr;}var rem=width/10;docEl.style.fontSize=rem+"px";flexible.rem=win.rem=rem;}win.addEventListener("resize",function(){clearTimeout(tid);tid=setTimeout(refreshRem,300);},false);win.addEventListener("pageshow",function(e){if(e.persisted){clearTimeout(tid);tid=setTimeout(refreshRem,300);}},false);if(doc.readyState==="complete"){doc.body.style.fontSize=12*dpr+"px";}else{doc.addEventListener("DOMContentLoaded",function(e){doc.body.style.fontSize=12*dpr+"px";},false);}refreshRem();flexible.dpr=win.dpr=dpr;flexible.refreshRem=refreshRem;flexible.rem2px=function(d){var val=parseFloat(d)*this.rem;if(typeof d==="string"&&d.match(/rem$/)){val+="px";}return val;};flexible.px2rem=function(d){var val=parseFloat(d)/this.rem;if(typeof d==="string"&&d.match(/px$/)){val+="rem";}return val;};})(window,window.lib||(window.lib={}));
+	</script>
+	<title>北京电信WAP商城</title>
+	<meta name="keywords" contect="">
+	<meta name="copyright" contect="">
+	<meta name="description" contect="">
+	<meta name="HandheldFriendly" content="true">
+    <!-- uc强制竖屏 -->
+	<meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+	<meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+	<meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+	<meta name="x5-fullscreen" content="true" />
+	<meta name="apple-mobile-web-app-title" content="北京电信WAP商城">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no, email=no">
+	<link rel="stylesheet" href="../pub-ui/css/swiper-3.4.1.min.css">
+	<link rel="stylesheet" href="../pub-ui/css/app.css">
+</head>
+<body>
+	<div id="J_dtUpArea">
+		<a href="#" class="dt-back"></a>
+		<div class="dt-swiper swiper-container">
+	        <div class="swiper-wrapper">
+	        	<div class="swiper-slide">
+					<a href="#"><img src="../pub-ui/pic/img-28.png" alt="" /></a>
+				</div>
+				<div class="swiper-slide">
+					<a href="#"><img src="../pub-ui/pic/img-28.png" alt="" /></a>
+				</div>
+				<div class="swiper-slide">
+					<a href="#"><img src="../pub-ui/pic/img-28.png" alt="" /></a>
+				</div>
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+		<section class="dt-info pdl-25 pdr-25">
+			<h3 class="fz-28 pdt-20">十全十美家庭套餐</h3>
+			<p class="des fz-24 mgt-10">每月可享不限流量+200M宽带+2部高清iTV，仅需299元/月</p>
+			<p class="prc fz-36 mgt-10"><span class="fz-24">¥</span>299/月</p>
+			<p class="ps fz-24 mgt-10">配送：由 网盈科技服务有限公司 负责免费配送，并提供售后服务</p>
+			<div class="clearfix mgt-10">
+				<p class="kd fl fz-24">快递：免运费</p>
+				<p class="yx fr fz-24">月销2324笔</p>
+			</div>
+			<div id="J_dtChoPramBtn" class="cho-pram com-go-bg pdt-20 pdb-20 mgt-20 clearfix">
+				<p class="yx-tt fz-26">已选</p>
+				<p class="fz-26 mgt-10">299套餐</p>
+			</div>
+		</section>
+		<section class="dt-cmd mgt-15">
+            <div class="hd pdl-25 fz-26">业务介绍</div>
+            <ul class="dt-cmd-ul clearfix" style="background: #3A95F5">
+                <li class="mgt-10">
+                    <img src="../pub-ui/images/detail_fee01.png">
+                </li>
+                <li class="mgt-10">
+                    <img src="../pub-ui/images/detail_fee02.png">
+                </li>
+                <li class="mgt-10"> 
+                    <img src="../pub-ui/images/detail_fee03.png">
+                </li>
+                <li class="mgt-10" style="margin-bottom: 1rem">
+                    <img src="../pub-ui/images/detail_fee04.png">
+                </li>
+            </ul>
+        </section>
+		<!-- <a href="#" class="dt-sm-fp clearfix mgt-15 pdl-25 pdr-25 fz-26">
+			<div class="text com-go-bg">实名制指南/电子发票</div>
+		</a> -->
+
+		<!-- <section class="dt-cmd mgt-15">
+			<div class="hd pdl-25 fz-26">为你推荐</div>
+			<ul class="dt-cmd-ul clearfix">
+				<li>
+					<a href="#">
+						<p class="img"><img src="../pub-ui/pic/img-10.png" alt=""></p>
+						<h3 class="fz-30 mgt-15 mgl-15">北京电信100M宽带包</h3>
+						<p class="prc fz-36 pdb-15 mgt-5 mgl-15"><span class="fz-24">¥</span>989</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<p class="img"><img src="../pub-ui/pic/img-10.png" alt=""></p>
+						<h3 class="fz-30 mgt-15 mgl-15">北京电信100M宽带包</h3>
+						<p class="prc fz-36 pdb-15 mgt-5 mgl-15"><span class="fz-24">¥</span>989</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<p class="img"><img src="../pub-ui/pic/img-10.png" alt=""></p>
+						<h3 class="fz-30 mgt-15 mgl-15">北京电信100M宽带包</h3>
+						<p class="prc fz-36 pdb-15 mgt-5 mgl-15"><span class="fz-24">¥</span>989</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<p class="img"><img src="../pub-ui/pic/img-10.png" alt=""></p>
+						<h3 class="fz-30 mgt-15 mgl-15">北京电信100M宽带包</h3>
+						<p class="prc fz-36 pdb-15 mgt-5 mgl-15"><span class="fz-24">¥</span>989</p>
+					</a>
+				</li>
+			</ul>
+		</section> -->
+
+		<!-- <div id="J_dtLaUp" class="dt-la-up fz-24 mgt-15">
+			上拉查看图文详情
+		</div> -->
+	</div>
+	
+
+	<!-- <div id="J_dtBottomArea" class="dt-bt-area none">
+		<header class="com-sub-hd">
+			<h2 class="tc fz-32">图文详情</h2>
+			<a class="com-sub-back" href="#"></a>
+		</header>
+		<ul id="J_dtMainUl" class="dt-main-ul">
+			<li class="on">商品详情</li>
+			<li>套餐介绍</li>
+		</ul>
+		<div id="J_dtLaDown" class="dt-la-down fz-24">
+			<i class="icon"></i>下拉查看商品详情
+		</div>
+		<section id="J_dtMain" class="dt-main">	
+			<div class="main-box">
+				<img src="../pub-ui/pic/img-30.png" alt="" />
+			</div>
+			<div class="main-box none">
+				套餐介绍
+			</div>
+		</section>
+	</div> -->
+
+	<section class="dt-nav">
+		<!-- <a class="other in" href="#">首页</a>
+		<a class="other like" href="#">喜欢</a> -->
+		<button class="nav-btn fz-32">填写安装信息</button>
+	</section>
+
+	<div id="J_dtPramSectBg" class="com-fix none"></div>
+	<section id="J_dtPramSect" class="dt-pram-sect">
+		<div class="dt-pram-base clearfix">
+			<p class="img"><img src="../pub-ui/pic/img-29.png" alt="" /></p>
+			<div class="base-info pdr-25">
+				<p class="prc fz-36 mgt-20"><span class="fz-24">¥</span>299/月</p>
+				<p class="kc fz-28 mgt-20">库存163件</p>
+				<p class="pram fz-28 mgt-10">299套餐 200M  IPTV  固定电话</p>
+			</div>
+			<a id="J_dtPramSectClose" class="close" href="javascript:;"></a>
+		</div>
+		<div class="dt-pram-main">
+			<dl class="dt-pram-dl">
+				<dt class="fz-26">档位</dt>
+				<dd class="clearfix">
+					<a class="on" href="javascript:;">299</a>
+					<a href="javascript:;">399</a>
+				</dd>
+			</dl>
+			<dl class="dt-pram-dl">
+				<dt class="fz-26">宽带</dt>
+				<dd class="clearfix">
+					<a class="on" href="javascript:;">200M</a>
+					<a href="javascript:;">250M</a>
+				</dd>
+			</dl>
+			<dl class="dt-pram-dl">
+				<dt class="fz-26">天翼高清（IPTV）（可选）</dt>
+				<dd class="clearfix">
+					<a class="on" href="javascript:;">加装</a>
+				</dd>
+			</dl>
+			<dl class="dt-pram-dl">
+				<dt class="fz-26">固定电话（可选）</dt>
+				<dd class="clearfix">
+					<a class="on" href="javascript:;">加装</a>
+				</dd>
+			</dl>
+		</div>
+		<button class="dt-pram-btn fz-32">填写安装信息</button>
+	</section>
+
+    <script type="text/javascript" src="../pub-ui/js/zepto.min.js"></script>
+	<script type="text/javascript" src="../pub-ui/js/swiper-3.4.1.jquery.min.js"></script>
+	<script>
+		$(function(){
+		    var swiper = new Swiper('.swiper-container', {
+		    	pagination: '.swiper-pagination',
+    			loop: true,
+		    });
+
+		    $(".dt-pram-dl a").on('click', function(event) {
+		    	event.preventDefault();
+		    	$(this).addClass('on').siblings().removeClass('on');
+		    });
+
+		    $("#J_dtChoPramBtn").on('click', function(event) {
+		    	event.preventDefault();
+		    	$("#J_dtPramSectBg").removeClass('none');
+		    	$("#J_dtPramSect").addClass('open');
+		    });
+		    $("#J_dtPramSectClose, #J_dtPramSectBg").on('click', function(event) {
+		    	event.preventDefault();
+		    	$("#J_dtPramSectBg").addClass('none');
+		    	$("#J_dtPramSect").removeClass('open');
+		    });
+
+		    $("#J_dtMainUl").on('click', 'li', function(event) {
+		    	event.preventDefault();
+		    	var me = $(this),
+		    		index = me.index();
+		    	me.addClass('on').siblings().removeClass('on');
+		    	$("#J_dtMain .main-box").eq(index).removeClass('none').siblings('.main-box').addClass('none');
+		    });
+
+		    var upArea = $("#J_dtUpArea"),
+		    	dcH = document.documentElement.clientHeight,
+		    	wsT = null,
+		    	spacePos = null,
+		    	startPos = null,
+		    	upH = upArea.height(),
+		    	isMove = false;
+		    upArea.on('touchstart',function(event){
+		    	var touch = event.targetTouches[0];
+		    	startPos = {y: touch.pageY};
+		    	upArea[0].addEventListener('touchmove', upArea[0], false);
+		    	upArea[0].addEventListener('touchend', upArea[0], false);
+		    });
+		    upArea.on('touchmove',function(event){
+		    	var touch = event.targetTouches[0];
+		    	spacePos = {y: touch.pageY - startPos.y};
+		    	if(spacePos.y > 0){
+		    		//console.log("下");
+		    	}else{
+		    		//console.log("上");
+		    		console.log(dcH+"上"+upH);
+		    		wsT = $(window).scrollTop();
+		    		if(dcH + wsT >= upH){
+		    			isMove = true;
+		    			upArea.css({
+		    				'transform':  'translateY('+spacePos.y+'px)',
+		    				'transition': 'none'
+		    			});
+		    		}
+		    	}
+		    });
+		    upArea.on('touchend', function(event) {
+		    	event.preventDefault();
+		    	if(isMove){
+	    			if(Math.abs(spacePos.y) > 150){
+	    				upArea.css({
+		    				'transform':  'translateY('+ -upH+'px)',
+		    				'transition': 'transform 1s'
+		    			});
+		    			setTimeout(function(){
+		    				upArea.css({
+			    				'transition': 'none'
+			    			}).addClass('none');
+			    			$(window).scrollTop(0);
+		    			}, 1000);
+		    			$("#J_dtBottomArea").removeClass('none');
+	    			}else{
+	    				upArea.css({
+		    				'transform':  'translateY(0)',
+		    				'transition': 'transform 1s'
+		    			});
+	    			}
+    			}
+    			upArea[0].removeEventListener('touchmove', upArea[0], false);
+		    	upArea[0].removeEventListener('touchend', upArea[0], false);
+		    });
+
+
+		    var bottomArea = $("#J_dtBottomArea"),
+		    	dtMain = $("#J_dtMain"),
+		    	dtLaDown = $("#J_dtLaDown"),
+		    	BstartPos = null,
+		    	BspacePos = null;
+		    dtMain.on('touchstart', function(event) {
+		    	var touch = event.targetTouches[0];
+		    	BstartPos = {y: touch.pageY};
+		    	dtMain[0].addEventListener('touchmove', dtMain[0], false);
+		    	dtMain[0].addEventListener('touchend', dtMain[0], false);
+		    });
+		    dtMain.on('touchmove', function(event) {
+		    	var touch = event.targetTouches[0];
+		    	BspacePos = {y: touch.pageY - BstartPos.y};
+		    	if(BspacePos.y > 0){
+		    		dtLaDown.css({
+		    			'height': lib.flexible.px2rem(105)+'rem',
+		    			'paddingBottom': BspacePos.y +'px'
+		    		});
+		    	}
+		    });
+		    dtMain.on('touchend', function(event) {
+		    	event.preventDefault();
+		    	if(BspacePos.y > lib.flexible.rem2px(3)){
+		    		bottomArea.addClass('none');
+		    		upArea.removeClass('none').css({
+	    				'transform':  'translateY(0)',
+	    				'transition': 'transform 1s'
+	    			});
+	    			console.log(dcH - upH);
+	    			$(window).scrollTop(upH - dcH);
+		    	}
+		    	dtLaDown.css({
+	    			'height': '0',
+	    			'paddingBottom': '0'
+	    		});
+		    });
+		});
+    </script>
+</body>
+</html>

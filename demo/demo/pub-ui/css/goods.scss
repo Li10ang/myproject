@@ -1,0 +1,389 @@
+@charset "UTF-8";
+/**********************************************14-商品列表********************************************/
+.gd-bnr{
+	@include flex;
+	>li{
+		@include flex1;
+		height: rem(84);
+		text-align: center;
+		line-height: rem(84);
+		font-size: rem(26);
+		border-bottom: 1px solid #e3e4e4;
+		&.on{
+			border-bottom: 2px solid $color-yel;
+			color: $color-yel;
+			.icon{
+				background-image: url(../images/gd-rank-02.png);
+			}
+			&.on.rank{
+				.icon{
+					background-image: url(../images/gd-rank-01.png);
+				}
+			}
+		}
+		.icon{
+			display: inline-block;
+			@include wh(7, 15);
+			margin-left: rem(10);
+			background: url(../images/gd-rank.png) center center no-repeat;
+			@include bgs(7, 15);
+			vertical-align: middle;
+		}
+	}
+}
+.gd-list{
+	.img{
+		@include wh(210, 210);
+		margin-top: 5px;
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.list-main{
+		@include wh(520, 220);
+		padding-left: rem(25);
+		border-bottom: 1px solid #e3e2e2;
+		h3{
+			margin-top: rem(40);
+			width: rem(520);
+			@include ellipsis;
+		}
+		.parm{
+			height: rem(60);
+			margin-top: rem(5);
+			color: #8e8e8e;
+			overflow: hidden;
+		}
+		.prc{
+			color: $color-yel;
+		}
+	}
+}
+.gd-filter-main{
+	position: fixed;
+	top: 0;right: - rem(620);bottom: 0;
+	width: rem(620);
+	padding-bottom: rem(98);
+	background-color: $color-wht;
+	overflow-y: auto;
+	-webkit-transition: right .35s linear;
+	transition: right .35s linear;
+	z-index: 1999;
+	&.open{
+		right: 0;
+	}
+}
+.gd-filter-dl{
+	dt{
+		padding: rem(20) rem(15) rem(20) rem(15);
+		.icon{
+			display: inline-block;
+			margin-top: rem(10);
+			margin-right: rem(5);
+			@include wh(21, 12);
+			background: url(../images/gd-filter-up.png) center center no-repeat;
+			@include bgs(21, 12);
+		}
+	}
+	dd{
+		a{
+			float: left;
+			@include wh(187, 92);
+			background-color: #eee;
+			@include bdrs(8);
+			margin-left: rem(15);
+			margin-bottom: rem(15);
+			text-align: center;
+			line-height: rem(92);
+			font-size: rem(24);
+			&.on{
+				background-color: $color-wht;
+				border: 2px solid $color-yel;
+				color: $color-yel;
+				line-height: rem(88);
+			}
+		}
+	}
+}
+.gd-filter-btn{
+	position: absolute;
+	right: 0;bottom: 0;
+	width: rem(620);
+	height: em(98);
+	>button{
+		float: left;
+		width: 50%;
+		border: none;
+		border-top: 1px solid #e6e5e5;
+		line-height: rem(98);
+		font-size: rem(30);
+		color: #666;
+		background-color: $color-wht;
+		&.yel{
+			background-color: $color-yel;
+			color: $color-wht;
+		}
+	}
+}
+
+/*************************02-商品详情-十全十美****************************/
+.dt-wrap{
+	overflow: hidden;
+}
+.dt-back{
+	position: absolute;
+	top: rem(20);
+	left: rem(20);
+	@include wh(60, 60);
+	background: rgba(0, 0, 0, .5) url(../images/com-back-2.png) center center no-repeat;
+	@include bgs(17, 32);
+	z-index: 99;
+	-webkit-border-radius: 100%;
+	border-radius: 100%;
+}
+.dt-swiper{
+	height: rem(802);
+	img{
+    	width: 100%;
+    	height: 100%;
+	}
+	.swiper-pagination .swiper-pagination-bullet{
+		@include wh(14, 14);
+		background-color: rgba(169, 169, 169, .64);
+		&.swiper-pagination-bullet-active{
+			background-color: $color-yel;
+		}
+	}
+}
+
+.dt-info{
+	background-color: $color-wht;
+	.des{
+		color: #858585;
+	}
+	.prc{
+		color: $color-yel;
+	}
+	.ps, .kd, .yx{
+		color: #8e8e8e;
+	}
+	.cho-pram{
+		position: relative;
+		border-top: 1px solid #ddd;
+		.yx-tt{
+			color: #858585;
+		}
+	}
+}
+.dt-sm-fp{
+	background-color: $color-wht;	
+	.text{
+		line-height: rem(100);
+	}
+}
+.dt-cmd{
+	background-color: $color-wht;
+	.hd{
+		line-height: rem(80);
+	}
+}
+.dt-cmd-ul{
+	>li{
+		float: left;width: rem(373);
+		&:nth-child(2n){
+			float: right;
+		}	
+	}
+	.img{
+		height: rem(375);
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	h3{
+		width: rem(340);
+		color: $color;@include ellipsis;
+	}
+	.prc{
+		color: $color-yel;
+	}
+}
+.dt-nav{
+	position: fixed;left: 0;right: 0;bottom: 0;z-index: 888;
+	background-color: $color-wht;
+	@include flex;
+	.other{
+		@include wh(162, 107);
+		border-top: 1px solid #dedede;
+		text-align: center;
+		font-size: rem(24);
+		padding-top: rem(60);
+		&:first-child{
+			border-right: 1px solid #dedede;
+		}
+		&.in{
+			background: url(../images/dt-in.png) center rem(18) no-repeat;
+			@include bgs(37, 37);
+		}
+		&.like{
+			background: url(../images/dt-like.png) center rem(20) no-repeat;
+			@include bgs(39, 32);
+		}
+	}
+	.nav-btn{
+		@include flex1;
+		background-color: $color-yel;
+		color: $color-wht;
+		text-align: center;
+		line-height: rem(108);
+		border: 0;
+	}
+}
+.dt-la-up{
+	height: rem(105);
+	text-align: center;
+	line-height: rem(105);
+	color: #666;
+	background: $color-wht url(../images/dt-la-up.png) rem(240) center no-repeat;
+	@include bgs(30, 15);
+}
+.dt-la-down{
+	height: 0;
+	background-color: $color-wht;
+	text-align: center;
+	color: #666;
+	transition: height .25s,padding-bottom .25s;
+	overflow: hidden;
+	.icon{
+		display: inline-block;
+		@include wh(30, 15);
+		margin-right: rem(10);
+		background: url(../images/dt-la-down.png) center center no-repeat;
+		@include bgs(30, 15);
+		vertical-align: middle;
+	}
+}
+.dt-pram-sect{
+	position: fixed;
+	left: 0;right: 0;bottom: - rem(950);z-index: 999;
+	height: rem(880);
+	background-color: $color-wht;
+	-webkit-transition: bottom .35s linear;
+	transition: bottom .35s linear;
+	&.open{
+		bottom: 0;
+	}
+}
+.dt-pram-base{
+	position: relative;
+	min-height: rem(171);
+	.img{
+		position: absolute;
+		left: rem(36);
+		top: - rem(40);
+		@include wh(211, 211);
+		border: 1px solid #f6f5f5;
+		@include bdrs(10);
+		overflow: hidden;
+		> img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.base-info{
+		margin-left: rem(266);
+		.prc{
+			color: $color-yel;
+		}
+		.kc{
+
+		}
+	}
+	.close{
+		position: absolute;
+		top: rem(30);
+		right: rem(30);
+		@include wh(28, 28);
+		background: url(../images/dt-pram-close.png) center center no-repeat;
+		@include bgs(28, 28);
+	}
+}
+.dt-pram-main{
+	min-height: rem(603);
+	overflow-y: auto;
+}
+.dt-pram-dl{
+	margin: 0 rem(25);
+	padding-left: rem(15);
+	border-bottom: 1px solid #ddd;
+	&:last-child{
+		border-bottom: 0;
+	}
+	dt{
+		padding-top: rem(20);
+		padding-bottom: rem(15);
+		color: #858585;
+	}
+	dd{
+		padding-bottom: rem(5);
+	}
+	a{
+		float: left;
+		min-width: rem(120);
+		height: rem(55);
+		margin: 0 rem(20) rem(20) 0;
+		padding: 0 rem(15);
+		line-height: rem(55);
+		text-align: center;
+		font-size: rem(26);
+		color: $color;
+		border: 1px solid #ddd;
+		&.on{
+			border-color: $color-yel;
+			color: $color-yel;
+		}
+	}
+}
+.dt-pram-btn{
+	position: absolute;
+	left: 0;bottom: 0;
+	width: 100%;
+	height: rem(98);
+	background-color: $color-yel;
+	color: $color-wht;
+	text-align: center;
+	line-height: rem(98);
+	border: 0;
+}
+.dt-bt-area{
+	padding-top: rem(100);
+}
+.dt-main{
+	.main-box{
+		background-color: $color-wht;
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+.dt-main-ul{
+	@include flex;
+	padding: rem(30) 0;
+	background-color: $color-wht;
+	li{
+		@include flex1;
+		font-size: rem(30);
+		color: #666;
+		line-height: rem(34);
+		text-align: center;
+		&:first-child{
+			border-right: 1px solid #ddd;
+		}
+		&.on{
+			color: $color-yel;
+		}
+	}
+}

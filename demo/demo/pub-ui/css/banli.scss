@@ -1,0 +1,354 @@
+@charset "UTF-8";
+
+/*******************************03-填写安装地址-十全十美**************************/
+.tx-ads-ul{
+	@include flex;
+	border-bottom: 2px solid #f0f0f0;
+	background-color: $color-wht;
+	li{
+		@include flex1;
+		.num{
+			display: inline-block;
+			@include wh(29, 29);
+			margin-top: rem(25);
+			-webkit-border-radius: 100%;
+			border-radius: 100%;
+			text-align: center;
+			line-height: rem(29);
+			background-color: #e7e7e7;
+			color: #fff;
+			font-size: rem(20);
+			font-style: normal;
+			vertical-align: top;
+		}
+		a{
+			line-height: rem(80);
+			font-size: rem(30);
+			color: #e7e7e7;
+			text-align: center;
+			&.on{
+				color: $color-yel;
+				.num{
+					background-color: $color-yel;
+					color: #fff;
+				}
+				border-bottom: 2px solid $color-yel;
+			}
+			&.over{
+				color: $color;
+				.num{
+					background-color: $color;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+.tx-ads-ipt-box{
+	border-bottom: 1px solid #efefef;
+}
+.tx-ads-ipt{
+	display: block;width: 100%;height: rem(78);padding-left: rem(60);
+	@include bdrs(10);border: 0;line-height: rem(78);
+	background: #f8f8f8 url(../images/in-sch-icon.png) rem(18) center no-repeat;@include bgs(31, 31);
+	color: #d3d3d3;
+	&::-webkit-input-placeholder{
+		color: #d3d3d3;
+	}
+}
+.tx-ads-dl{
+	position: relative;
+	min-height: rem(85);
+	padding: rem(0) rem(25);
+	background-color: $color-wht;
+	border-bottom: 1px solid #efefef;
+	dt{
+		line-height: rem(108);
+	}
+	dd{
+		width: rem(525);
+		padding-left: rem(15);
+		padding-top: rem(36);
+		padding-bottom: rem(33);
+		color: #d3d3d3;
+		&.over{
+			color: #333;
+		}
+	}
+	.ipt{
+		width: rem(525);
+		line-height: rem(40);
+		border: 0;
+		color: $color;
+		&::-webkit-input-placeholder{
+			color: #d3d3d3;
+		}
+	}
+	.com-go{
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: rem(108);
+	}
+	.ed-ta{
+		width: rem(525);
+		min-height: rem(70);
+		border: 0;
+		font-family:sans-serif
+	}
+}
+.tx-ads-body{
+	padding-bottom: rem(90) !important;
+}
+.tx-ads-fix{
+	position: fixed;left: 0;right: 0;bottom: - rem(700);z-index: 999;
+	height: rem(690);
+	background-color: $color-wht;
+	-webkit-transition: bottom .35s linear;
+	transition: bottom .35s linear;
+	&.open{
+		bottom: 0;
+	}
+	.close{
+		position: absolute;
+		top: 0;
+		right: 0;
+		@include wh(75, 75);
+		background: url(../images/dt-pram-close.png) center center no-repeat;
+		@include bgs(28, 28);
+	}
+}
+.tx-ads-tab{
+	@include flex;
+	border-bottom: 1px solid #e5e3e4;
+	li{
+		height: rem(75);
+		margin-left: rem(40);
+		line-height: rem(75);
+		&.on{
+			border-bottom: 2px solid $color-yel;
+			color: $color-yel;
+		}
+	}
+}
+.tx-ads-main{
+	height: rem(615);
+	overflow-y: auto;
+	.no-ads{
+		margin-top: rem(200);
+		color: #8e8e8e;
+		line-height: rem(44);
+		a{
+			display: inline-block;
+			color: $color-yel;
+		}
+	}
+}
+.tx-ads-list{
+	padding-top: rem(20);
+	li{
+		padding-left: rem(36);
+		font-size: rem(26);
+		line-height: rem(66);
+		&.on{
+			color: $color-yel;
+		}
+	}
+}
+
+/*************************03-填写安装地址-搜索地址-十全十美********************************/
+.tx-ads-sch-hd{
+	position: fixed;top: 0;left: 0;right: 0;z-index: 1999;
+    width: 100%;height: rem(100);background-color: $color-wht;border-bottom: 1px solid #e6e6e6;
+    overflow: hidden;
+    h2{
+       line-height: rem(100); 
+    }
+}
+.tx-ads-sch-back{
+    position: absolute;
+    top: 0;left: 0;
+    width: rem(80);
+    height: rem(100);
+    background: url(../images/com-back.png) center center no-repeat;
+    @include bgs(19, 35);
+}
+.tx-ads-sch-cz{
+    position: absolute;
+    top: 0;right: 0;
+    height: rem(100);
+    padding: 0 rem(25);
+    line-height: rem(100);
+    &.yel{
+        color: $color-yel;
+    }
+}
+.tx-ads-sch-ipt{
+    display: block;@include wh(570, 60);margin: rem(20) 0 0 rem(80);padding: rem(10) 0 rem(10) rem(60);
+    @include bdrs(10);border: 0;
+    background: #f4f4f4 url(../images/in-sch-icon.png) rem(18) center no-repeat;@include bgs(31, 31);
+    line-height: rem(40);
+    &::-webkit-input-placeholder{
+        color: #d3d3d3;
+    }
+}
+.tx-ads-sch{
+	background-color: $color-wht;
+	padding-top: rem(100);
+}
+.tx-ads-sch-ul{
+	>li{
+		padding-left: rem(25);
+		line-height: rem(80);
+		font-size: rem(26);
+		color: #666;
+		border-bottom: 1px solid #e6e6e6;
+	}
+}
+
+/*************************03-入网人信息-十全十美********************************/
+.rw-info-base{
+	padding: rem(25);
+	background-color: $color-wht;
+	.des{
+		background-color: #f6f6f6;
+		line-height: rem(44);
+		@include bdrs(5);
+	}
+	.rw-tt{
+		display: inline-block;
+		margin-left: rem(5);
+		line-height: rem(80);
+	}
+	.rw-ipt{
+		@include wh(535, 80);
+		padding: rem(8) 0 0 rem(20);
+		border: 1px solid #cdcdcd;
+		line-height: rem(34);
+		@include bdrs(5);
+		&::-webkit-input-placeholder{
+			color: #dedede;
+		}
+	}
+}
+.rw-xy{
+	background-color: $color-wht;
+	color: #8e8e8e;
+	padding: rem(28) rem(25);
+	.xy{
+		color: $color-yel;
+	}
+	.icon{
+		display: inline-block;
+		@include wh(29, 29);
+		margin-right: rem(5);
+		border: 1px solid #c1c0c0;
+		-webkit-border-radius: 100%;
+		border-radius: 100%;
+		vertical-align: middle;
+		&.on{
+			background: $color-yel url(../images/com-true.png) center center no-repeat;
+			border-color: $color-yel;
+			@include bgs(19, 14);
+		}
+	}
+}
+.rw-pram{
+	background-color: $color-wht;
+	> p{
+		color: #666;
+		font-size: rem(26);
+		line-height: rem(54);
+	}
+}
+
+/**********************************************03-选择号码-十全十美********************************************/
+.cho-num-sch{
+	.sch-ipt{
+		display: block;@include wh(560, 75);padding: rem(15) 0 rem(10) rem(60);
+		border-top-left-radius: rem(10);
+		border-bottom-left-radius: rem(10);
+		border: 0;
+		background: #f8f8f8 url(../images/in-sch-icon.png) rem(18) center no-repeat;
+		@include bgs(31, 31);
+		line-height: rem(40);
+		&::-webkit-input-placeholder{
+			color: #d3d3d3;
+		}
+	}
+	.sch-btn{
+		@include wh(140, 75);
+		background-color: $color-yel;
+		border-top-right-radius: rem(10);
+		border-bottom-right-radius: rem(10);
+		border: 0;
+		text-align: center;
+		line-height: rem(75);
+		color: $color-wht;
+	}
+}
+.cho-num-main{
+	padding-bottom: rem(85);
+}
+.cho-num-dl{
+	background-color:$color-wht;
+	&.fixed{
+		position: fixed;
+		left: 0;right: 0;bottom: rem(90);
+	}
+	dt{
+		padding: rem(25);
+		border-top: 1px solid #e7e7e7;
+		border-bottom: 1px solid #e7e7e7;
+	}
+	h3{
+		padding-left: rem(15);
+		color: #666;
+		border-left: rem(7) solid $color-yel;
+		line-height: rem(30);
+	}
+	.yx{
+		padding-right: rem(30);
+		background: url(../images/com-go.png) center right no-repeat;
+		@include bgs(15, 28);
+		line-height: rem(30);
+		color: #c2c2c2;
+		.val{
+			color: $color-yel;
+		}
+		&.open{
+			background-image: url(../images/gd-filter-up.png);
+			@include bgs(21, 12);
+		}
+	}
+	dd{
+		@include flex;
+		padding-bottom: rem(25);
+		@include flex-wrap;
+		a{
+			@include wh(338, 87);
+			margin: rem(25) 0 0 rem(25);
+			border: 1px solid #cecece;
+			text-align: center;
+			line-height: rem(87);
+			font-size: rem(30);
+			@include bdrs(8);
+			&.on{
+				border-color: $color-yel;
+				color: $color-yel;
+			}
+		}
+	}
+}
+.cho-num-no{
+	width: 100%;
+	margin-top: rem(90);
+	padding-top: rem(230);
+	background: url(../images/ph-num-no.png) center top no-repeat;
+	@include bgs(188, 217);
+	color: #8e8e8e;
+	> p{
+	    line-height: rem(40);
+	}
+}

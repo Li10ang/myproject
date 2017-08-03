@@ -1,0 +1,219 @@
+@charset "UTF-8";
+/*****************************20-选择支付配送方式*****************************/
+.chos-pay-give{
+	margin-bottom: rem(15);
+	padding-bottom: rem(10);
+	background-color: $color-wht;
+	dt{
+		padding: rem(25) 0 rem(25) 0;
+	}
+	.cell{
+		min-width: rem(144);
+		height: rem(50);
+		margin-right: rem(15);
+		margin-bottom: rem(15);
+		text-align: center;
+		border: 1px solid #dadada;
+		line-height: rem(50);
+		&.on{
+			color: $color-yel;
+			border-color: $color-yel;
+		}
+	}
+	.give-time{
+		label{
+			display: block;
+			margin-bottom: rem(10);
+			font-size: rem(26);
+			line-height: rem(40);
+		}
+		.icon{
+			display: inline-block;
+			@include wh(29, 29);
+			margin: rem(5) rem(5) 0 0;
+			border: 1px solid #c1c0c0;
+			-webkit-border-radius: 100%;
+			border-radius: 100%;
+			vertical-align: top;
+			&.on{
+				background: $color-yel url(../images/com-true.png) center center no-repeat;
+				border-color: $color-yel;
+				@include bgs(19, 14);
+			}
+		}
+	}
+}
+
+/******************************21-发票信息************************************/
+.invo-dl{
+	margin-bottom: rem(15);
+	padding-bottom: rem(10);
+	background-color: $color-wht;
+	dt{
+		padding: rem(25) 0 rem(25) 0;
+	}
+	.cell{
+		min-width: rem(144);
+		height: rem(50);
+		margin-right: rem(15);
+		margin-bottom: rem(15);
+		text-align: center;
+		border: 1px solid #dadada;
+		line-height: rem(50);
+		&.on{
+			color: $color-yel;
+			border-color: $color-yel;
+		}
+	}
+	.invo-hd{
+		label{
+			display: block;
+			margin-right: rem(40);
+			margin-bottom: rem(10);
+			font-size: rem(26);
+			line-height: rem(40);
+		}
+		.icon{
+			display: inline-block;
+			@include wh(29, 29);
+			margin: rem(5) rem(5) 0 0;
+			border: 1px solid #c1c0c0;
+			-webkit-border-radius: 100%;
+			border-radius: 100%;
+			vertical-align: top;
+			&.on{
+				background: $color-yel url(../images/com-true.png) center center no-repeat;
+				border-color: $color-yel;
+				@include bgs(19, 14);
+			}
+		}
+	}
+	.invo-hd-dw{
+		height: rem(70);
+		margin-bottom: rem(10);
+		padding: rem(19) 0 0 rem(15);
+		background-color: #f9f9f9;
+		@include bdrs(6);
+		.ipt{
+			width: rem(600);
+			line-height: rem(32);
+			border: 0;
+			background-color: transparent;
+			&::-webkit-input-placeholder{
+				color: #cfcfcf;
+			}
+		}
+	}
+}
+.invo-pepo{
+	.pepo-row{
+		margin-bottom: rem(20);
+		.pepo-tt{
+			width: rem(170);
+			text-align: right;
+			padding-right: rem(25);
+			line-height: rem(36);
+		}
+		.ipt{
+			width: rem(500);
+			border: 0;
+			line-height: rem(36);
+			&::-webkit-input-placeholder{
+				color: #d3d3d3;
+			}
+		}
+	}
+}
+
+/******************************06-确认订单-十全十美************************************/
+.sr-pos{
+	padding-bottom: rem(6);
+	background: $color-wht url(../images/sr-od-ads-bt.png) left bottom repeat-x;
+}
+.sr-pos-main{
+	span{
+		display: inline-block;
+		vertical-align: middle;
+		&.lab{
+			padding: 0 rem(15);
+			line-height: rem(26);
+			border: 1px solid #fe7902;
+			color: #fe7902;
+			font-size: rem(22);
+			@include bdrs(5);
+		}
+	}
+	.pos-ads{
+		padding-left: rem(25);
+		line-height: rem(28);
+		background: url(../images/sr-od-ads-pos.png) center left no-repeat;
+		@include bgs(16, 22);
+	}
+}
+.sr-base{
+	background-color: $color-wht;
+	h3{
+		border-bottom: 1px solid #ededed;
+		line-height: rem(82);
+	}
+}
+.sr-base-info{
+	dt{
+		@include wh(186, 186);
+		@include bdrs(15);
+		overflow: hidden;
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	dd{
+		width: rem(495)
+	}
+	.pram{
+		min-height: rem(90);
+		color: #666;
+	}
+	.prc{
+		color: $color-yel;
+	}
+	.num{
+		color: #666;
+	}
+}
+.sr-row{
+	padding-right: rem(33);
+	border-top: 1px solid #ededed;
+	dd{
+		text-align: right;
+	}
+}
+.sr-prc{
+	background-color: $color-wht;
+	.prc-val{
+		color: $color-yel;
+	}
+}
+.sr-ft{
+	@include flex;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: rem(108);
+	background-color: $color-wht;
+	.s-prc{
+		@include flex1;
+		border-top: 1px solid #ddd;
+		line-height: rem(108);
+		color: $color-yel;
+	}
+	.smt-btn{
+		@include wh(300, 108);
+		background-color: $color-yel;
+		text-align: center;
+		line-height: rem(108);
+		border: 0;
+		color: $color-wht;
+	}
+}
