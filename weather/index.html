@@ -21,9 +21,9 @@
                 url: 'http://yaoliang2016.cn/weather/weather.php',
                 data: 'name='+data,
                 type: 'get',
-                dataType: 'jsonp',
+                dataType: 'json',
                 success: function(data){
-                    console.log(data)
+                    window.data1 = data;
                 }
             })
         })
