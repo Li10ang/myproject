@@ -8,9 +8,6 @@
     $cityy = $_GET['name'];    
     $querys = "city="+urlencode($cityy)+"&citycode=citycode&cityid=cityid&ip=ip&location=location";
     
-    echo($cityy)
-    echo($querys)
-    
     $bodys = "";
     $url = $host . $path . "?" . $querys;
 
@@ -28,7 +25,7 @@
     }
 
     $res=curl_exec($curl);
-    // print_r($res);
+    print_r($res);
 
     // var_dump(curl_exec($curl));
     // echo json_decode(curl_exec($curl));
