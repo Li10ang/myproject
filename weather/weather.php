@@ -7,8 +7,6 @@
     array_push($headers, "Authorization:APPCODE " . $appcode);
     $cityy = urlencode($_GET['name']);    
     $querys = "city={$cityy}&citycode=citycode&cityid=cityid&ip=ip&location=location";
-    echo $querys;
-    exit;
     $bodys = "";
     $url = $host . $path . "?" . $querys;
 
