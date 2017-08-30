@@ -8,8 +8,8 @@
     $cityy = $_GET['name'];    
     $querys = "city="+urlencode($cityy)+"&citycode=citycode&cityid=cityid&ip=ip&location=location";
     
-    print_r($cityy)
-    print_r($querys)
+    echo($cityy)
+    echo($querys)
     
     $bodys = "";
     $url = $host . $path . "?" . $querys;
