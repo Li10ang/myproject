@@ -9,21 +9,23 @@
 <body>
     <form action="/#" method="get">
         请输入要查询的城市名称<input type="text" class="cityname" >
-        <input type="button" value="确定">
+        <input type="button" value="确定" class="btn">
     </form>
 </body>
 <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 <script>
     $(function(){
         var data = $('.cityname').val();
-        $.ajax({
-            url: 'http://yaoliang2016.cn/weather/weather.php',
-            data: 'name='+data,
-            type: 'get',
-            dataType: 'jsonp',
-            success: function(data){
-                console.log(data)
-            }
+        $('.btn').click(function(){
+            $.ajax({
+                url: 'http://yaoliang2016.cn/weather/weather.php',
+                data: 'name='+data,
+                type: 'get',
+                dataType: 'jsonp',
+                success: function(data){
+                    console.log(data)
+                }
+            })
         })
     })
 </script>
