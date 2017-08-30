@@ -5,7 +5,8 @@
     $appcode = "3925f9ae5b674f9fb64d6e1664c157b0";
     $headers = array();
     array_push($headers, "Authorization:APPCODE " . $appcode);
-    $querys = "city=%E5%AE%89%E9%A1%BA&citycode=citycode&cityid=cityid&ip=ip&location=location";
+    // $querys = "city=%E5%AE%89%E9%A1%BA&citycode=citycode&cityid=cityid&ip=ip&location=location";
+    $querys = $_GET['name'];
     $bodys = "";
     $url = $host . $path . "?" . $querys;
 
