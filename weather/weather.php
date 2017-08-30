@@ -22,7 +22,11 @@
         curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, false);
     }
-    var_dump(curl_exec($curl));
+
+    $res=json_decode(curl_exec($curl),true);
+    print_r($res);
+
+    // var_dump(curl_exec($curl));
     // echo json_decode(curl_exec($curl));
     exit;
 ?>
