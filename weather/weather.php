@@ -7,8 +7,8 @@
     array_push($headers, "Authorization:APPCODE " . $appcode);
     $querys = "city=%E5%AE%89%E9%A1%BA&citycode=citycode&cityid=cityid&ip=ip&location=location";
     // $querys = $_GET['name'];
-    $city = $_GET['name'];
-    echo $city;
+    $cityy = $_GET['name'];
+    echo $cityy;
     $bodys = "";
     $url = $host . $path . "?" . $querys;
 
@@ -26,7 +26,7 @@
     }
 
     $res=curl_exec($curl);
-    print_r($res);
+    // print_r($res);
 
     // var_dump(curl_exec($curl));
     // echo json_decode(curl_exec($curl));
