@@ -19,7 +19,7 @@
         $('.btn').click(function(){
             $.ajax({
                 url: 'http://yaoliang2016.cn/weather/weather.php',
-                data: 'name='+data,
+                data: {data: data},
                 type: 'get',
                 dataType: 'json',
                 success: function(data){
