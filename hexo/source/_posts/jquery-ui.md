@@ -9,6 +9,8 @@ tags:
 使用jqueryUI滑动条，记录下滑动条的参数设置。
 官方地址：http://jqueryui.com/slider/
 
+<!--more-->
+
 ·参数（参数名 : 参数类型 : 默认名称）  
 animate : Boolean : false  
   设置是否在拖动滑块时执行动画效果。  

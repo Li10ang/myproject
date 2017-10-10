@@ -5,7 +5,7 @@ tags:
   - vue
 ---
 ## 计算属性
-
+<!--more-->
 #### #基础栗子
 ```html
 <div id="example">

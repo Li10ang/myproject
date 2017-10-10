@@ -11,13 +11,14 @@ tags:
 * 下载 nvm 包 地址：https://github.com/coreybutler/nvm-windows/releases，我们选择第一个：nvm-noinstall.zip 下载完成后解压到一个地方，比如: C:\dev\nvm 里面的文件列表是这样的：elevate.cmd、elevate.vbs、install.cmd、LICENSE、nvm.exe
 * 备注：windows下要设置显示文件类型的扩展名，这样才能看到上述文件的后缀
 * 双击 install.cmd 然后会让你输入”压缩文件解压或拷贝到的一个绝对路径” 先不用管它，直接回车，成功后，会在C盘的根目录生成一个settings.txt的文本文件，把这个文件剪切到C:\dev\nvm目录中，然后我们把它的内容修改成这样：
+<!--more-->
 
-> root: C:\dev\nvm 
-> path: C:\dev\nodejs 
-> arch: 64 
-> proxy: none 
-> node_mirror: http://npm.taobao.org/mirrors/node/ 
-> npm_mirror: https://npm.taobao.org/mirrors/npm/
+ root: C:\dev\nvm 
+ path: C:\dev\nodejs 
+ arch: 64 
+ proxy: none 
+ node_mirror: http://npm.taobao.org/mirrors/node/ 
+ npm_mirror: https://npm.taobao.org/mirrors/npm/
 
 * 然后我们开始配置环境变量了，因为刚刚点击了install.cmd的文件，那么会在环境变量的系统变量中，生成两个环境变量：NVM_HOME 和 NVM_SYMLINK 我们开始修改这两个变量名的变量值：NVM_HOME的变量值为：C:\dev\nvm； NVM_SYMLINK的变量值为：C:\dev\nodejs
 * 我们还会发现，在Path中也会自动添加上C:\dev\nvm;或者是C:\dev\nodejs，如果有的话，把他们删掉，没有的话更好，我们自己来配置，在Path的最前面输入： ;%NVM_HOME%;%NVM_SYMLINK%;
