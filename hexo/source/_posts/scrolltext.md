@@ -5,7 +5,7 @@ tags:
   - 文字滚动显示
 ---
 
-<!--more-->
+
 
 ```html
 <div role="tabpanel" class="tab-pane fade in active" id="Section1">
@@ -30,6 +30,7 @@ $('#Section1').vTicker({
 			});
 </script>
 ```
+<!--more-->
 ```js
 (function(a) {
 	a.fn.vTicker = function(b) {
